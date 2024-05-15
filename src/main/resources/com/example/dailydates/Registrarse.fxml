@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anchorPaneMain" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Registrarse">
+   <children>
+      <Pane layoutX="22.0" layoutY="13.0" prefHeight="374.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
+         <children>
+            <Button fx:id="registrarseUsuarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseUsuarioButtonOnAction" text="Registrarse" />
+            <Label fx:id="usuarioDescripcionLabel" layoutX="31.0" layoutY="244.0" prefHeight="68.0" prefWidth="210.0" text="Pide citas rápidamente en los establecimientos cercanos, ¡Gestiona tu tiempo!" textAlignment="CENTER" wrapText="true" />
+            <ImageView fx:id="usuarioImage" fitHeight="193.0" fitWidth="215.0" layoutX="29.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/HombreFruteriaMiraMovil.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="convierteteEnUsuarioLabel" layoutX="46.0" layoutY="203.0" text="Conviertete en Usuario">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="308.0" layoutY="13.0" prefHeight="374.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
+         <children>
+            <ImageView fx:id="empresariaImage" fitHeight="171.0" fitWidth="220.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/EmpresariaMovilConTraje.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="registrarseEmpresarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseEmpresarioButtonOnAction" text="Registrarse" />
+            <Label fx:id="empresarioDescripcionLabel" layoutX="31.0" layoutY="243.0" prefHeight="68.0" prefWidth="210.0" text="Gestiona las citas de tu establecimiento y haz conocer tu empresa en la ciudad" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="convierteteEnEmpresarioLabel" layoutX="31.0" layoutY="204.0" text="Conviertete en Empresario">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
