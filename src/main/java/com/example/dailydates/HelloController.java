@@ -1,14 +1,10 @@
 package com.example.dailydates;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+
+import java.text.BreakIterator;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="344.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.EditarEmpresa">
+   <children>
+      <Pane layoutX="377.0" layoutY="133.0" prefHeight="150.0" prefWidth="200.0" style="-fx-border-style: dashed;" />
+      <Label layoutX="176.0" layoutY="41.0" text="Añadir Empresa">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="127.0" text="Nombre:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="164.0" text="Dirección:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="262.0" text="CIF:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="295.0" />
+      <TextField fx:id="NombreEmpresaNueva" layoutX="176.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="DireccionEmpresaNueva" layoutX="176.0" layoutY="165.0" prefHeight="17.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="CifEmpresaNueva" layoutX="176.0" layoutY="261.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <ImageView fx:id="AñadeFoto" fitHeight="150.0" fitWidth="200.0" layoutX="379.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="419.0" layoutY="190.0" text="AÑADIR FOTO ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="205.0" text="Horario apertura:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="291.0" text="Ciudad:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="AperturaEmpresa" layoutX="210.0" layoutY="207.0" prefHeight="25.0" prefWidth="62.0" />
+      <Label layoutX="78.0" layoutY="233.0" text="Horario cierre:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="CierreEmpresa" layoutX="210.0" layoutY="234.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="CiudadEmpresaNueva" layoutX="176.0" layoutY="291.0" visible="false" />
+   </children>
+</AnchorPane>
