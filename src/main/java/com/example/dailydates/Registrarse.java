@@ -36,7 +36,12 @@ public class Registrarse
 
     @javafx.fxml.FXML
     public void registrarseEmpresarioButtonOnAction(ActionEvent actionEvent) {
-
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("RegistrarseEmpresario.fxml"));
+            this.anchorPaneMain.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
