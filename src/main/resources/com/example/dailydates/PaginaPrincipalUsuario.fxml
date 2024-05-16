@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,47 +8,74 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalUsuario">
+<AnchorPane fx:id="anchorPaneMain" prefHeight="707.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalUsuario">
    <children>
-      <Pane fx:id="fruteriaPane" layoutX="43.0" layoutY="145.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-image: img\descarga.jpg; -fx-background-size: cover;">
+      <Pane fx:id="menuPane" prefHeight="71.0" prefWidth="608.0" style="-fx-border-color: ff00aa;">
          <children>
-            <Label fx:id="fruteriasLabel" layoutX="14.0" layoutY="5.0" text="FRUTERÍAS">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="fruteriaImage" fitHeight="39.0" fitWidth="113.0" layoutX="357.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="citasButton" layoutX="268.0" layoutY="23.0" mnemonicParsing="false" onAction="#citasButtonOnAction" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: transparent;" />
+            <Label fx:id="perfilMenuLabel" layoutX="397.0" layoutY="27.0" text="Perfil" />
+            <Label fx:id="categoriaMenuLabel" layoutX="163.0" layoutY="27.0" text="Categorías" />
+            <Label fx:id="citasMenuLabel" layoutX="279.0" layoutY="27.0" prefHeight="17.0" prefWidth="49.0" text="Mis Citas" />
+            <ImageView fitHeight="71.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/descarga.jpg" />
+                  <Image url="@img/DailyDateFoto.png" />
                </image>
             </ImageView>
+            <Button fx:id="categoriaButton" layoutX="157.0" layoutY="23.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="perfilButton" layoutX="384.0" layoutY="23.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: transparent;" />
          </children>
       </Pane>
-      <Pane fx:id="centroDeSaludPane" layoutX="43.0" layoutY="200.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;">
+      <AnchorPane fx:id="anchorPaneUsuario" layoutY="67.0" prefHeight="641.0" prefWidth="600.0">
          <children>
-            <Label fx:id="centroDeSaludLabel" layoutX="14.0" layoutY="5.0" text="CENTRO DE SALUD">
+            <Pane fx:id="restaurantesPane" layoutX="43.0" layoutY="345.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;">
+               <children>
+                  <Label fx:id="restaurantesLabel" layoutX="14.0" layoutY="5.0" text="RESTAURANTES">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="restaurantesImage" fitHeight="40.0" fitWidth="112.0" layoutX="326.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/descarga%20(5).jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="centroDeSaludPane" layoutX="43.0" layoutY="280.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;">
+               <children>
+                  <Label fx:id="centroDeSaludLabel" layoutX="14.0" layoutY="5.0" text="CENTRO DE SALUD">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="centroDeSaludImage" fitHeight="40.0" fitWidth="112.0" layoutX="327.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/descarga%20(3).jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="fruteriaPane" layoutX="43.0" layoutY="215.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-image: img\descarga.jpg; -fx-background-size: cover;">
+               <children>
+                  <Label fx:id="fruteriasLabel" layoutX="14.0" layoutY="5.0" text="FRUTERÍAS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="fruteriaImage" fitHeight="39.0" fitWidth="113.0" layoutX="327.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/descarga.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="fruteriaButton" layoutX="451.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0" style="-fx-background-radius: 15;" />
+               </children>
+            </Pane>
+            <Label fx:id="categoriaLabel" layoutX="23.0" layoutY="137.0" text="Categorías:">
                <font>
-                  <Font size="20.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="centroDeSaludImage" fitHeight="40.0" fitWidth="215.0" layoutX="300.0" pickOnBounds="true" preserveRatio="true" />
          </children>
-      </Pane>
-      <Pane fx:id="restaurantesPane" layoutX="43.0" layoutY="257.0" prefHeight="40.0" prefWidth="514.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;">
-         <children>
-            <Label fx:id="restaurantesLabel" layoutX="14.0" layoutY="5.0" text="RESTAURANTES">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="restaurantesImage" fitHeight="40.0" fitWidth="215.0" layoutX="300.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </Pane>
-      <Label fx:id="categoriaLabel" layoutX="43.0" layoutY="73.0" text="Categorías:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      </AnchorPane>
    </children>
 </AnchorPane>
