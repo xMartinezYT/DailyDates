@@ -9,7 +9,7 @@ package com.example.dailydates;
 
 
         private Connection conn;
-        private String cadenaConexion = "jdbc:mysql://localhost:3306/dispositivos";
+        private String cadenaConexion = "jdbc:mysql://localhost:3306/dailydates";
         private String nombreUsuario = "root";
         private String password = "1234";
 
