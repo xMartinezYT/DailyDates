@@ -26,8 +26,6 @@ public class Login {
     @FXML
     private Button accederButton;
     @FXML
-    private Label registrarLabel;
-    @FXML
     private Button crearCuentaButton;
     @FXML
     private ImageView logoImage;
@@ -37,7 +35,7 @@ public class Login {
 
         AnchorPane pane = null;
         try {
-            pane = FXMLLoader.load(getClass().getResource("Registrarse.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
             this.anchorPanePrincipal.getChildren().setAll(pane);
         } catch (IOException e) {
             throw new RuntimeException(e);
