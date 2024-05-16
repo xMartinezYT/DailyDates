@@ -50,7 +50,7 @@ public class PaginaPrincipalUsuario
     @javafx.fxml.FXML
     public void citasButtonOnAction(ActionEvent actionEvent) {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("RegistrarseEmpresario.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("PaginaCitas.fxml"));
             this.contenedorAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
             throw new RuntimeException(e);
