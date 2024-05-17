@@ -3,62 +3,103 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="perfilAnchorPane" prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPerfil">
+<AnchorPane fx:id="perfilAnchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPerfil">
    <children>
-      <Label fx:id="perfilLabel" alignment="CENTER" layoutX="55.0" layoutY="25.0" prefHeight="41.0" prefWidth="490.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;" text="Perfil">
+      <Label fx:id="perfilLabel" alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;" text="Perfil">
          <font>
-            <Font size="20.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <Pane fx:id="fotoPane" layoutX="37.0" layoutY="109.0" prefHeight="196.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+      <Pane fx:id="fotoPane" layoutX="90.0" layoutY="106.0" prefHeight="196.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button fx:id="fotoButton" layoutX="17.0" layoutY="152.0" mnemonicParsing="false" text="Cargar Imágen" />
+            <Button fx:id="fotoButton" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" text="Cargar Imágen" />
             <ImageView fx:id="perfilImage" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Label fx:id="datosPersonalesLabel" layoutX="230.0" layoutY="115.0" text="- Datos Personales:">
+      <Label fx:id="datosPersonalesLabel" layoutX="316.0" layoutY="106.0" text="Datos Personales:" underline="true">
          <font>
-            <Font size="18.0" />
+            <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="nombreLabel" layoutX="239.0" layoutY="158.0" text="Nombre:">
+      <Label fx:id="nombreLabel" layoutX="326.0" layoutY="160.0" text="Nombre:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="apellidosLabel" layoutX="410.0" layoutY="158.0" text="Apellidos:">
+      <Label fx:id="apellidosLabel" layoutX="534.0" layoutY="159.0" text="Apellidos:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="correoLabel" layoutX="239.0" layoutY="192.0" text="Correo:">
+      <Label fx:id="correoLabel" layoutX="326.0" layoutY="194.0" text="Correo:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="telefonoLabel" layoutX="410.0" layoutY="192.0" text="Nº Teléfono:">
+      <Label fx:id="telefonoLabel" layoutX="534.0" layoutY="193.0" text="Nº Teléfono:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTextField" layoutX="300.0" layoutY="154.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="nombre" />
-      <TextField fx:id="apellidosTextField" layoutX="484.0" layoutY="154.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="apellido" />
-      <TextField fx:id="correoTextField" layoutX="300.0" layoutY="188.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="correo" />
-      <TextField fx:id="telefonoTextField" layoutX="498.0" layoutY="188.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="telefono" />
-      <TextField fx:id="nombreUsuarioTextField" alignment="CENTER" layoutX="45.0" layoutY="314.0" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: transparent;" text="Nombre Usuario" />
-      <Label fx:id="negociosRecientesLabel" layoutX="230.0" layoutY="247.0" text="- Negocios recientes:">
+      <TextField fx:id="nombreTextField" layoutX="427.0" layoutY="158.0" prefHeight="28.0" prefWidth="67.0" text="nombre">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="apellidosTextField" layoutX="644.0" layoutY="158.0" prefHeight="30.0" prefWidth="112.0" text="apellido">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="correoTextField" layoutX="427.0" layoutY="192.0" prefHeight="30.0" prefWidth="67.0" text="correo">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="telefonoTextField" layoutX="644.0" layoutY="191.0" prefHeight="30.0" prefWidth="112.0" text="telefono">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="nombreUsuarioTextField" alignment="CENTER" layoutX="98.0" layoutY="308.0" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: transparent;" text="Nombre Usuario" />
+      <Label fx:id="negociosRecientesLabel" layoutX="318.0" layoutY="256.0" text="Negocios recientes:" underline="true">
+         <font>
+            <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="negocio2Label" layoutX="356.0" layoutY="297.0" text="negocio 1" />
-      <Label fx:id="negocio1Label" layoutX="255.0" layoutY="297.0" text="negocio 1" />
-      <Label fx:id="negocio3Label" layoutX="458.0" layoutY="297.0" text="negocio 3" />
-      <Pane fx:id="datosPane" layoutX="216.0" layoutY="111.0" prefHeight="108.0" prefWidth="362.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;" />
+      <Label fx:id="negocio2Label" layoutX="506.0" layoutY="310.0" text="negocio 2">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="negocio1Label" layoutX="365.0" layoutY="310.0" text="negocio 1">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="negocio3Label" layoutX="644.0" layoutY="310.0" text="negocio 3">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ImageView fx:id="editarImage" fitHeight="28.0" fitWidth="23.0" layoutX="495.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/lapiz.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="fotoPane1" layoutX="333.0" layoutY="347.0" prefHeight="151.0" prefWidth="134.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+         <children>
+            <ImageView fx:id="negocio1Image" fitHeight="124.0" fitWidth="102.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="fotoPane11" layoutX="477.0" layoutY="347.0" prefHeight="151.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+         <children>
+            <ImageView fx:id="negocio2Image" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="fotoPane12" layoutX="615.0" layoutY="347.0" prefHeight="151.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+         <children>
+            <ImageView fx:id="negocio3Image" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

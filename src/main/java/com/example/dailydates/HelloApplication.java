@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 620, 430);
+        Scene scene = new Scene(fxmlLoader.load(), 860, 600);
         stage.setTitle("DailyDates");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/dailydates/img/DailyDateFoto.png"));
         stage.setScene(scene);
