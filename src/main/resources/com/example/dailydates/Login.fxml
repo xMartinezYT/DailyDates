@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Login">
+<AnchorPane prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Login">
    <children>
-      <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="397.0" prefWidth="605.0">
          <children>
             <Label layoutX="60.0" layoutY="130.0" text="Inicio de Sesión:">
                <font>
