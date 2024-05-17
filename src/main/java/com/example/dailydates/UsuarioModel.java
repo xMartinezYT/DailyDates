@@ -2,6 +2,9 @@ package com.example.dailydates;
 
 import javafx.scene.image.Image;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,5 +33,26 @@ public class UsuarioModel extends Conexion{
         return lista;
     }
 
+    public void anyadir_usuario(Usuario u) {
+        try {
+            String sql = "insert into usuario values(?,?,?,?,?,?)";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setString(1, u.getNombre());
+            ps.setString(2, u.getApellidos());
+            ps.setString(3, u.getGmail());
+            ps.setString(4, u.getContrasenya());
+            ps.setString(5, u.getTelefono());
+            FileInputStream fis = new FileInputStream(String.valueOf(u.getFoto_perfil()));
+            File f = new File(String.valueOf(u.getFoto_perfil()));
+            ps.setBinaryStream(6, fis, (int) f.length());
+            ps.execute();
+
+        } catch (SQLException | FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 
 }
+
