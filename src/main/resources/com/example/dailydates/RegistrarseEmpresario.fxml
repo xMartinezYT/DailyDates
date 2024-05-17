@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPaneMain" prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
+<AnchorPane fx:id="anchorPaneMain" prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
    <children>
       <Label fx:id="introducirDatosLabel" layoutX="52.0" layoutY="47.0" text="Introduzca sus datos:" underline="true">
          <font>
