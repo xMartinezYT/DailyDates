@@ -1,5 +1,7 @@
 package com.example.dailydates;
 
+import javafx.scene.image.Image;
+
 public class Empresa {
 
     private int id_empresa;
@@ -10,9 +12,10 @@ public class Empresa {
     private String horario;
     private String ciudad;
     private String direccion;
+    private Image foto_empresa;
 
 
-    public Empresa(int id_empresa, int id_empresario, Categoria categoria, String nombre, String CIF, String horario, String ciudad, String direccion) {
+    public Empresa(int id_empresa, int id_empresario, Categoria categoria, String nombre, String CIF, String horario, String ciudad, String direccion, Image fotoEmpresa) {
         this.id_empresa = id_empresa;
         this.id_empresario = id_empresario;
         this.categoria = categoria;
@@ -21,6 +24,7 @@ public class Empresa {
         this.horario = horario;
         this.ciudad = ciudad;
         this.direccion = direccion;
+        foto_empresa = fotoEmpresa;
     }
 
 
@@ -86,6 +90,13 @@ public class Empresa {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    public Image getFoto_empresa() {
+        return foto_empresa;
+    }
+
+    public void setFoto_empresa(Image foto_empresa) {
+        this.foto_empresa = foto_empresa;
     }
 
     @Override

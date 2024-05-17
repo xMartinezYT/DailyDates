@@ -1,5 +1,7 @@
 package com.example.dailydates;
 
+import javafx.scene.image.Image;
+
 public class Empresario {
 
     private int id;
@@ -8,15 +10,18 @@ public class Empresario {
     private String gmail;
     private String contrasenya;
     private String telefono;
+    private Image foto_perfil;
 
 
-    public Empresario(int id, String nombre, String apellidos, String gmail, String contrasenya, String telefono) {
+
+    public Empresario(int id, String nombre, String apellidos, String gmail, String contrasenya, String telefono, Image fotoPerfil) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.gmail = gmail;
         this.contrasenya = contrasenya;
         this.telefono = telefono;
+        foto_perfil = fotoPerfil;
     }
 
 
@@ -66,6 +71,13 @@ public class Empresario {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+    public Image getFoto_perfil() {
+        return foto_perfil;
+    }
+
+    public void setFoto_perfil(Image foto_perfil) {
+        this.foto_perfil = foto_perfil;
     }
 
     @Override
