@@ -41,6 +41,18 @@ public class PaginaCategorias
     private Button pescaderiaButton1;
     @javafx.fxml.FXML
     private ImageView pescaderiaImage;
+    @javafx.fxml.FXML
+    private Button tallerButton;
+    @javafx.fxml.FXML
+    private ImageView tallerImage;
+    @javafx.fxml.FXML
+    private ImageView verduleriaImage;
+    @javafx.fxml.FXML
+    private Button peluqueriaButton;
+    @javafx.fxml.FXML
+    private Button verduleriaButton;
+    @javafx.fxml.FXML
+    private ImageView peluqueriaImage;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -76,5 +88,17 @@ public class PaginaCategorias
 
     @javafx.fxml.FXML
     public void fruteriaButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void verduleriaButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void peluqueriaButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void tallerButtonOnAction(ActionEvent actionEvent) {
     }
 }

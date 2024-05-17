@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="citasAnchorPane" prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaCitas">
+<AnchorPane fx:id="citasAnchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaCitas">
    <children>
-      <ScrollPane fx:id="scrollpane" layoutX="117.0" layoutY="74.0" prefHeight="252.0" prefWidth="367.0">
+      <ScrollPane fx:id="scrollpane" layoutX="95.0" layoutY="123.0" prefHeight="59.0" prefWidth="687.0">
          <content>
             <Button fx:id="prueba" mnemonicParsing="false" onAction="#pruebaclick" prefHeight="88.0" prefWidth="149.0" text="Button" />
          </content>
       </ScrollPane>
+      <Label fx:id="perfilLabel" alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;" text="Mis Citas">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

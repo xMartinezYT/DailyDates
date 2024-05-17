@@ -19,9 +19,23 @@ public class PaginaCitas
     private ScrollPane scrollpane;
     @javafx.fxml.FXML
     private Button prueba;
+    @javafx.fxml.FXML
+    private Label perfilLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        Pane p = new Pane();
+        for (int i = 50;i < 5000;i+=50) {
+            //Pane p2 = new Pane();
+            Button l = new Button();
+            l.setText("gonza");
+            //l.setTranslateY(i);
+            //p2.getChildren().add(l);
+            //p2.setTranslateY(i);
+            p.getChildren().add(l);
+        }
+
+        scrollpane.setContent(p);
 
     }
 
@@ -35,6 +49,8 @@ public class PaginaCitas
         v.getChildren().add(b);
         scrollpane.setContent(v);
          */
+
+
 
     }
 }

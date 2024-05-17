@@ -47,6 +47,20 @@ public class PaginaPerfil
     private Label negociosRecientesLabel;
     @javafx.fxml.FXML
     private Label negocio2Label;
+    @javafx.fxml.FXML
+    private ImageView negocio1Image;
+    @javafx.fxml.FXML
+    private ImageView negocio3Image;
+    @javafx.fxml.FXML
+    private Pane fotoPane1;
+    @javafx.fxml.FXML
+    private ImageView editarImage;
+    @javafx.fxml.FXML
+    private Pane fotoPane12;
+    @javafx.fxml.FXML
+    private Pane fotoPane11;
+    @javafx.fxml.FXML
+    private ImageView negocio2Image;
 
     @javafx.fxml.FXML
     public void initialize() {
