@@ -10,50 +10,50 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPaneMain" prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
+<AnchorPane fx:id="anchorPaneMain" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
    <children>
-      <Label fx:id="introducirDatosLabel" layoutX="52.0" layoutY="47.0" text="Introduzca sus datos:" underline="true">
+      <Label fx:id="introducirDatosLabel" layoutX="60.0" layoutY="58.0" text="Introduzca sus datos:" underline="true">
          <font>
-            <Font size="18.0" />
+            <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="121.0" text="Nombre:">
+      <Label layoutX="193.0" layoutY="190.0" text="Nombre:">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="86.0" layoutY="171.0" text="Apellidos:">
+      <Label layoutX="195.0" layoutY="240.0" text="Apellidos:">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="216.0" prefHeight="20.0" prefWidth="78.0" text="Contraseña:">
+      <Label layoutX="194.0" layoutY="285.0" prefHeight="25.0" prefWidth="94.0" text="Contraseña:">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="258.0" text="Gmail:">
+      <Label layoutX="193.0" layoutY="328.0" text="Gmail:">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="302.0" text="Nº Teléfono:">
+      <Label layoutX="193.0" layoutY="371.0" text="Nº Teléfono:">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTextField" layoutX="238.0" layoutY="118.0" promptText="Nombre" />
-      <TextField fx:id="apellidosTextField" layoutX="238.0" layoutY="168.0" promptText="Apellido1, Apellido2" />
-      <TextField fx:id="contraseñaTextField" layoutX="238.0" layoutY="213.0" />
-      <TextField fx:id="gmailTextField" layoutX="238.0" layoutY="256.0" promptText="ejemplo@gmail.com" />
-      <TextField fx:id="telefonoTextField" layoutX="238.0" layoutY="300.0" promptText="123123123" />
-      <Pane layoutX="426.0" layoutY="122.0" prefHeight="189.0" prefWidth="130.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+      <TextField fx:id="nombreTextField" layoutX="342.0" layoutY="190.0" promptText="Nombre" />
+      <TextField fx:id="apellidosTextField" layoutX="342.0" layoutY="240.0" promptText="Apellido1, Apellido2" />
+      <TextField fx:id="contraseñaTextField" layoutX="342.0" layoutY="285.0" />
+      <TextField fx:id="gmailTextField" layoutX="342.0" layoutY="328.0" promptText="ejemplo@gmail.com" />
+      <TextField fx:id="telefonoTextField" layoutX="342.0" layoutY="372.0" promptText="123123123" />
+      <Pane fx:id="imagenPane" layoutX="603.0" layoutY="191.0" prefHeight="208.0" prefWidth="149.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button layoutX="18.0" layoutY="150.0" mnemonicParsing="false" text="Cargar imagen" />
-            <ImageView fitHeight="124.0" fitWidth="102.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="cargarImagenButton" layoutX="28.0" layoutY="150.0" mnemonicParsing="false" onAction="#cargarImagenButtonOnAction" text="Cargar imagen" />
+            <ImageView fx:id="fotoImage" fitHeight="124.0" fitWidth="120.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button fx:id="crearButton" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" onAction="#crearButtonOnAction" text="Crear cuenta">
+      <Button fx:id="crearButton" layoutX="378.0" layoutY="421.0" mnemonicParsing="false" onAction="#crearButtonOnAction" text="Crear cuenta">
          <effect>
             <DisplacementMap>
                <mapData>

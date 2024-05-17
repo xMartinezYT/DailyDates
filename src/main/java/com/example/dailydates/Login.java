@@ -29,6 +29,8 @@ public class Login {
     private Button crearCuentaButton;
     @FXML
     private ImageView logoImage;
+    @FXML
+    private Button bienvenidoLabel;
 
     @FXML
     public void accederButtonOnAction(ActionEvent actionEvent) {
