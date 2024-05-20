@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="47.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Citasmostrar">
+   <children>
+      <Label fx:id="nombreNegocio" layoutX="38.0" layoutY="21.0" prefHeight="47.0" prefWidth="218.0" text="NOMBRE NEGOCIO">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelFecha" layoutX="38.0" layoutY="69.0" text="11/10/2024" />
+      <Label fx:id="labelHora" layoutX="174.0" layoutY="69.0" text="11:15" />
+   </children>
+</AnchorPane>
