@@ -5,19 +5,30 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorPaneMain" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalUsuario">
    <children>
-      <Pane fx:id="menuPane" prefHeight="70.0" prefWidth="850.0" style="-fx-border-color: ff00aa;">
+      <Pane fx:id="menuPane" prefHeight="70.0" prefWidth="850.0" stylesheets="@estilos/estilo.css">
          <children>
-            <Button fx:id="citasButton" layoutX="389.0" layoutY="23.0" mnemonicParsing="false" onAction="#citasButtonOnAction" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: transparent;" text="Mis Citas" />
-            <ImageView fitHeight="71.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="citasButton" layoutX="425.0" layoutY="17.0" mnemonicParsing="false" onAction="#citasButtonOnAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-text-fill: #bf186c;" text="Mis Citas" textFill="#bf186c">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <ImageView fitHeight="71.0" fitWidth="96.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/DailyDateFoto.png" />
                </image>
             </ImageView>
-            <Button fx:id="categoriaButton" layoutX="145.0" layoutY="23.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: transparent;" text="Categorías" />
-            <Button fx:id="perfilButton" layoutX="656.0" layoutY="23.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: transparent;" text="Perfil" />
+            <Button fx:id="categoriaButton" layoutX="203.0" layoutY="17.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="124.0" style="-fx-text-fill: #bf186c;" stylesheets="@estilos/estilo.css" text="Categorías" textFill="#bf186c">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Button fx:id="perfilButton" layoutX="638.0" layoutY="17.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-text-fill: #710038;" text="Perfil" textFill="#bf186c">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <AnchorPane fx:id="contenedorAnchorPane" layoutY="71.0" prefHeight="480.0" prefWidth="850.0" />
