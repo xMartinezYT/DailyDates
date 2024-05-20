@@ -5,13 +5,16 @@ import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import jdk.internal.icu.impl.NormalizerImpl;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.Month;
 
@@ -19,15 +22,30 @@ public class PaginaCalendario
 {
     @javafx.fxml.FXML
     private AnchorPane anchorPane;
-    @javafx.fxml.FXML
-    private Label calendarioLabel;
-    @javafx.fxml.FXML
-    private Button pepe;
 
     @Deprecated
-    public void initialize(Stage primaryStage) {
+    public void initialize() {
+
+// Crear instancia de CalendarView
+        CalendarView calendarView = new CalendarView();
+
+        // Crear un calendario y añadirlo a CalendarView
+        Calendar calendar = new Calendar("My Calendar");
+        CalendarSource calendarSource = new CalendarSource("My Calendars");
+        calendarSource.getCalendars().add(calendar);
+        calendarView.getCalendarSources().add(calendarSource);
+
+        // Botón para añadir evento
+        Button addButton = new Button("Añadir Evento");
+        addButton.setOnAction(e -> agregarEvento(calendar));
 
 
+
+        anchorPane.getChildren().add(calendarView);
+        anchorPane.setTopAnchor(calendarView, 0.0);
+        anchorPane.setRightAnchor(calendarView, 0.0);
+        anchorPane.setBottomAnchor(calendarView, 50.0);
+        anchorPane.setLeftAnchor(calendarView, 0.0);
 
     }
 
@@ -46,23 +64,8 @@ public class PaginaCalendario
         calendar.addEntry(entry);
     }
 
-    @javafx.fxml.FXML
-    public void sexo(ActionEvent actionEvent) {
-        // Crear instancia de CalendarView
-        CalendarView calendarView = new CalendarView();
 
-        // Crear un calendario y añadirlo a CalendarView
-        Calendar calendar = new Calendar("My Calendar");
-        CalendarSource calendarSource = new CalendarSource("My Calendars");
-        calendarSource.getCalendars().add(calendar);
-        calendarView.getCalendarSources().add(calendarSource);
 
-        // Botón para añadir evento
-        Button addButton = new Button("Añadir Evento");
-        addButton.setOnAction(e -> agregarEvento(calendar));
 
-        VBox root = new VBox();
-        root.getChildren().add(calendarView);
-        root.getChildren().add(addButton);
-    }
+
 }

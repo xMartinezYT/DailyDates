@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="245.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.InfoCitas">
    <children>
       <Label fx:id="nombreLabel" layoutX="26.0" layoutY="30.0" text="Nombre: ">
@@ -35,7 +34,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="pedidoLabel" layoutX="31.0" layoutY="194.0" prefHeight="35.0" prefWidth="53.0" text="Pedido: (opcional)" wrapText="true">
+      <Label fx:id="pedidoLabel" layoutX="31.0" layoutY="194.0" prefHeight="35.0" prefWidth="62.0" text="Pedido: (opcional)" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
