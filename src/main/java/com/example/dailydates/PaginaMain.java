@@ -11,11 +11,10 @@ import java.util.ResourceBundle;
 
 public class PaginaMain implements Initializable
 {
-    @javafx.fxml.FXML
-    private AnchorPane anchorPaneMain;
-    @javafx.fxml.FXML
-    private Pane panePrincipal;
 
+
+    @javafx.fxml.FXML
+    private AnchorPane AnchorPaneMain;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -24,7 +23,7 @@ public class PaginaMain implements Initializable
         AnchorPane pane = null;
         try {
             pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
-            this.anchorPaneMain.getChildren().setAll(pane);
+            this.AnchorPaneMain.getChildren().setAll(pane);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
