@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
 
 
-<AnchorPane fx:id="mainAnchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalEmpresario">
+<AnchorPane fx:id="anchorpaneMainEmpresario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalEmpresario">
    <children>
-      <Label fx:id="calendarioLabel" alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;" text="Calendario">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
+      <Pane fx:id="menuPane" prefHeight="70.0" prefWidth="850.0" style="-fx-border-color: ff00aa;">
+         <children>
+            <Button fx:id="establecimientosButton" layoutX="371.0" layoutY="23.0" mnemonicParsing="false" onAction="#establecimientosButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Establecimientos" />
+            <ImageView fitHeight="71.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/DailyDateFoto.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="calendarioButton" layoutX="145.0" layoutY="23.0" mnemonicParsing="false" onAction="#calendarioButtonOnAction" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: transparent;" text="Calendario" />
+            <Button fx:id="perfilButton" layoutX="657.0" layoutY="23.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: transparent;" text="Perfil" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="contenedorAnchorPane" layoutY="70.0" prefHeight="480.0" prefWidth="850.0" />
    </children>
 </AnchorPane>

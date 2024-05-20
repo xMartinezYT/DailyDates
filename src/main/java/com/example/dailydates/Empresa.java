@@ -2,11 +2,13 @@ package com.example.dailydates;
 
 import javafx.scene.image.Image;
 
+import java.util.ArrayList;
+
 public class Empresa {
 
     private int id_empresa;
     private int id_empresario;
-    private Categoria categoria;
+    private ArrayList<Categoria> categorias;
     private String nombre;
     private String CIF;
     private String horario;
@@ -15,16 +17,16 @@ public class Empresa {
     private Image foto_empresa;
 
 
-    public Empresa(int id_empresa, int id_empresario, Categoria categoria, String nombre, String CIF, String horario, String ciudad, String direccion, Image fotoEmpresa) {
+    public Empresa(int id_empresa, int id_empresario, ArrayList<Categoria> categorias, String nombre, String CIF, String horario, String ciudad, String direccion, Image foto_empresa) {
         this.id_empresa = id_empresa;
         this.id_empresario = id_empresario;
-        this.categoria = categoria;
+        this.categorias = categorias;
         this.nombre = nombre;
         this.CIF = CIF;
         this.horario = horario;
         this.ciudad = ciudad;
         this.direccion = direccion;
-        foto_empresa = fotoEmpresa;
+        this.foto_empresa = foto_empresa;
     }
 
 
@@ -44,12 +46,12 @@ public class Empresa {
         this.id_empresario = id_empresario;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public ArrayList<Categoria> getCategorias() {
+        return categorias;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setCategorias(ArrayList<Categoria> categorias) {
+        this.categorias = categorias;
     }
 
     public String getNombre() {
@@ -91,6 +93,7 @@ public class Empresa {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
     public Image getFoto_empresa() {
         return foto_empresa;
     }
@@ -102,12 +105,15 @@ public class Empresa {
     @Override
     public String toString() {
         return "Empresa{" +
-                "categoria=" + categoria +
+                "id_empresa=" + id_empresa +
+                ", id_empresario=" + id_empresario +
+                ", categorias=" + categorias +
                 ", nombre='" + nombre + '\'' +
                 ", CIF='" + CIF + '\'' +
                 ", horario='" + horario + '\'' +
                 ", ciudad='" + ciudad + '\'' +
                 ", direccion='" + direccion + '\'' +
+                ", foto_empresa=" + foto_empresa +
                 '}';
     }
 }
