@@ -14,13 +14,9 @@ import java.io.IOException;
 public class Login {
 
     @FXML
-    private Label contraseñaLabel;
-    @FXML
     private TextField emailTextField;
     @FXML
     private AnchorPane anchorPanePrincipal;
-    @FXML
-    private Label correoLabel;
     @FXML
     private TextField contraseñaTextField;
     @FXML
@@ -31,6 +27,8 @@ public class Login {
     private ImageView logoImage;
     @FXML
     private Button bienvenidoLabel;
+    @FXML
+    private AnchorPane AnchorPaneDegradado;
 
     @FXML
     public void accederButtonOnAction(ActionEvent actionEvent) {

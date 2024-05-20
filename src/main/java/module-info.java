@@ -3,6 +3,7 @@ module com.example.dailydates {
     requires javafx.fxml;
     requires java.sql;
     requires mysql.connector.j;
+    requires com.calendarfx.view;
 
 
     opens com.example.dailydates to javafx.fxml;
