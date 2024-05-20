@@ -12,30 +12,25 @@
    <children>
       <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="540.0" prefWidth="838.0">
          <children>
-            <Label layoutX="343.0" layoutY="153.0" text="Inicio de Sesión:" textFill="#ff00aa">
+            <Label layoutX="527.0" layoutY="182.0" text="Inicio de Sesión:" textFill="#ff00aa">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="correoLabel" layoutX="194.0" layoutY="235.0" text="Correo:">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="contraseñaLabel" layoutX="194.0" layoutY="290.0" text="Contraseña:">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="emailTextField" layoutX="351.0" layoutY="235.0" promptText="email" />
-            <TextField fx:id="contraseñaTextField" layoutX="351.0" layoutY="290.0" promptText="contraseña" />
-            <Button fx:id="accederButton" layoutX="288.0" layoutY="393.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="25.0" prefWidth="97.0" text="Acceder" />
-            <Button fx:id="crearCuentaButton" layoutX="460.0" layoutY="393.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
-            <ImageView fx:id="logoImage" fitHeight="96.0" fitWidth="123.0" layoutX="358.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/DailyDateFoto.png" />
-               </image></ImageView>
-            <Button fx:id="bienvenidoLabel" layoutX="345.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" underline="true" />
+            <TextField fx:id="emailTextField" layoutX="529.0" layoutY="252.0" promptText="email" />
+            <TextField fx:id="contraseñaTextField" layoutX="529.0" layoutY="319.0" promptText="contraseña" />
+            <Button fx:id="accederButton" layoutX="507.0" layoutY="391.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="25.0" prefWidth="97.0" text="Acceder" />
+            <Button fx:id="crearCuentaButton" layoutX="611.0" layoutY="391.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
+            <Button fx:id="bienvenidoLabel" layoutX="529.0" layoutY="212.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" underline="true" />
+            <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutY="-1.0" prefHeight="540.0" prefWidth="337.0">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="191.0" layoutX="64.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/DailyDateFoto.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

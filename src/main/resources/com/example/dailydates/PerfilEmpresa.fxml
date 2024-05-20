@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -37,31 +36,12 @@
             <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="273.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="36.0" layoutY="273.0" text="Tel :" />
             <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="456.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../OneDrive/Escritorio/Fotos%20SceneBuilder/Editor.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="456.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../OneDrive/Escritorio/Fotos%20SceneBuilder/Editor.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="456.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../OneDrive/Escritorio/Fotos%20SceneBuilder/Editor.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="192.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../OneDrive/Escritorio/Fotos%20SceneBuilder/Editor.png" />
-               </image>
             </ImageView>
             <Label layoutX="411.0" layoutY="240.0" text="de">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <TextField layoutX="59.0" layoutY="269.0" prefHeight="26.0" prefWidth="138.0" />
          </children>
       </AnchorPane>
    </children>
