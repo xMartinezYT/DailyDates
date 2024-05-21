@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -52,10 +53,12 @@ public class FormularioEmpresa
     @javafx.fxml.FXML
     public void initialize() {
 
+
     }
 
     @javafx.fxml.FXML
     public void cancelarButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

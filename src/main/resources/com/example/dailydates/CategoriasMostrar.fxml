@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="191.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.CategoriasMostrar">
+   <children>
+      <Label fx:id="anyadirNombre" alignment="TOP_LEFT" layoutX="58.0" layoutY="36.0" text="Nombre Empresa" />
+      <Label fx:id="anyadirHorario" alignment="TOP_LEFT" layoutX="60.0" layoutY="79.0" text="Horario Empresa" />
+      <Label fx:id="anyadirCiudad" alignment="TOP_LEFT" layoutX="59.0" layoutY="116.0" text="Ciudad Empresa" />
+      <Label fx:id="anyadirDireccion" alignment="TOP_LEFT" layoutX="59.0" layoutY="154.0" text="Direccion Empresa" />
+      <Pane fx:id="imagenPane" layoutX="217.0" layoutY="22.0" prefHeight="149.0" prefWidth="119.0">
+         <children>
+            <ImageView fx:id="imagenEmpresa" fitHeight="151.0" fitWidth="130.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="disenyoPane" layoutY="17.0" prefHeight="0.0" prefWidth="368.0" style="-fx-border-color: black;" />
+   </children>
+</AnchorPane>
