@@ -101,5 +101,10 @@
             <ImageView fx:id="negocio3Image" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
+      <Button fx:id="guardarCambiosButton" layoutX="639.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" text="Guardar cambios">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
