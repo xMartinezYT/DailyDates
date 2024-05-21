@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="245.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.InfoCitas">
+<AnchorPane fx:id="anchorPane" prefHeight="245.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.FormularioEmpresa">
    <children>
       <Label fx:id="nombreLabel" layoutX="26.0" layoutY="30.0" text="Nombre: ">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="fechaLabel" layoutX="28.0" layoutY="63.0" text="Fecha:">
+      <Label fx:id="categoriaLabel" layoutX="28.0" layoutY="63.0" text="Categoría:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="horaLabel" layoutX="30.0" layoutY="97.0" text="Hora:">
+      <Label fx:id="horarioLabel" layoutX="30.0" layoutY="97.0" text="Horario:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -29,22 +31,16 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="ciudadLabel" layoutX="31.0" layoutY="162.0" text="Ciudad:">
+      <Label fx:id="ciudadLabel" layoutX="32.0" layoutY="162.0" text="Ciudad:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="pedidoLabel" layoutX="31.0" layoutY="194.0" prefHeight="35.0" prefWidth="62.0" text="Pedido: (opcional)" wrapText="true">
+      <Label fx:id="cifLabel" layoutX="32.0" layoutY="195.0" prefHeight="17.0" prefWidth="43.0" text="CIF" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="anyadirNombreLabel" layoutX="118.0" layoutY="30.0" text="Label" />
-      <Label fx:id="anyadirFechaLabel" layoutX="118.0" layoutY="63.0" text="Label" />
-      <Label fx:id="anyadirHoraLabel" layoutX="118.0" layoutY="97.0" text="Label" />
-      <Label fx:id="anyadirDireccionLabel" layoutX="118.0" layoutY="129.0" text="Label" />
-      <Label fx:id="anyadirCiudadLabel" layoutX="118.0" layoutY="162.0" text="Label" />
-      <Label fx:id="anyadirPedidoLabel" layoutX="118.0" layoutY="203.0" text="Label" />
       <Pane fx:id="fotoPane" layoutX="261.0" layoutY="26.0" prefHeight="142.0" prefWidth="170.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="137.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
@@ -52,5 +48,11 @@
       </Pane>
       <Button fx:id="cancelarButton" layoutX="268.0" layoutY="191.0" mnemonicParsing="false" onAction="#cancelarButtonOnAction" text="Cancelar" />
       <Button fx:id="modificarButton" layoutX="358.0" layoutY="191.0" mnemonicParsing="false" onAction="#modificarButtonOnAction" text="Modificar" />
+      <ChoiceBox fx:id="categoriaChoiceBox" layoutX="118.0" layoutY="59.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField fx:id="anyadirNombre" layoutX="118.0" layoutY="26.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField fx:id="anyadirHorario" layoutX="118.0" layoutY="93.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField fx:id="anyadirDireccion" layoutX="118.0" layoutY="125.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField fx:id="anyadirCiudad" layoutX="118.0" layoutY="158.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField fx:id="anyadirCif" layoutX="118.0" layoutY="191.0" prefHeight="25.0" prefWidth="82.0" />
    </children>
 </AnchorPane>

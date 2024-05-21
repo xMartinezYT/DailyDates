@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="anchorPaneMain" prefHeight="430.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Registrarse">
+<AnchorPane fx:id="anchorPaneMain" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Registrarse">
    <children>
-      <Pane layoutX="22.0" layoutY="13.0" prefHeight="374.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
+      <Pane layoutX="86.0" layoutY="61.0" prefHeight="429.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
          <children>
             <Button fx:id="registrarseUsuarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseUsuarioButtonOnAction" text="Registrarse" />
             <Label fx:id="usuarioDescripcionLabel" layoutX="31.0" layoutY="244.0" prefHeight="68.0" prefWidth="210.0" text="Pide citas rápidamente en los establecimientos cercanos, ¡Gestiona tu tiempo!" textAlignment="CENTER" wrapText="true" />
@@ -27,7 +26,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="308.0" layoutY="13.0" prefHeight="374.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
+      <Pane layoutX="480.0" layoutY="61.0" prefHeight="429.0" prefWidth="272.0" style="-fx-border-color: ff00aa; -fx-border-style: Double;">
          <children>
             <ImageView fx:id="empresariaImage" fitHeight="171.0" fitWidth="220.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -43,5 +42,10 @@
             </Label>
          </children>
       </Pane>
+      <Button fx:id="atrasButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" style="-fx-background-color: transparent;" text="&lt;">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

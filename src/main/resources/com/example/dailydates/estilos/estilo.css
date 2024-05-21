@@ -1,3 +1,20 @@
-.AnchorPaneDegradado{
-    -fx-background-color: linear-gradient(to left,#ff00aa, #df32rt);
+#AnchorPaneDegradado {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff00aa, white);
 }
+#menuPane{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, white);
+}
+
+#categoriaButton {
+     -fx-background-color: transparent; /* Fondo transparente */
+     -fx-color: #bf186c;
+
+
+ }
+ #citasButton {
+     -fx-background-color: transparent; /* Fondo transparente */
+     -fx-color: #bf186c;
+
+
+ }
+
