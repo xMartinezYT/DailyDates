@@ -33,7 +33,8 @@ public class UsuarioModel extends Conexion{
         return lista;
     }
 
-    public void anyadir_usuario(Usuario u) {
+    public boolean anyadir_usuario(Usuario u) {
+        boolean resultado = false;
         try {
             String sql = "insert into usuario values(?,?,?,?,?,?)";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -46,27 +47,31 @@ public class UsuarioModel extends Conexion{
             File f = new File(String.valueOf(u.getFoto_perfil()));
             ps.setBinaryStream(6, fis, (int) f.length());
             ps.execute();
+            resultado = true;
 
         } catch (SQLException | FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        return resultado;
     }
 
-    public void eliminar_usuario(Usuario u){
-
+    public boolean eliminar_usuario(Usuario u){
+        boolean resultado = false;
         try {
             String sql = "delete from usuario where id_Usuario = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setInt(1,u.getId());
             ps.execute();
+            resultado = true;
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return resultado;
     }
 
-   public void mod_usuario(Usuario u){
-
+   public boolean mod_usuario(Usuario u){
+        boolean resultado = false;
        try {
            String sql = "update usuario set nombre = ?, apellidos = ?, gmail = ?, contrasenya = ?, telefono = ?, foto_perfil = ? where id=?";
            PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -81,10 +86,12 @@ public class UsuarioModel extends Conexion{
            ps.setBinaryStream(6, fis, (int) f.length());
            ps.setInt(7,u.getId());
            ps.execute();
+           resultado = true;
 
        } catch (SQLException | FileNotFoundException e) {
            throw new RuntimeException(e);
        }
+       return resultado;
    }
 
    public boolean validar_usuario(String gmail, String contrasenya){
