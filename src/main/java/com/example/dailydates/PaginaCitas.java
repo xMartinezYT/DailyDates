@@ -29,10 +29,7 @@ public class PaginaCitas
     @javafx.fxml.FXML
     public void initialize() {
 
-
         try {
-
-
             for (int i = 0; i < 40; i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("citasmostrar.fxml"));
@@ -41,8 +38,6 @@ public class PaginaCitas
                 gridPane.add(anchor,1,i);
                 GridPane.setMargin(anchor,new Insets(2));
             }
-
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
