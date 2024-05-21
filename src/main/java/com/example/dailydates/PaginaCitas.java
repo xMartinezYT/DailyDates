@@ -30,7 +30,7 @@ public class PaginaCitas
     public void initialize() {
 
         try {
-            for (int i = 0; i < 40; i++) {
+            for (int i = 1; i < 40; i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("citasmostrar.fxml"));
                 AnchorPane anchor = fxmlLoader.load();

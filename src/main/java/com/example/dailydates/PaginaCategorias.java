@@ -1,9 +1,12 @@
 package com.example.dailydates;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class PaginaCategorias
 {
@@ -60,6 +63,12 @@ public class PaginaCategorias
 
     @javafx.fxml.FXML
     public void extraescolaresButtonOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
+            this.categoriasAnchorPane.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
