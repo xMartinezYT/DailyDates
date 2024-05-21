@@ -60,7 +60,6 @@ public class CitasModel extends Conexion{
 
     public Citas buscar_cita(LocalDate fecha, Time hora){
         Citas c = null;
-
         try {
             String sql = "Select * from citas where fecha = ?, hora = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
