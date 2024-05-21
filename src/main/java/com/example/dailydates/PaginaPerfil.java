@@ -1,5 +1,6 @@
 package com.example.dailydates;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -61,9 +62,16 @@ public class PaginaPerfil
     private Pane fotoPane11;
     @javafx.fxml.FXML
     private ImageView negocio2Image;
+    @javafx.fxml.FXML
+    private Button guardarCambiosButton;
 
     @javafx.fxml.FXML
     public void initialize() {
 
         nombreTextField.setText("Pepe");
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+    }
+}
