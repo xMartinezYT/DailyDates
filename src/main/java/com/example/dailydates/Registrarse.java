@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
@@ -31,6 +32,12 @@ public class Registrarse
     private AnchorPane anchorPaneMain;
     @javafx.fxml.FXML
     private Button atrasButton;
+    @javafx.fxml.FXML
+    private Pane disenyoPane;
+    @javafx.fxml.FXML
+    private Pane registrarseEmpresarioPane;
+    @javafx.fxml.FXML
+    private Pane registrarseUsuarioPane;
 
     @javafx.fxml.FXML
     public void initialize() {
