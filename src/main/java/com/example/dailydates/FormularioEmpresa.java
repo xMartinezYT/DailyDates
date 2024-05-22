@@ -22,8 +22,6 @@ public class FormularioEmpresa
     @javafx.fxml.FXML
     private ChoiceBox categoriaChoiceBox;
     @javafx.fxml.FXML
-    private Button modificarButton;
-    @javafx.fxml.FXML
     private Label direccionLabel;
     @javafx.fxml.FXML
     private Label categoriaLabel;
@@ -49,11 +47,11 @@ public class FormularioEmpresa
     private TextField anyadirCif;
     @javafx.fxml.FXML
     private TextField anyadirHorario;
+    @javafx.fxml.FXML
+    private Button guardarButton;
 
     @javafx.fxml.FXML
     public void initialize() {
-
-
     }
 
     @javafx.fxml.FXML
@@ -61,7 +59,11 @@ public class FormularioEmpresa
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void modificarButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void guardarButtonOnAction(ActionEvent actionEvent) {
     }
 }
