@@ -107,9 +107,4 @@ public class EmpresarioModel extends Conexion{
         }
         return false;
     }
-
-
-
-
-
 }
