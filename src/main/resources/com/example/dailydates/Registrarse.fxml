@@ -20,7 +20,7 @@
                   <Image url="@img/HombreFruteriaMiraMovil.png" />
                </image>
             </ImageView>
-            <Label fx:id="convierteteEnUsuarioLabel" layoutX="46.0" layoutY="203.0" text="Conviertete en Usuario">
+            <Label fx:id="convierteteEnUsuarioLabel" layoutX="39.0" layoutY="201.0" text="Conviertete en Usuario">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -36,7 +36,7 @@
             </ImageView>
             <Button fx:id="registrarseEmpresarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseEmpresarioButtonOnAction" stylesheets="@estilos/estilo.css" text="Registrarse" />
             <Label fx:id="empresarioDescripcionLabel" layoutX="31.0" layoutY="243.0" prefHeight="68.0" prefWidth="210.0" text="Gestiona las citas de tu establecimiento y haz conocer tu empresa en la ciudad" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="convierteteEnEmpresarioLabel" layoutX="31.0" layoutY="204.0" text="Conviertete en Empresario">
+            <Label fx:id="convierteteEnEmpresarioLabel" layoutX="24.0" layoutY="201.0" text="Conviertete en Empresario">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

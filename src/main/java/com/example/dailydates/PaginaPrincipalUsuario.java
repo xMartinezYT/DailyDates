@@ -41,6 +41,10 @@ public class PaginaPrincipalUsuario {
     public void initialize() {
 
 
+        //Codigo no para de hacer la animación, ARREGLAR//
+
+
+
         // Animación de degradado del color del texto
         Timeline categoriaTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(categoriaButton.textFillProperty(), Color.WHITE)),
