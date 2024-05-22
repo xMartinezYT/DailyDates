@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -7,7 +8,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.BotonesCategorias">
    <children>
@@ -28,5 +28,10 @@
             <Font size="22.0" />
          </font>
       </Label>
+      <Button fx:id="atrasButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" style="-fx-background-color: transparent;" text="&lt;">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -52,6 +52,7 @@ public class InfoCitas
 
     @javafx.fxml.FXML
     public void cancelarButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

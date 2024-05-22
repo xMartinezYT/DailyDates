@@ -17,28 +17,28 @@
       </Label>
       <Label fx:id="nombreUsuarioLabel" layoutX="192.0" layoutY="149.0" text="Nombre:">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TextField fx:id="nombreTextField" layoutX="335.0" layoutY="145.0" prefHeight="27.0" prefWidth="149.0" promptText="Nombre" />
       <Label fx:id="apellidosLabel" layoutX="192.0" layoutY="193.0" prefHeight="27.0" prefWidth="84.0" text="Apellidos:">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="contraseñaLabel" layoutX="192.0" layoutY="237.0" text="Contraseña:">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="gmailLabel" layoutX="192.0" layoutY="283.0" text="Gmail:">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="telefonoLabel" layoutX="192.0" layoutY="331.0" text="Nº Teléfono:">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TextField fx:id="apellidosTextField" layoutX="335.0" layoutY="189.0" prefHeight="27.0" prefWidth="149.0" promptText="Apellido1, Apellido2" />
