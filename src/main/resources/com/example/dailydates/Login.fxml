@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,34 +9,29 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Login">
    <children>
-      <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="540.0" prefWidth="838.0">
+      <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="600.0" prefWidth="838.0">
          <children>
-            <Label layoutX="452.0" layoutY="157.0" prefHeight="53.0" prefWidth="280.0" text="Inicio de Sesión" textFill="#ff00aa">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Label>
-            <TextField fx:id="emailTextField" layoutX="505.0" layoutY="250.0" prefHeight="39.0" prefWidth="173.0" promptText="email">
+            <TextField fx:id="emailTextField" layoutX="505.0" layoutY="252.0" prefHeight="39.0" prefWidth="173.0" promptText="email">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <TextField fx:id="contraseñaTextField" layoutX="505.0" layoutY="308.0" prefHeight="39.0" prefWidth="173.0" promptText="contraseña">
+            <TextField fx:id="contraseñaTextField" layoutX="505.0" layoutY="324.0" prefHeight="39.0" prefWidth="173.0" promptText="contraseña">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Button fx:id="accederButton" layoutX="439.0" layoutY="377.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="120.0" text="Acceder" />
-            <Button fx:id="crearCuentaButton" layoutX="624.0" layoutY="384.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
-            <Button fx:id="bienvenidoLabel" layoutX="502.0" layoutY="194.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" underline="true" />
-            <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-6.0" layoutY="-11.0" prefHeight="565.0" prefWidth="343.0" stylesheets="@estilos/estilo.css">
+            <Button fx:id="accederButton" layoutX="439.0" layoutY="405.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="120.0" text="Acceder" />
+            <Button fx:id="crearCuentaButton" layoutX="624.0" layoutY="412.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
+            <Button fx:id="bienvenidoLabel" layoutX="502.0" layoutY="168.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" underline="true" />
+            <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-6.0" layoutY="-11.0" prefHeight="614.0" prefWidth="343.0" stylesheets="@estilos/estilo.css">
                <children>
-                  <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="230.0" layoutX="54.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="230.0" layoutX="54.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/DailydatesBlanco.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="125.0" fitWidth="153.0" layoutX="516.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="179.0" fitWidth="203.0" layoutX="491.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/User.png" />
                </image>
