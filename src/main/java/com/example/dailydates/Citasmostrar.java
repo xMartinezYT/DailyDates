@@ -31,18 +31,15 @@ public class Citasmostrar
 
     @javafx.fxml.FXML
     public void infoclick(ActionEvent actionEvent) {
-
-
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InfoCitas.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }
