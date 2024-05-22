@@ -11,8 +11,6 @@ public class InfoCitas
 {
 
     @javafx.fxml.FXML
-    private Label nombreLabel;
-    @javafx.fxml.FXML
     private Label anyadirCiudadLabel;
     @javafx.fxml.FXML
     private Label direccionLabel;
@@ -31,17 +29,11 @@ public class InfoCitas
     @javafx.fxml.FXML
     private Button modificarButton;
     @javafx.fxml.FXML
-    private Button cancelarButton;
-    @javafx.fxml.FXML
     private Label anyadirPedidoLabel;
-    @javafx.fxml.FXML
-    private Label horaLabel;
     @javafx.fxml.FXML
     private Label anyadirFechaLabel;
     @javafx.fxml.FXML
     private Label anyadirHoraLabel;
-    @javafx.fxml.FXML
-    private Label fechaLabel;
     @javafx.fxml.FXML
     private Label pedidoLabel;
 
@@ -50,7 +42,7 @@ public class InfoCitas
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void cancelarButtonOnAction(ActionEvent actionEvent) {
 
     }
