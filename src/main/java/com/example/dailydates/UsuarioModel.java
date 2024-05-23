@@ -36,7 +36,7 @@ public class UsuarioModel extends Conexion{
     public boolean anyadir_usuario(Usuario u) {
         boolean resultado = false;
         try {
-            String sql = "insert into usuario values(?,?,?,?,?,?)";
+            String sql = "insert into usuario (nombre,apellidos,gmail,contrasenya,telefono,foto_perfil) values(?,?,?,?,?,?)";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, u.getNombre());
             ps.setString(2, u.getApellidos());
