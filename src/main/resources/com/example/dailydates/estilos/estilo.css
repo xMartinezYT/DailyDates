@@ -17,4 +17,91 @@
 
 
  }
+#registrarseUsuarioPane {
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 15;
 
+}
+#registrarseUsuarioPane: hover{
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 15;
+    -fx-border-width: 5;
+    -fx-background-color: fff1ff;
+
+}
+#registrarseEmpresarioPane {
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 15;
+
+}
+#registrarseEmpresarioPane: hover{
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 15;
+    -fx-border-width: 5;
+    -fx-background-color: fff1ff;
+}
+#registrarseUsuarioButton {
+    -fx-color:pink;
+
+
+}
+#registrarseUsuarioButton: hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
+
+}
+#registrarseEmpresarioButton {
+     -fx-color:pink;
+
+}
+#registrarseEmpresarioButton: hover {
+ -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, hotpink);
+
+}
+#atrasButton{
+    -fx-background-color: transparent;
+
+}
+#atrasButton: hover {
+    -fx-background-color: transparent;
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-background-color: fff1ff;
+}
+#disenyoPane {
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+
+}
+
+#calendarioButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+}
+#perfilButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+
+}
+#establecimientosButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+}
+
+#categoriaButton {
+
+    -fx-background-color:transparent;
+    -fx-text-fill:#bf186c;
+
+}
+
+#citasButton {
+
+    -fx-background-color:transparent;
+    -fx-text-fill:#bf186c;
+
+}
