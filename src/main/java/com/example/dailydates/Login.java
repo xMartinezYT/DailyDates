@@ -32,6 +32,8 @@ public class Login {
     private PasswordField contrasenyaField;
     @FXML
     private CheckBox verContraseña;
+    @FXML
+    private ImageView pepe;
 
     @FXML
     public void accederButtonOnAction(ActionEvent actionEvent) {
@@ -81,7 +83,6 @@ public class Login {
             mostrarContrasenyaField.setVisible(false);
             contrasenyaField.setVisible(true);
         }
-
 
     }
 }

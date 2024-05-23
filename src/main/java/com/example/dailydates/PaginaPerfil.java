@@ -77,11 +77,17 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     public void initialize() {
 
-        nombreTextField.setText("Pepe");
+        UsuarioModel um = new UsuarioModel();
+
+        for(Usuario u : um.ListarUsuarios()) {
+            perfilImage.setImage(u.getFoto_perfil());
+        }
+
     }
 
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

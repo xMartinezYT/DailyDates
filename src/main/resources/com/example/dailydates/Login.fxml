@@ -29,7 +29,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="195.0" fitWidth="201.0" layoutX="491.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="pepe" fitHeight="195.0" fitWidth="201.0" layoutX="491.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/User.png" />
                </image>
