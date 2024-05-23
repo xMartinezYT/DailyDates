@@ -12,27 +12,27 @@
 
 <AnchorPane fx:id="anchorPaneMain" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
    <children>
-      <Label fx:id="introducirDatosLabel" layoutX="60.0" layoutY="58.0" text="Introduzca sus datos:" underline="true">
+      <Label fx:id="introducirDatosLabel" layoutX="60.0" layoutY="58.0" text="Introduzca sus datos" underline="true">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="193.0" layoutY="190.0" text="Nombre:">
+      <Label layoutX="193.0" layoutY="143.0" text="Nombre:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="195.0" layoutY="240.0" text="Apellidos:">
+      <Label layoutX="194.0" layoutY="203.0" text="Apellidos:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="194.0" layoutY="285.0" prefHeight="25.0" prefWidth="94.0" text="Contraseña:">
+      <Label layoutX="194.0" layoutY="263.0" prefHeight="25.0" prefWidth="94.0" text="Contraseña:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="193.0" layoutY="328.0" text="Gmail:">
+      <Label layoutX="193.0" layoutY="316.0" text="Gmail:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -42,18 +42,18 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTextField" layoutX="342.0" layoutY="190.0" promptText="Nombre" />
-      <TextField fx:id="apellidosTextField" layoutX="342.0" layoutY="240.0" promptText="Apellido1, Apellido2" />
-      <TextField fx:id="contraseñaTextField" layoutX="342.0" layoutY="285.0" />
-      <TextField fx:id="gmailTextField" layoutX="342.0" layoutY="328.0" promptText="ejemplo@gmail.com" />
-      <TextField fx:id="telefonoTextField" layoutX="342.0" layoutY="372.0" promptText="123123123" />
-      <Pane fx:id="imagenPane" layoutX="603.0" layoutY="191.0" prefHeight="208.0" prefWidth="149.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+      <TextField fx:id="nombreTextField" layoutX="342.0" layoutY="143.0" promptText="Nombre" />
+      <TextField fx:id="apellidosTextField" layoutX="342.0" layoutY="203.0" promptText="Apellido1, Apellido2" />
+      <TextField fx:id="contraseñaTextField" layoutX="342.0" layoutY="263.0" />
+      <TextField fx:id="gmailTextField" layoutX="342.0" layoutY="316.0" promptText="ejemplo@gmail.com" />
+      <TextField fx:id="telefonoTextField" layoutX="343.0" layoutY="371.0" promptText="123123123" />
+      <Pane fx:id="imagenPane" layoutX="598.0" layoutY="171.0" prefHeight="208.0" prefWidth="149.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button fx:id="cargarImagenButton" layoutX="28.0" layoutY="150.0" mnemonicParsing="false" onAction="#cargarImagenButtonOnAction" text="Cargar imagen" />
+            <Button id="buttonEstilo" fx:id="cargarImagenButton" layoutX="28.0" layoutY="150.0" mnemonicParsing="false" onAction="#cargarImagenButtonOnAction" stylesheets="@estilos/estilo.css" text="Cargar imagen" />
             <ImageView fx:id="fotoImage" fitHeight="124.0" fitWidth="120.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button fx:id="crearButton" layoutX="378.0" layoutY="421.0" mnemonicParsing="false" onAction="#crearButtonOnAction" text="Crear cuenta">
+      <Button id="buttonEstilo" fx:id="crearButton" layoutX="378.0" layoutY="421.0" mnemonicParsing="false" onAction="#crearButtonOnAction" stylesheets="@estilos/estilo.css" text="Crear cuenta">
          <effect>
             <DisplacementMap>
                <mapData>
@@ -62,5 +62,10 @@
             </DisplacementMap>
          </effect></Button>
       <Button fx:id="pruebaButton" layoutX="391.0" layoutY="490.0" mnemonicParsing="false" onAction="#pruebaButtonOnAction" text="Button" />
+      <Button id="atrasButton" fx:id="atrasButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" prefHeight="47.0" prefWidth="46.0" stylesheets="@estilos/estilo.css" text="&lt;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -41,7 +41,7 @@
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="137.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button fx:id="modificarButton" layoutX="335.0" layoutY="176.0" mnemonicParsing="false" onAction="#modificarButtonOnAction" text="Modificar" />
+      <Button id="buttonEstilo" fx:id="modificarButton" layoutX="335.0" layoutY="176.0" mnemonicParsing="false" onAction="#modificarButtonOnAction" stylesheets="@estilos/estilo.css" text="Modificar" />
       <Pane layoutX="14.0" layoutY="57.0" prefHeight="2.0" prefWidth="232.0" style="-fx-border-color: black;" />
    </children>
 </AnchorPane>

@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="223.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.ModificarCitas">
    <children>
       <Label fx:id="pedidoLabel" layoutX="276.0" layoutY="9.0" prefHeight="66.0" prefWidth="174.0" text="Pedido: (opcional)" wrapText="true">
@@ -29,6 +28,6 @@
       <TextArea fx:id="pedidoTextArea" layoutX="297.0" layoutY="68.0" prefHeight="104.0" prefWidth="144.0" promptText="Editar" />
       <DatePicker fx:id="fechaDatePicker" layoutX="58.0" layoutY="78.0" promptText="Esacoja la fecha" />
       <Spinner fx:id="horaSpinner" layoutX="58.0" layoutY="171.0" prefHeight="25.0" prefWidth="174.0" />
-      <Button fx:id="guardarButton" layoutX="334.0" layoutY="184.0" mnemonicParsing="false" onAction="#guardarButtonOnAction" text="Guardar" />
+      <Button id="buttonEstilo" fx:id="guardarButton" layoutX="334.0" layoutY="184.0" mnemonicParsing="false" onAction="#guardarButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar" />
    </children>
 </AnchorPane>

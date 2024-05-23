@@ -13,7 +13,7 @@
       <Pane fx:id="disenyoPane" layoutX="17.0" layoutY="17.0" prefHeight="518.0" prefWidth="817.0" stylesheets="@estilos/estilo.css" />
       <Pane fx:id="registrarseUsuarioPane" layoutX="86.0" layoutY="61.0" prefHeight="429.0" prefWidth="272.0" stylesheets="@estilos/estilo.css">
          <children>
-            <Button fx:id="registrarseUsuarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseUsuarioButtonOnAction" stylesheets="@estilos/estilo.css" text="Registrarse" />
+            <Button id="buttonEstilo" fx:id="registrarseUsuarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseUsuarioButtonOnAction" stylesheets="@estilos/estilo.css" text="Registrarse" />
             <Label fx:id="usuarioDescripcionLabel" layoutX="31.0" layoutY="244.0" prefHeight="68.0" prefWidth="210.0" text="Pide citas rápidamente en los establecimientos cercanos, ¡Gestiona tu tiempo!" textAlignment="CENTER" wrapText="true" />
             <ImageView fx:id="usuarioImage" fitHeight="193.0" fitWidth="215.0" layoutX="29.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -34,7 +34,7 @@
                   <Image url="@img/EmpresariaMovilConTraje.png" />
                </image>
             </ImageView>
-            <Button fx:id="registrarseEmpresarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseEmpresarioButtonOnAction" stylesheets="@estilos/estilo.css" text="Registrarse" />
+            <Button id="buttonEstilo" fx:id="registrarseEmpresarioButton" layoutX="99.0" layoutY="329.0" mnemonicParsing="false" onAction="#registrarseEmpresarioButtonOnAction" stylesheets="@estilos/estilo.css" text="Registrarse" />
             <Label fx:id="empresarioDescripcionLabel" layoutX="31.0" layoutY="243.0" prefHeight="68.0" prefWidth="210.0" text="Gestiona las citas de tu establecimiento y haz conocer tu empresa en la ciudad" textAlignment="CENTER" wrapText="true" />
             <Label fx:id="convierteteEnEmpresarioLabel" layoutX="24.0" layoutY="201.0" text="Conviertete en Empresario">
                <font>

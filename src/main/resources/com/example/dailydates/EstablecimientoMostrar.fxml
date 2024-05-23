@@ -22,7 +22,7 @@
       <Label fx:id="horarioLabel" layoutX="77.0" layoutY="168.0" prefHeight="17.0" prefWidth="54.0" text="Horario:" />
       <Label fx:id="ciudadLabel" layoutX="77.0" layoutY="202.0" prefHeight="17.0" prefWidth="54.0" text="Ciudad:" />
       <Label fx:id="direccionLabel" layoutX="77.0" layoutY="238.0" prefHeight="17.0" prefWidth="54.0" text="Dirección:" />
-      <Button fx:id="eliminarButton" layoutX="372.0" layoutY="247.0" mnemonicParsing="false" onAction="#eliminarButtonOnAction" text="Eliminar" />
+      <Button id="buttonEstilo" fx:id="eliminarButton" layoutX="372.0" layoutY="247.0" mnemonicParsing="false" onAction="#eliminarButtonOnAction" stylesheets="@estilos/estilo.css" text="Eliminar" />
       <Pane fx:id="imagenPane" layoutX="327.0" layoutY="50.0" prefHeight="185.0" prefWidth="149.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <ImageView fx:id="fotoImage" fitHeight="158.0" fitWidth="120.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />

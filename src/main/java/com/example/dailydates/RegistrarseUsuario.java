@@ -45,6 +45,8 @@ public class RegistrarseUsuario
     private Button cargarButton;
     @javafx.fxml.FXML
     private ImageView imagenPerfil;
+    @javafx.fxml.FXML
+    private Button atrasButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -63,5 +65,9 @@ public class RegistrarseUsuario
 
     @javafx.fxml.FXML
     public void cargarButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void atrasButtonOnAction(ActionEvent actionEvent) {
     }
 }
