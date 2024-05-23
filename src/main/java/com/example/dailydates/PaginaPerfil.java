@@ -63,9 +63,7 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private ImageView negocio2Image;
     @javafx.fxml.FXML
-    private Label correoLabel1;
-    @javafx.fxml.FXML
-    private TextField correoTextField1;
+    private Button guardarCambiosButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -73,7 +71,7 @@ public class PaginaPerfil
         nombreTextField.setText("Pepe");
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
     }
 }

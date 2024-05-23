@@ -5,19 +5,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorpaneMainEmpresario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaPrincipalEmpresario">
    <children>
       <Pane fx:id="menuPane" prefHeight="70.0" prefWidth="850.0" stylesheets="@estilos/estilo.css">
          <children>
-            <Button fx:id="establecimientosButton" layoutX="371.0" layoutY="23.0" mnemonicParsing="false" onAction="#establecimientosButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Establecimientos" />
+            <Button fx:id="establecimientosButton" layoutX="373.0" layoutY="16.0" mnemonicParsing="false" onAction="#establecimientosButtonOnAction" prefHeight="40.0" prefWidth="170.0" stylesheets="@estilos/estilo.css" text="Establecimientos">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
             <ImageView fitHeight="71.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/DailyDateFoto.png" />
                </image>
             </ImageView>
-            <Button fx:id="calendarioButton" layoutX="145.0" layoutY="23.0" mnemonicParsing="false" onAction="#calendarioButtonOnAction" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: transparent;" text="Calendario" />
-            <Button fx:id="perfilButton" layoutX="657.0" layoutY="23.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: transparent;" text="Perfil" />
+            <Button fx:id="calendarioButton" layoutX="143.0" layoutY="15.0" mnemonicParsing="false" onAction="#calendarioButtonOnAction" prefHeight="40.0" prefWidth="121.0" stylesheets="@estilos/estilo.css" text="Calendario">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Button fx:id="perfilButton" layoutX="656.0" layoutY="15.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="40.0" prefWidth="101.0" stylesheets="@estilos/estilo.css" text="Perfil">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
          </children>
       </Pane>
       <AnchorPane fx:id="contenedorAnchorPane" layoutY="70.0" prefHeight="480.0" prefWidth="850.0" />

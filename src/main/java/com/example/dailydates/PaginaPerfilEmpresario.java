@@ -41,8 +41,6 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private TextField nombreUsuarioTextField;
     @javafx.fxml.FXML
-    private Label negociosRecientesLabel;
-    @javafx.fxml.FXML
     private TextField correoTextField;
     @javafx.fxml.FXML
     private Label correoLabel;

@@ -19,8 +19,6 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     private ImageView fruteriaImage;
     @javafx.fxml.FXML
-    private Button pasteleriaButton;
-    @javafx.fxml.FXML
     private ImageView saludImage;
     @javafx.fxml.FXML
     private ImageView restauranteImage;
@@ -56,6 +54,8 @@ public class PaginaCategorias
     private Button verduleriaButton;
     @javafx.fxml.FXML
     private ImageView peluqueriaImage;
+    @javafx.fxml.FXML
+    private Button pasteleriasButton;
 
     @javafx.fxml.FXML
     public void initialize() {

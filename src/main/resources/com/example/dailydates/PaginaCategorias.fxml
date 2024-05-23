@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="categoriasAnchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PaginaCategorias">
    <children>
-      <Button fx:id="fruteriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="128.0" mnemonicParsing="false" onAction="#fruteriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-radius: 15; -fx-border-color: ff00aa; -fx-background-color: transparent;" text="FRUTERÍAS">
+      <Button id="categoriasButton" fx:id="fruteriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="128.0" mnemonicParsing="false" onAction="#fruteriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="FRUTERÍAS">
          <font>
             <Font size="18.0" />
          </font>
@@ -19,12 +19,12 @@
             <Image url="@img/sandia.png" />
          </image>
       </ImageView>
-      <Button fx:id="carniceriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="247.0" mnemonicParsing="false" onAction="#carniceriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="CARNICERÍAS">
+      <Button id="categoriasButton" fx:id="carniceriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="247.0" mnemonicParsing="false" onAction="#carniceriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="CARNICERÍAS">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="saludButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="247.0" mnemonicParsing="false" onAction="#saludButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="SALUD">
+      <Button id="categoriasButton" fx:id="saludButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="247.0" mnemonicParsing="false" onAction="#saludButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="SALUD">
          <font>
             <Font size="18.0" />
          </font>
@@ -39,7 +39,7 @@
             <Image url="@img/latido-del-corazon.png" />
          </image>
       </ImageView>
-      <Button fx:id="restauranteButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="305.0" mnemonicParsing="false" onAction="#restauranteButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="RESTAURANTES">
+      <Button id="categoriasButton" fx:id="restauranteButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="305.0" mnemonicParsing="false" onAction="#restauranteButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="RESTAURANTES">
          <font>
             <Font size="18.0" />
          </font>
@@ -49,7 +49,7 @@
             <Image url="@img/tenedor.png" />
          </image>
       </ImageView>
-      <Button fx:id="pescaderiaButton1" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="189.0" mnemonicParsing="false" onAction="#pescaderiaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="PESCADERÍAS">
+      <Button id="categoriasButton" fx:id="pescaderiaButton1" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="189.0" mnemonicParsing="false" onAction="#pescaderiaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="PESCADERÍAS">
          <font>
             <Font size="18.0" />
          </font>
@@ -59,7 +59,7 @@
             <Image url="@img/pez-muerto.png" />
          </image>
       </ImageView>
-      <Button fx:id="extraescolaresButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="189.0" mnemonicParsing="false" onAction="#extraescolaresButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="EXTRAESCOLARES">
+      <Button id="categoriasButton" fx:id="extraescolaresButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="189.0" mnemonicParsing="false" onAction="#extraescolaresButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="EXTRAESCOLARES">
          <font>
             <Font size="18.0" />
          </font>
@@ -69,12 +69,12 @@
             <Image url="@img/trotar.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15;" text="Categorías">
+      <Label alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: #fff1ff; -fx-border-radius: 15;" text="Categorías">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="pasteleriaButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="129.0" mnemonicParsing="false" onAction="#pasteleriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="PASTELERÍAS">
+      <Button id="categoriasButton" fx:id="pasteleriasButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="129.0" mnemonicParsing="false" onAction="#pasteleriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="PASTELERÍAS">
          <font>
             <Font size="18.0" />
          </font>
@@ -84,7 +84,7 @@
             <Image url="@img/pastel.png" />
          </image>
       </ImageView>
-      <Button fx:id="otrosButton" alignment="BOTTOM_LEFT" layoutX="279.0" layoutY="438.0" mnemonicParsing="false" onAction="#otrosButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="OTRAS">
+      <Button id="categoriasButton" fx:id="otrosButton" alignment="BOTTOM_LEFT" layoutX="279.0" layoutY="438.0" mnemonicParsing="false" onAction="#otrosButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="OTRAS">
          <font>
             <Font size="18.0" />
          </font>
@@ -94,7 +94,7 @@
             <Image url="@img/elipsis.png" />
          </image>
       </ImageView>
-      <Button fx:id="verduleriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="305.0" mnemonicParsing="false" onAction="#verduleriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="VERDULERÍAS">
+      <Button id="categoriasButton" fx:id="verduleriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="305.0" mnemonicParsing="false" onAction="#verduleriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="VERDULERÍAS">
          <font>
             <Font size="18.0" />
          </font>
@@ -104,12 +104,12 @@
             <Image url="@img/verduras.png" />
          </image>
       </ImageView>
-      <Button fx:id="tallerButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="362.0" mnemonicParsing="false" onAction="#tallerButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="TALLERES">
+      <Button id="categoriasButton" fx:id="tallerButton" alignment="BOTTOM_RIGHT" layoutX="121.0" layoutY="362.0" mnemonicParsing="false" onAction="#tallerButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="TALLERES">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="peluqueriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="362.0" mnemonicParsing="false" onAction="#peluqueriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: transparent;" text="PELUQUERÍAS">
+      <Button id="categoriasButton" fx:id="peluqueriaButton" alignment="BOTTOM_LEFT" layoutX="438.0" layoutY="362.0" mnemonicParsing="false" onAction="#peluqueriaButtonOnAction" prefHeight="41.0" prefWidth="292.0" stylesheets="@estilos/estilo.css" text="PELUQUERÍAS">
          <font>
             <Font size="18.0" />
          </font>
