@@ -69,7 +69,7 @@
             <Image url="@img/trotar.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: #fff1ff; -fx-border-radius: 15;" text="Categorías">
+      <Label alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: #fff1ff;" text="Categorías">
          <font>
             <Font size="30.0" />
          </font>
