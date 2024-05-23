@@ -106,5 +106,6 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Button fx:id="cerrarSesionButton" layoutX="111.0" layoutY="410.0" mnemonicParsing="false" onAction="#cerrarSesionButtonOnAction" text="Cerrar Sesión" />
    </children>
 </AnchorPane>
