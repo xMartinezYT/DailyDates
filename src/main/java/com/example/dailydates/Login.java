@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class Login {
@@ -35,12 +36,22 @@ public class Login {
     @FXML
     public void accederButtonOnAction(ActionEvent actionEvent) {
 
-        AnchorPane pane = null;
-        try {
-            pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
-            this.anchorPanePrincipal.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        UsuarioModel um = new UsuarioModel();
+        String email = emailTextField.getText();
+        String password = contrasenyaField.getText();
+
+        if (um.validar_usuario(email,password)) {
+            AnchorPane pane = null;
+            try {
+                pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
+                this.anchorPanePrincipal.getChildren().setAll(pane);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Datos incorrectos");
+            a.showAndWait();
         }
     }
 

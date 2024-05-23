@@ -97,7 +97,7 @@ public class UsuarioModel extends Conexion{
    public boolean validar_usuario(String gmail, String contrasenya){
 
        try {
-           String sql = "Select * from usuario where gmail = ?, contrasenya = ?";
+           String sql = "Select * from usuario where gmail = ? and contrasenya = ?";
            PreparedStatement ps = this.getConexion().prepareStatement(sql);
            ps.setString(1,gmail);
            ps.setString(2,contrasenya);
