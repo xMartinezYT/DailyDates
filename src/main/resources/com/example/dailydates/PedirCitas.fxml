@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PedirCitas">
+   <children>
+      <Label fx:id="nombreUsuarioLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="72.0" prefHeight="30.0" prefWidth="179.0" text="Nombre:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="horaLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="185.0" prefHeight="30.0" prefWidth="179.0" text="Seleccione su hora:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="fechaLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="128.0" prefHeight="30.0" prefWidth="179.0" text="Seleccione la fecha:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="direccionLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="240.0" prefHeight="30.0" prefWidth="179.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane fx:id="citaPane" layoutX="39.0" layoutY="14.0" prefHeight="49.0" prefWidth="476.0">
+         <children>
+            <Label fx:id="pideCitaLabel" layoutX="161.0" layoutY="7.0" text="¡Pide tu Cita!">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="pedidoLabel" alignment="TOP_LEFT" layoutX="39.0" layoutY="240.0" prefHeight="30.0" prefWidth="179.0" text="Pedido (Opcional):">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreTextField" layoutX="294.0" layoutY="72.0" prefHeight="30.0" prefWidth="179.0" />
+      <DatePicker fx:id="fechaDatePicker" layoutX="294.0" layoutY="128.0" prefHeight="30.0" prefWidth="179.0" />
+      <Spinner fx:id="horaSpinner" layoutX="294.0" layoutY="185.0" prefHeight="30.0" prefWidth="179.0" />
+      <TextArea fx:id="pedidoTextArea" layoutX="294.0" layoutY="236.0" prefHeight="49.0" prefWidth="179.0" promptText="pedido" />
+   </children>
+</AnchorPane>

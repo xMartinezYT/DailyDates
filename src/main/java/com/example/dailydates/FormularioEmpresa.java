@@ -30,8 +30,6 @@ public class FormularioEmpresa
     @javafx.fxml.FXML
     private Pane fotoPane;
     @javafx.fxml.FXML
-    private Button cancelarButton;
-    @javafx.fxml.FXML
     private Label ciudadLabel;
     @javafx.fxml.FXML
     private Label cifLabel;
@@ -54,14 +52,6 @@ public class FormularioEmpresa
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void cancelarButtonOnAction(ActionEvent actionEvent) {
-
-    }
-
-    @Deprecated
-    public void modificarButtonOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void guardarButtonOnAction(ActionEvent actionEvent) {

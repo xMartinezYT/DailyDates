@@ -24,12 +24,12 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="anyadirNombreLabel" layoutX="91.0" layoutY="68.0" text="nombre" />
+      <Label fx:id="anyadirNombreLabel" layoutX="109.0" layoutY="68.0" text="nombre" />
       <Label fx:id="anyadirFechaLabel" layoutX="31.0" layoutY="17.0" prefHeight="31.0" prefWidth="62.0" text="Fecha">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="anyadirHoraLabel" layoutX="159.0" layoutY="18.0" text="Hora">
+      <Label fx:id="anyadirHoraLabel" layoutX="178.0" layoutY="18.0" text="Hora">
          <font>
             <Font size="20.0" />
          </font></Label>

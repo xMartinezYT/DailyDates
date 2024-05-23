@@ -1,11 +1,14 @@
 package com.example.dailydates;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+
+import java.io.IOException;
 
 public class InfoCitas
 {
@@ -42,12 +45,13 @@ public class InfoCitas
 
     }
 
-    @Deprecated
-    public void cancelarButtonOnAction(ActionEvent actionEvent) {
-
-    }
-
     @javafx.fxml.FXML
     public void modificarButtonOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("ModificarCitas.fxml"));
+            this.anchorPane.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
