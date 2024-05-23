@@ -129,4 +129,21 @@
 
 }
 
+#pideTuCitaLabel {
+
+    -fx-text-fill:ff00aa;
+
+}
+
+#masInfoButton {
+
+
+
+}
+#masInfoButton: hover {
+
+   -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
+
+}
+
 
