@@ -25,7 +25,7 @@ public class CitasModel extends Conexion{
         boolean resultado = false;
 
         try {
-            String sql = "insert into citas values(?,?,?,?,?)";
+            String sql = "insert into citas (id_empresa,id_usuario,fecha,pedido,hora) values(?,?,?,?,?)";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
             ps.setInt(1,c.getId_empresa());

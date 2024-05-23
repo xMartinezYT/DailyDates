@@ -41,10 +41,6 @@ public class PaginaPrincipalUsuario {
     public void initialize() {
 
 
-        //Codigo no para de hacer la animación, ARREGLAR//
-
-
-
         // Animación de degradado del color del texto
         Timeline categoriaTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(categoriaButton.textFillProperty(), Color.WHITE)),
@@ -85,7 +81,7 @@ public class PaginaPrincipalUsuario {
         // Animación de degradado del color del texto
         Timeline perfilTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(perfilButton.textFillProperty(), Color.PINK)),
-                new KeyFrame(Duration.seconds(1), new KeyValue(perfilButton.textFillProperty(), Color.WHITE))
+                new KeyFrame(Duration.seconds(1), new KeyValue(perfilButton.textFillProperty(), Color. HOTPINK))
         );
         perfilTimeline.setAutoReverse(true); // Repetir la animación en reversa
         perfilTimeline.setCycleCount(Animation.INDEFINITE); // Repetir la animación infinitamente
