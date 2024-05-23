@@ -1,12 +1,19 @@
 package com.example.dailydates;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class PaginaPerfil
 {
@@ -64,6 +71,8 @@ public class PaginaPerfil
     private ImageView negocio2Image;
     @javafx.fxml.FXML
     private Button guardarCambiosButton;
+    @javafx.fxml.FXML
+    private Button cerrarSesionButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -73,5 +82,23 @@ public class PaginaPerfil
 
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+            Parent ne = loader.load();
+            Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene news = new Scene(ne);
+            st.setScene(news);
+            st.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
     }
 }
