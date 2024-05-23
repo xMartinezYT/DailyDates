@@ -14,6 +14,6 @@
       </Label>
       <Label fx:id="labelFecha" layoutX="31.0" layoutY="78.0" text="11/10/2024" />
       <Label fx:id="labelHora" layoutX="183.0" layoutY="78.0" text="11:15" />
-      <Button id="masInfoButton" fx:id="buttonInfo" layoutX="445.0" layoutY="44.0" mnemonicParsing="false" onAction="#infoclick" stylesheets="@estilos/estilo.css" text="+ Info" />
+      <Button id=" buttonEstilo" fx:id="buttonInfo" layoutX="445.0" layoutY="44.0" mnemonicParsing="false" onAction="#infoclick" stylesheets="@estilos/estilo.css" text="+ Info" />
    </children>
 </AnchorPane>

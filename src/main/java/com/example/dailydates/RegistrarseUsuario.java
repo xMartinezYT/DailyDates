@@ -49,6 +49,8 @@ public class RegistrarseUsuario
     private Button cargarButton;
     @javafx.fxml.FXML
     private ImageView imagenPerfil;
+    @javafx.fxml.FXML
+    private Button atrasButton;
 
     private File imagenSeleccionada;
 
@@ -103,5 +105,9 @@ public class RegistrarseUsuario
 
         imagenPerfil.setImage(fotoperfil);
 
+    }
+
+    @javafx.fxml.FXML
+    public void atrasButtonOnAction(ActionEvent actionEvent) {
     }
 }

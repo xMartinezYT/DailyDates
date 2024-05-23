@@ -50,14 +50,14 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private TextField apellidosTextField;
     @javafx.fxml.FXML
-    private Label negociosRecientesLabel;
+    private Button cerrarSesionButton;
 
     @javafx.fxml.FXML
     public void initialize() {
 
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));

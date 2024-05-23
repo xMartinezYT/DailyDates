@@ -21,39 +21,41 @@
          </font>
       </Label>
       <TextField fx:id="nombreTextField" layoutX="335.0" layoutY="145.0" prefHeight="27.0" prefWidth="149.0" promptText="Nombre" />
-      <Label fx:id="apellidosLabel" layoutX="192.0" layoutY="193.0" prefHeight="27.0" prefWidth="84.0" text="Apellidos:">
+      <Label fx:id="apellidosLabel" layoutX="193.0" layoutY="203.0" prefHeight="27.0" prefWidth="84.0" text="Apellidos:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="contraseñaLabel" layoutX="192.0" layoutY="237.0" text="Contraseña:">
+      <Label fx:id="contraseñaLabel" layoutX="191.0" layoutY="262.0" text="Contraseña:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="gmailLabel" layoutX="192.0" layoutY="283.0" text="Gmail:">
+      <Label fx:id="gmailLabel" layoutX="192.0" layoutY="326.0" text="Gmail:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="telefonoLabel" layoutX="192.0" layoutY="331.0" text="Nº Teléfono:">
+      <Label fx:id="telefonoLabel" layoutX="193.0" layoutY="388.0" text="Nº Teléfono:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="apellidosTextField" layoutX="335.0" layoutY="189.0" prefHeight="27.0" prefWidth="149.0" promptText="Apellido1, Apellido2" />
-      <TextField fx:id="contraseñaTextField" layoutX="335.0" layoutY="233.0" prefHeight="27.0" prefWidth="149.0" />
-      <TextField fx:id="gmailTextField" layoutX="335.0" layoutY="279.0" prefHeight="27.0" prefWidth="149.0" promptText="ejemplo@gmail.com" />
-      <TextField fx:id="telefonoTextField" layoutX="336.0" layoutY="328.0" prefHeight="27.0" prefWidth="149.0" promptText="123123123" />
-      <Button fx:id="crearCuentaButton" layoutX="361.0" layoutY="386.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" text="Crear cuenta">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
+      <TextField fx:id="apellidosTextField" layoutX="335.0" layoutY="203.0" prefHeight="27.0" prefWidth="149.0" promptText="Apellido1, Apellido2" />
+      <TextField fx:id="contraseñaTextField" layoutX="335.0" layoutY="262.0" prefHeight="27.0" prefWidth="149.0" />
+      <TextField fx:id="gmailTextField" layoutX="335.0" layoutY="326.0" prefHeight="27.0" prefWidth="149.0" promptText="ejemplo@gmail.com" />
+      <TextField fx:id="telefonoTextField" layoutX="335.0" layoutY="388.0" prefHeight="27.0" prefWidth="149.0" promptText="123123123" />
+      <Button id="buttonEstilo" fx:id="crearCuentaButton" layoutX="361.0" layoutY="446.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" stylesheets="@estilos/estilo.css" text="Crear cuenta" />
       <Pane fx:id="fotoPane" layoutX="597.0" layoutY="149.0" prefHeight="204.0" prefWidth="149.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button fx:id="cargarButton" layoutX="28.0" layoutY="157.0" mnemonicParsing="false" onAction="#cargarButtonOnAction" text="Cargar imagen" />
+            <Button id="buttonEstilo" fx:id="cargarButton" layoutX="28.0" layoutY="157.0" mnemonicParsing="false" onAction="#cargarButtonOnAction" stylesheets="@estilos/estilo.css" text="Cargar imagen" />
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="110.0" layoutX="13.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
+      <Button id="atrasButton" fx:id="atrasButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" prefHeight="47.0" prefWidth="46.0" stylesheets="@estilos/estilo.css" text="&lt;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

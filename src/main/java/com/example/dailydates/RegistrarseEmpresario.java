@@ -38,6 +38,8 @@ public class RegistrarseEmpresario
     private Button cargarImagenButton;
     @javafx.fxml.FXML
     private Button pruebaButton;
+    @javafx.fxml.FXML
+    private Button atrasButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -66,5 +68,9 @@ public class RegistrarseEmpresario
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void atrasButtonOnAction(ActionEvent actionEvent) {
     }
 }

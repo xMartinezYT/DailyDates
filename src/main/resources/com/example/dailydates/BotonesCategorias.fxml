@@ -28,7 +28,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button fx:id="atrasButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" stylesheets="@estilos/estilo.css" text="&lt;">
+      <Button id="atrasButton" fx:id="atrasButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" stylesheets="@estilos/estilo.css" text="&lt;">
          <font>
             <Font size="27.0" />
          </font>

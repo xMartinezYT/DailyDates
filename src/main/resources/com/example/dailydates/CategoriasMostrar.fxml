@@ -31,6 +31,6 @@
          </children>
       </Pane>
       <Pane fx:id="disenyoPane" layoutY="17.0" prefHeight="2.0" prefWidth="554.0" style="-fx-border-color: black;" />
-      <Button id="masInfoButton" fx:id="pedirCitaButton" layoutX="400.0" layoutY="248.0" mnemonicParsing="false" onAction="#pedirCitaButtonOnAction" stylesheets="@estilos/estilo.css" text="Pedir Cita" />
+      <Button id="buttonEstilo" fx:id="pedirCitaButton" layoutX="400.0" layoutY="248.0" mnemonicParsing="false" onAction="#pedirCitaButtonOnAction" stylesheets="@estilos/estilo.css" text="Pedir Cita" />
    </children>
 </AnchorPane>

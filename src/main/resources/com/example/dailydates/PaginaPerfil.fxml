@@ -18,7 +18,7 @@
       </Label>
       <Pane fx:id="fotoPane" layoutX="90.0" layoutY="106.0" prefHeight="196.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button fx:id="fotoButton" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" text="Cargar Imágen" />
+            <Button id="buttonEstilo" fx:id="fotoButton" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" stylesheets="@estilos/estilo.css" text="Cargar Imágen" />
             <ImageView fx:id="perfilImage" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
@@ -101,11 +101,7 @@
             <ImageView fx:id="negocio3Image" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button fx:id="guardarCambiosButton" layoutX="639.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" text="Guardar cambios">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="cerrarSesionButton" layoutX="111.0" layoutY="410.0" mnemonicParsing="false" onAction="#cerrarSesionButtonOnAction" text="Cerrar Sesión" />
+      <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="644.0" layoutY="230.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" prefHeight="27.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Guardar cambios" />
+      <Button id="buttonEstilo" fx:id="cerrarSesionButton" layoutX="111.0" layoutY="410.0" mnemonicParsing="false" onAction="#cerrarSesionButtonOnAction" stylesheets="@estilos/estilo.css" text="Cerrar Sesión" />
    </children>
 </AnchorPane>
