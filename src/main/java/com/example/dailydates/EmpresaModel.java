@@ -41,15 +41,24 @@ public class EmpresaModel extends Conexion{
         return lista;
     }
 
-        public boolean anyadir_empresa(){
+        public boolean anyadir_empresa(int id_empresario, Empresa em){
         boolean resultado = false;
 
             try {
-                String sql = "insert into empresa values(?,?,?,?,?,?,?,?)";
+                String sql = "insert into empresa (id_empresario, nombre, cif,horario,ciudad,foto_empresa,direccion) values(?,?,?,?,?,?,?)";
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
-
+                ps.setInt(1,id_empresario);
+                ps.setString(2,em.getNombre());
+                ps.setString(3,em.getCIF());
+                ps.setString(4,em.getHorario());
+                ps.setString(5,em.getCiudad());
+                FileInputStream fis = new FileInputStream(String.valueOf(em.getFoto_empresa()));
+                File f = new File(String.valueOf(em.getFoto_empresa()));
+                ps.setBinaryStream(6, fis, (int) f.length());
+                ps.setString(7,em.getDireccion());
                 ps.execute();
-            } catch (SQLException e) {
+                resultado = true;
+            } catch (SQLException | FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
           return resultado;

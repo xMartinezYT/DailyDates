@@ -34,7 +34,7 @@ public class EmpresarioModel extends Conexion{
     public boolean anyadir_empresario(Empresario em){
         boolean resultado = false;
         try {
-            String sql = "insert into empresario values(?,?,?,?,?,?)";
+            String sql = "insert into empresario (nombre,apellidos,gmail,contrasenya,telefono,foto_perfil) values(?,?,?,?,?,?)";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, em.getNombre());
             ps.setString(2, em.getApellidos());

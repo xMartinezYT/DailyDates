@@ -30,7 +30,7 @@ public class CategoriaModel extends Conexion{
     public boolean anyadir_categoria(Categoria c){
             boolean resultado = false;
         try {
-            String sql = "insert into categoria values(?,?)";
+            String sql = "insert into categoria (descripcion,nombre) values(?,?)";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1,c.getDescripcion());
             ps.setString(2,c.getNombre());

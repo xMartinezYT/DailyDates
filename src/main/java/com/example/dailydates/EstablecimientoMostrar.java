@@ -20,17 +20,11 @@ public class EstablecimientoMostrar
     @javafx.fxml.FXML
     private AnchorPane anchorPane;
     @javafx.fxml.FXML
-    private Label anyadirCategoriaLabel;
-    @javafx.fxml.FXML
     private Label anyadirCifLabel;
     @javafx.fxml.FXML
     private Pane imagenPane;
     @javafx.fxml.FXML
     private Button eliminarButton;
-    @javafx.fxml.FXML
-    private Label anyadirHorarioLabel;
-    @javafx.fxml.FXML
-    private Button modificarButton;
     @javafx.fxml.FXML
     private ImageView fotoImage;
     @javafx.fxml.FXML
@@ -40,11 +34,7 @@ public class EstablecimientoMostrar
     @javafx.fxml.FXML
     private Label anyadirNombre;
     @javafx.fxml.FXML
-    private Label anyadirCiudadLabel;
-    @javafx.fxml.FXML
     private Label direccionLabel;
-    @javafx.fxml.FXML
-    private Label anyadirDireccionLabel;
     @javafx.fxml.FXML
     private Label ciudadLabel;
     @javafx.fxml.FXML
@@ -58,7 +48,7 @@ public class EstablecimientoMostrar
     public void eliminarButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void modificarButtonOnAction(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FormularioEmpresa.fxml"));

@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="anchorPane" prefHeight="191.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.CategoriasMostrar">
+<AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.CategoriasMostrar">
    <children>
-      <Label fx:id="anyadirNombre" alignment="TOP_LEFT" layoutX="58.0" layoutY="36.0" text="Nombre Empresa" />
-      <Label fx:id="anyadirHorario" alignment="TOP_LEFT" layoutX="60.0" layoutY="79.0" text="Horario Empresa" />
-      <Label fx:id="anyadirCiudad" alignment="TOP_LEFT" layoutX="59.0" layoutY="116.0" text="Ciudad Empresa" />
-      <Label fx:id="anyadirDireccion" alignment="TOP_LEFT" layoutX="59.0" layoutY="154.0" text="Direccion Empresa" />
-      <Pane fx:id="imagenPane" layoutX="217.0" layoutY="22.0" prefHeight="149.0" prefWidth="119.0">
+      <Label fx:id="anyadirNombre" alignment="TOP_LEFT" layoutX="30.0" layoutY="56.0" prefHeight="30.0" prefWidth="169.0" text="Nombre Empresa">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="anyadirHorario" alignment="TOP_LEFT" layoutX="30.0" layoutY="117.0" prefHeight="30.0" prefWidth="169.0" text="Horario Empresa">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="anyadirCiudad" alignment="TOP_LEFT" layoutX="30.0" layoutY="172.0" prefHeight="30.0" prefWidth="169.0" text="Ciudad Empresa">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="anyadirDireccion" alignment="TOP_LEFT" layoutX="30.0" layoutY="230.0" prefHeight="30.0" prefWidth="169.0" text="Direccion Empresa">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Pane fx:id="imagenPane" layoutX="367.0" layoutY="71.0" prefHeight="152.0" prefWidth="132.0" style="-fx-border-color: pink;">
          <children>
-            <ImageView fx:id="imagenEmpresa" fitHeight="151.0" fitWidth="130.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagenEmpresa" fitHeight="152.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane fx:id="disenyoPane" layoutY="17.0" prefHeight="0.0" prefWidth="368.0" style="-fx-border-color: black;" />
+      <Pane fx:id="disenyoPane" layoutY="17.0" prefHeight="2.0" prefWidth="554.0" style="-fx-border-color: black;" />
+      <Button fx:id="pedirCitaButton" layoutX="400.0" layoutY="248.0" mnemonicParsing="false" onAction="#pedirCitaButtonOnAction" text="Pedir Cita" />
    </children>
 </AnchorPane>
