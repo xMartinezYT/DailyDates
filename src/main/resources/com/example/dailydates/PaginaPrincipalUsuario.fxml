@@ -11,7 +11,7 @@
    <children>
       <Pane fx:id="menuPane" prefHeight="70.0" prefWidth="850.0" stylesheets="@estilos/estilo.css">
          <children>
-            <Button fx:id="citasButton" layoutX="425.0" layoutY="17.0" mnemonicParsing="false" onAction="#citasButtonOnAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-text-fill: #ff00aa;" text="Mis Citas" textFill="#bf186c">
+            <Button fx:id="citasButton" layoutX="396.0" layoutY="18.0" mnemonicParsing="false" onAction="#citasButtonOnAction" prefHeight="25.0" prefWidth="118.0" stylesheets="@estilos/estilo.css" text="Mis Citas" textFill="#bf186c">
                <font>
                   <Font size="19.0" />
                </font></Button>
@@ -20,11 +20,11 @@
                   <Image url="@img/DailyDateFoto.png" />
                </image>
             </ImageView>
-            <Button fx:id="categoriaButton" layoutX="203.0" layoutY="17.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="124.0" style="-fx-text-fill: #ff00aa;" stylesheets="@estilos/estilo.css" text="Categorías" textFill="#bf186c">
+            <Button fx:id="categoriaButton" layoutX="151.0" layoutY="18.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="124.0" stylesheets="@estilos/estilo.css" text="Categorías" textFill="#bf186c">
                <font>
                   <Font size="19.0" />
                </font></Button>
-            <Button fx:id="perfilButton" layoutX="638.0" layoutY="17.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-text-fill: #ff00aa;" text="Perfil" textFill="#ff00aa">
+            <Button fx:id="perfilButton" layoutX="657.0" layoutY="17.0" mnemonicParsing="false" onAction="#perfilButtonOnAction" prefHeight="25.0" prefWidth="98.0" stylesheets="@estilos/estilo.css" text="Perfil" textFill="#bf186c">
                <font>
                   <Font size="19.0" />
                </font>

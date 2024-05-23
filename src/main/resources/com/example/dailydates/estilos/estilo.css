@@ -74,3 +74,34 @@
     -fx-border-width: 2;
 
 }
+
+#calendarioButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+}
+#perfilButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+
+}
+#establecimientosButton {
+
+    -fx-background-color: transparent;
+    -fx-text-fill:#bf186c ;
+}
+
+#categoriaButton {
+
+    -fx-background-color:transparent;
+    -fx-text-fill:#bf186c;
+
+}
+
+#citasButton {
+
+    -fx-background-color:transparent;
+    -fx-text-fill:#bf186c;
+
+}

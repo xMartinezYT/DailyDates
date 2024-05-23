@@ -35,38 +35,38 @@ public class PaginaPrincipalEmpresario
     public void initialize() {
 
         // Animación de degradado del color del texto
-        Timeline categoriaTimeline = new Timeline(
+        Timeline calendarioTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(calendarioButton.textFillProperty(), Color.WHITE)),
                 new KeyFrame(Duration.seconds(1), new KeyValue(calendarioButton.textFillProperty(), Color.DEEPPINK))
         );
-        categoriaTimeline.setAutoReverse(true); // Repetir la animación en reversa
-        categoriaTimeline.setCycleCount(Animation.INDEFINITE); // Repetir la animación infinitamente
+        calendarioTimeline.setAutoReverse(true); // Repetir la animación en reversa
+        calendarioTimeline.setCycleCount(Animation.INDEFINITE); // Repetir la animación infinitamente
         // Evento al pasar el cursor sobre el botón
         calendarioButton.setOnMouseEntered(event -> {
-            categoriaTimeline.play(); // Iniciar la animación
+            calendarioTimeline.play(); // Iniciar la animación
         });
 
         // Evento al sacar el cursor del botón
         calendarioButton.setOnMouseExited(event -> {
-            categoriaTimeline.stop(); // Detener la animación
+            calendarioTimeline.stop(); // Detener la animación
         });
 
 
         // Animación de degradado del color del texto
-        Timeline citasTimeline = new Timeline(
+        Timeline establecimientosTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(establecimientosButton.textFillProperty(), Color.WHITE)),
                 new KeyFrame(Duration.seconds(1), new KeyValue(establecimientosButton.textFillProperty(), Color.DEEPPINK))
         );
-        citasTimeline.setAutoReverse(true); // Repetir la animación en reversa
-        citasTimeline.setCycleCount(Animation.INDEFINITE); // Repetir la animación infinitamente
+        establecimientosTimeline.setAutoReverse(true); // Repetir la animación en reversa
+        establecimientosTimeline.setCycleCount(Animation.INDEFINITE); // Repetir la animación infinitamente
         // Evento al pasar el cursor sobre el botón
         establecimientosButton.setOnMouseEntered(event -> {
-            citasTimeline.play(); // Iniciar la animación
+            establecimientosTimeline.play(); // Iniciar la animación
         });
 
         // Evento al sacar el cursor del botón
         establecimientosButton.setOnMouseExited(event -> {
-            citasTimeline.stop(); // Detener la animación
+            establecimientosTimeline.stop(); // Detener la animación
         });
 
 
