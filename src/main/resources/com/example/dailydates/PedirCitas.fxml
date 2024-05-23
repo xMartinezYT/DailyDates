@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PedirCitas">
    <children>
       <Label fx:id="nombreUsuarioLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="72.0" prefHeight="30.0" prefWidth="179.0" text="Nombre:">
@@ -34,7 +33,7 @@
       </Label>
       <Pane fx:id="citaPane" layoutX="39.0" layoutY="14.0" prefHeight="49.0" prefWidth="476.0">
          <children>
-            <Label fx:id="pideCitaLabel" layoutX="161.0" layoutY="7.0" text="¡Pide tu Cita!">
+            <Label id="pideTuCitaLabel" fx:id="pideCitaLabel" layoutX="161.0" layoutY="7.0" stylesheets="@estilos/estilo.css" text="¡Pide tu Cita!">
                <font>
                   <Font name="System Bold Italic" size="25.0" />
                </font>

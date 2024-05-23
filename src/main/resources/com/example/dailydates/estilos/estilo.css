@@ -105,3 +105,45 @@
     -fx-text-fill:#bf186c;
 
 }
+#categoriasButton {
+
+    -fx-border-color:#ff00aa;
+    -fx-border-radius:15;
+    -fx-background-color:transparent;
+
+}
+#categoriasButton: hover {
+
+    -fx-border-color:#ff00aa;
+    -fx-border-radius:15;
+    -fx-border-width:1.5;
+    -fx-background-color:#fff1ff;
+
+}
+
+#anyadirEmpresaButton {
+
+    -fx-border-radius:15;
+    -fx-border-color:#ff00aa;
+    -fx-background-color:#fff1ff;
+
+}
+
+#pideTuCitaLabel {
+
+    -fx-text-fill:ff00aa;
+
+}
+
+#masInfoButton {
+
+
+
+}
+#masInfoButton: hover {
+
+   -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
+
+}
+
+

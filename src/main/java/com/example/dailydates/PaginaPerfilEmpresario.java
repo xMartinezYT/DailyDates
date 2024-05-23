@@ -1,5 +1,6 @@
 package com.example.dailydates;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -41,8 +42,6 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private TextField nombreUsuarioTextField;
     @javafx.fxml.FXML
-    private Label negociosRecientesLabel;
-    @javafx.fxml.FXML
     private TextField correoTextField;
     @javafx.fxml.FXML
     private Label correoLabel;
@@ -50,8 +49,21 @@ public class PaginaPerfilEmpresario
     private TextField telefonoTextField;
     @javafx.fxml.FXML
     private TextField apellidosTextField;
+    @javafx.fxml.FXML
+    private Label negociosRecientesLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
 
-    }}
+    }
+
+    @Deprecated
+    public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            this.anchorPaneMain.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
