@@ -1,5 +1,6 @@
 package com.example.dailydates;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -30,7 +31,14 @@ public class PedirCitas
     private Label pedidoLabel;
     @javafx.fxml.FXML
     private Label pideCitaLabel;
+    @javafx.fxml.FXML
+    private Button guardarCambiosButton;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+    }
+}

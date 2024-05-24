@@ -18,7 +18,7 @@
       </Label>
       <Pane fx:id="fotoPane" layoutX="90.0" layoutY="106.0" prefHeight="196.0" prefWidth="128.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
-            <Button id="buttonEstilo" fx:id="fotoButton" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" stylesheets="@estilos/estilo.css" text="Cargar Imágen" />
+            <Button id="buttonEstilo" fx:id="cargarImagenButton" layoutX="17.0" layoutY="157.0" mnemonicParsing="false" onAction="#cargarImagenButtonOnAction" stylesheets="@estilos/estilo.css" text="Cargar Imágen" />
             <ImageView fx:id="perfilImage" fitHeight="124.0" fitWidth="102.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>

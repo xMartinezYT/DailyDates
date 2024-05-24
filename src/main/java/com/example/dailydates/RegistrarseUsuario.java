@@ -109,5 +109,11 @@ public class RegistrarseUsuario
 
     @javafx.fxml.FXML
     public void atrasButtonOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Registrarse.fxml"));
+            this.anchorPaneMain.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

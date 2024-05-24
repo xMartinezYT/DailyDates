@@ -78,12 +78,8 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="CifTextField" layoutX="297.0" layoutY="370.0" prefHeight="30.0" prefWidth="112.0" text="Cif">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Button id="buttonEstilo" layoutX="241.0" layoutY="490.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Guardar cambios" />
+      <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="241.0" layoutY="490.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" prefHeight="23.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Guardar cambios" />
       <Button id="buttonEstilo" fx:id="cerrarSesionButton" layoutX="550.0" layoutY="490.0" mnemonicParsing="false" onAction="#cerrarSesionButtonOnAction" stylesheets="@estilos/estilo.css" text="Cerrar Sesión" />
+      <Label fx:id="cifLabel" layoutX="297.0" layoutY="370.0" prefHeight="30.0" prefWidth="112.0" text="CIF" />
    </children>
 </AnchorPane>

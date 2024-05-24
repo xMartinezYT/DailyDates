@@ -20,8 +20,6 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private Pane fotoPane;
     @javafx.fxml.FXML
-    private Button fotoButton;
-    @javafx.fxml.FXML
     private ImageView perfilImage;
     @javafx.fxml.FXML
     private Label perfilLabel;
@@ -73,6 +71,8 @@ public class PaginaPerfil
     private Button guardarCambiosButton;
     @javafx.fxml.FXML
     private Button cerrarSesionButton;
+    @javafx.fxml.FXML
+    private Button cargarImagenButton;
 
     private Usuario u = new Usuario();
 
@@ -112,5 +112,9 @@ public class PaginaPerfil
         apellidosTextField.setText(u.getApellidos());
         telefonoTextField.setText(u.getTelefono());
 
+    }
+
+    @javafx.fxml.FXML
+    public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
     }
 }
