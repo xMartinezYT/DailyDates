@@ -24,6 +24,9 @@ public class Empresario {
         foto_perfil = fotoPerfil;
     }
 
+    public Empresario() {
+    }
+
 
     public int getId() {
         return id;
