@@ -129,7 +129,10 @@ public class UsuarioModel extends Conexion{
             ps.setString(2,dato);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                Image img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
+                Image img = null;
+                if (rs.getBlob(7) != null) {
+                    img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
+                }
                 Usuario u = new Usuario(rs.getInt("id_Usuario"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("gmail"),rs.getString("contrasenya"),rs.getString("telefono"),img);
                 lista.add(u);
             }
@@ -150,9 +153,12 @@ public class UsuarioModel extends Conexion{
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1,gmail);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                Image img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
-                u = new Usuario(rs.getInt("id_Usuario"), rs.getString("nombre"), rs.getString("apellidos"), rs.getString("gmail"), rs.getString("contrasenya"), rs.getString("telefono"), img);
+            while(rs.next()){
+                Image img = null;
+                if (rs.getBlob(7) != null) {
+                    img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
+                }
+                 u = new Usuario(rs.getInt("id_Usuario"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("gmail"),rs.getString("contrasenya"),rs.getString("telefono"),img);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

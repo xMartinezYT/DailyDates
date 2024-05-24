@@ -44,10 +44,11 @@ public class Login {
     public void accederButtonOnAction(ActionEvent actionEvent) {
 
         UsuarioModel um = new UsuarioModel();
+        EmpresarioModel em = new EmpresarioModel();
         String email = emailTextField.getText();
         String password = contrasenyaField.getText();
 
-        if (um.validar_usuario(email,password)) {
+        if (um.validar_usuario(email, password)) {
             enviarDatos(actionEvent);
             try {
                 AnchorPane pane = null;
@@ -56,6 +57,16 @@ public class Login {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        } else if (em.validar_empresario(email,password)){
+           // enviarDatos(actionEvent);
+            try {
+                AnchorPane pane = null;
+                pane = FXMLLoader.load(getClass().getResource("Pa.fxml"));
+                this.anchorPanePrincipal.getChildren().setAll(pane);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         }else{
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("Datos incorrectos");

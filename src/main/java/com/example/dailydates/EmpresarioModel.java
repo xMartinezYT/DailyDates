@@ -31,7 +31,7 @@ public class EmpresarioModel extends Conexion{
         return lista;
     }
 
-    public boolean anyadir_empresario(Empresario em){
+    public boolean anyadir_empresario(Empresario em, File img){
         boolean resultado = false;
         try {
             String sql = "insert into empresario (nombre,apellidos,gmail,contrasenya,telefono,foto_perfil) values(?,?,?,?,?,?)";
@@ -41,12 +41,15 @@ public class EmpresarioModel extends Conexion{
             ps.setString(3, em.getGmail());
             ps.setString(4, em.getContrasenya());
             ps.setString(5, em.getTelefono());
-            FileInputStream fis = new FileInputStream(String.valueOf(em.getFoto_perfil()));
-            File f = new File(String.valueOf(em.getFoto_perfil()));
-            ps.setBinaryStream(6, fis, (int) f.length());
+            if (em.getFoto_perfil() != null) {
+                FileInputStream fis = new FileInputStream(img);
+                File f = new File(String.valueOf(img));
+                ps.setBinaryStream(6, fis, (int) f.length());
+            }else {
+                ps.setBinaryStream(6,null);
+            }
             ps.execute();
             resultado = true;
-
         } catch (SQLException | FileNotFoundException e) {
             throw new RuntimeException(e);
         }
