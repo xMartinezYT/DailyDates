@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PedirCitas">
+<AnchorPane fx:id="anchorPane" prefHeight="351.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.PedirCitas">
    <children>
       <Label fx:id="nombreUsuarioLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="72.0" prefHeight="30.0" prefWidth="179.0" text="Nombre:">
          <font>
@@ -49,5 +50,6 @@
       <DatePicker fx:id="fechaDatePicker" layoutX="294.0" layoutY="128.0" prefHeight="30.0" prefWidth="179.0" />
       <Spinner fx:id="horaSpinner" layoutX="294.0" layoutY="185.0" prefHeight="30.0" prefWidth="179.0" />
       <TextArea fx:id="pedidoTextArea" layoutX="294.0" layoutY="236.0" prefHeight="49.0" prefWidth="179.0" promptText="pedido" />
+      <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="221.0" layoutY="299.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" prefHeight="23.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Guardar cambios" />
    </children>
 </AnchorPane>

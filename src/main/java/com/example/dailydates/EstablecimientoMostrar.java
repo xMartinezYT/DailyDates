@@ -39,6 +39,8 @@ public class EstablecimientoMostrar
     private Label ciudadLabel;
     @javafx.fxml.FXML
     private Label cifLabel;
+    @javafx.fxml.FXML
+    private Button guardarCambiosButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -59,5 +61,9 @@ public class EstablecimientoMostrar
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
     }
 }

@@ -32,8 +32,6 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private TextField nombreTextField;
     @javafx.fxml.FXML
-    private TextField CifTextField;
-    @javafx.fxml.FXML
     private Label datosPersonalesLabel;
     @javafx.fxml.FXML
     private Pane fotoPane;
@@ -51,12 +49,15 @@ public class PaginaPerfilEmpresario
     private TextField apellidosTextField;
     @javafx.fxml.FXML
     private Button cerrarSesionButton;
+    @javafx.fxml.FXML
+    private Label cifLabel;
+    @javafx.fxml.FXML
+    private Button guardarCambiosButton;
 
     @javafx.fxml.FXML
     public void initialize() {
 
     }
-
     @javafx.fxml.FXML
     public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -65,5 +66,9 @@ public class PaginaPerfilEmpresario
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
     }
 }

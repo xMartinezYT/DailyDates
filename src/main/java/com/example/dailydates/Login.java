@@ -42,7 +42,7 @@ public class Login {
         String email = emailTextField.getText();
         String password = contrasenyaField.getText();
 
-        if (um.validar_usuario(email,password)) {
+         if (um.validar_usuario(email,password)) {
             AnchorPane pane = null;
             try {
                 pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));

@@ -39,6 +39,8 @@ public class InfoCitas
     private Label anyadirHoraLabel;
     @javafx.fxml.FXML
     private Label pedidoLabel;
+    @javafx.fxml.FXML
+    private Button eliminarButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -53,5 +55,9 @@ public class InfoCitas
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void eliminarButtonOnAction(ActionEvent actionEvent) {
     }
 }
