@@ -74,15 +74,11 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private Button cerrarSesionButton;
 
+    private Usuario u = new Usuario();
+
     @javafx.fxml.FXML
     public void initialize() {
-
-        UsuarioModel um = new UsuarioModel();
-
-        for(Usuario u : um.ListarUsuarios()) {
-            perfilImage.setImage(u.getFoto_perfil());
-        }
-
+      anyadirdatos();
     }
 
     @javafx.fxml.FXML
@@ -103,8 +99,18 @@ public class PaginaPerfil
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void anyadirdatos(){
 
+        UsuarioHolder holder = UsuarioHolder.getInstance();
+        u = holder.getUsuario();
 
+        perfilImage.setImage(u.getFoto_perfil());
+        nombreUsuarioTextField.setText(u.getNombre());
+        nombreTextField.setText(u.getNombre());
+        correoTextField.setText(u.getGmail());
+        apellidosTextField.setText(u.getApellidos());
+        telefonoTextField.setText(u.getTelefono());
 
     }
 }

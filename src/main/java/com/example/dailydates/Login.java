@@ -3,9 +3,13 @@ package com.example.dailydates;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -35,6 +39,7 @@ public class Login {
     @FXML
     private ImageView pepe;
 
+
     @FXML
     public void accederButtonOnAction(ActionEvent actionEvent) {
 
@@ -43,16 +48,10 @@ public class Login {
         String password = contrasenyaField.getText();
 
         if (um.validar_usuario(email,password)) {
-            AnchorPane pane = null;
-
-            UsuarioHolder holder = UsuarioHolder.getInstance();
-
-
-            for(Usuario u : um.filtrar_usuarios("gmail",email)) {
-                holder.setUsuario(u);
-            }
+            enviarDatos(actionEvent);
             try {
-                pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
+                AnchorPane pane = null;
+                pane = FXMLLoader.load(getClass().getResource("PaginaPerfil.fxml"));
                 this.anchorPanePrincipal.getChildren().setAll(pane);
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -91,5 +90,27 @@ public class Login {
             contrasenyaField.setVisible(true);
         }
 
+    }
+    @FXML
+    private void enviarDatos(ActionEvent event) {
+        UsuarioModel um = new UsuarioModel();
+        Usuario us = um.buscar_usuario(emailTextField.getText());
+
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+        try {
+            // Paso 1
+            UsuarioHolder holder = UsuarioHolder.getInstance();
+            // Paso 2
+            holder.setUsuario(us);
+           Parent root = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
+            Scene scene = new Scene(root);
+            stage.setTitle("Tutorial JavaFX");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
+        }
     }
 }

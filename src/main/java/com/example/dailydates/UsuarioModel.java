@@ -142,5 +142,22 @@ public class UsuarioModel extends Conexion{
         return lista;
     }
 
-}
+    public Usuario buscar_usuario(String gmail) {
+        Usuario u = new Usuario();
+
+        try {
+            String sql = "select * from usuario where gmail = ?";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setString(1,gmail);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Image img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
+                u = new Usuario(rs.getInt("id_Usuario"), rs.getString("nombre"), rs.getString("apellidos"), rs.getString("gmail"), rs.getString("contrasenya"), rs.getString("telefono"), img);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return u;
+    }
+    }
 

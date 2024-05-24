@@ -23,6 +23,9 @@ public class Usuario {
         foto_perfil = fotoPerfil;
     }
 
+    public Usuario() {
+    }
+
 
     public int getId() {
         return id;
