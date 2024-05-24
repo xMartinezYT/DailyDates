@@ -96,7 +96,7 @@ public class EmpresarioModel extends Conexion{
     public boolean validar_empresario(String gmail, String contrasenya) {
 
         try {
-            String sql = "Select * from empresario where gmail = ?, contrasenya = ?";
+            String sql = "Select * from empresario where gmail = ? and contrasenya = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, gmail);
             ps.setString(2, contrasenya);
