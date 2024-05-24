@@ -44,6 +44,13 @@ public class Login {
 
         if (um.validar_usuario(email,password)) {
             AnchorPane pane = null;
+
+            UsuarioHolder holder = UsuarioHolder.getInstance();
+
+
+            for(Usuario u : um.filtrar_usuarios("gmail",email)) {
+                holder.setUsuario(u);
+            }
             try {
                 pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalUsuario.fxml"));
                 this.anchorPanePrincipal.getChildren().setAll(pane);
