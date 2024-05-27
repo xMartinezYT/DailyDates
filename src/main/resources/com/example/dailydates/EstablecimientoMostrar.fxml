@@ -17,7 +17,7 @@
       </Label>
       <Label fx:id="categoriaLabel" layoutX="77.0" layoutY="97.0" text="Categoría:" />
       <Label fx:id="cifLabel" layoutX="78.0" layoutY="134.0" prefHeight="17.0" prefWidth="54.0" text="CIF:" />
-      <Label fx:id="anyadirCifLabel" layoutX="171.0" layoutY="134.0" prefHeight="17.0" prefWidth="67.0" text="CIF" />
+      <Label fx:id="anyadirCifLabel" layoutX="171.0" layoutY="134.0" prefHeight="17.0" prefWidth="110.0" text="CIF" />
       <Label fx:id="horarioLabel" layoutX="77.0" layoutY="168.0" prefHeight="17.0" prefWidth="54.0" text="Horario:" />
       <Label fx:id="ciudadLabel" layoutX="77.0" layoutY="202.0" prefHeight="17.0" prefWidth="54.0" text="Ciudad:" />
       <Label fx:id="direccionLabel" layoutX="77.0" layoutY="238.0" prefHeight="17.0" prefWidth="54.0" text="Dirección:" />
@@ -28,10 +28,10 @@
          </children>
       </Pane>
       <Pane fx:id="disenyoPane" layoutX="-3.0" layoutY="18.0" prefHeight="2.0" prefWidth="564.0" style="-fx-border-color: black;" />
-      <TextField fx:id="horariofield" layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="horariofield" layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="110.0" />
       <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="292.0" layoutY="246.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar Cambios" />
-      <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="67.0" text="cats" />
+      <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="149.0" text="cats" />
    </children>
 </AnchorPane>

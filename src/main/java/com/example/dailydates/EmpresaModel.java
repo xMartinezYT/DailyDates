@@ -57,11 +57,15 @@ public class EmpresaModel extends Conexion{
                 ps.setBinaryStream(6, fis, (int) f.length());
                 ps.setString(7,em.getDireccion());
                 ps.execute();
+
+                //no inserta bien en la tabla pertenece el problema es el id de la empresa ya que al crearla no puedo saber su id
+                // (posible solucion realizando un select para saber el id de la nueva empresa y pasarselo a el segundo insert)
                 String sql2 = "insert into pertenece (id_categoria,id_empresa) values (?,?)";
                 PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                 ps2.setInt(1,c.getId());
                 ps2.setInt(2,em.getId_empresa());
                 ps2.execute();
+
                 resultado = true;
             } catch (SQLException | FileNotFoundException e) {
                 throw new RuntimeException(e);
@@ -145,23 +149,17 @@ public class EmpresaModel extends Conexion{
           public boolean modificar_empresa(Empresa em){
               boolean resultado = false;
               try {
-                  String sql = "update empresa set nombre = ?, Horario = ?, ciudad = ?, foto_empresa = ?, direccion = ? where id_empresa = ?";
+                  String sql = "update empresa set nombre = ?, Horario = ?, ciudad = ?, direccion = ? where id_empresa = ?";
                   PreparedStatement ps = this.getConexion().prepareStatement(sql);
                   ps.setString(1,em.getNombre());
                   ps.setString(2,em.getHorario());
                   ps.setString(3,em.getCiudad());
-                  FileInputStream fis = null;
-                  fis = new FileInputStream(String.valueOf(em.getFoto_empresa()));
-                  File f = new File(String.valueOf(em.getFoto_empresa()));
-                  ps.setBinaryStream(4, fis, (int) f.length());
-                  ps.setString(5,em.getDireccion());
-                  ps.setInt(6,em.getId_empresa());
+                  ps.setString(4,em.getDireccion());
+                  ps.setInt(5,em.getId_empresa());
                   ps.execute();
                   resultado = true;
 
               } catch (SQLException e) {
-                  throw new RuntimeException(e);
-              } catch (FileNotFoundException e) {
                   throw new RuntimeException(e);
               }
               return resultado;
