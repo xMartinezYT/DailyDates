@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -41,9 +43,33 @@ public class EstablecimientoMostrar
     private Label cifLabel;
     @javafx.fxml.FXML
     private Button guardarCambiosButton;
+    @javafx.fxml.FXML
+    private TextField direccionfield;
+    @javafx.fxml.FXML
+    private TextField horariofield;
+    @javafx.fxml.FXML
+    private TextField ciudadfield;
+    @javafx.fxml.FXML
+    private Label categoriaslabel;
+
+    private Empresa empresa;
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
+
+             String imprimir = null;
+             for (Categoria cat : empresa.getCategorias()){
+                 imprimir += ", " + cat.getNombre();
+             }
+             categoriaslabel.setText(imprimir);
     }
 
     @javafx.fxml.FXML

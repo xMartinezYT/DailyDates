@@ -44,6 +44,7 @@
       <Pane fx:id="fotoPane" layoutX="261.0" layoutY="26.0" prefHeight="142.0" prefWidth="170.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="137.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="cargar_imagen" layoutX="38.0" layoutY="107.0" mnemonicParsing="false" onAction="#cargar_imagenOnClick" text="Cargar Imagen" />
          </children>
       </Pane>
       <Button id="buttonEstilo" fx:id="guardarButton" layoutX="317.0" layoutY="191.0" mnemonicParsing="false" onAction="#guardarButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar" />

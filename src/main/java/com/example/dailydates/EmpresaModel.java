@@ -41,7 +41,7 @@ public class EmpresaModel extends Conexion{
         return lista;
     }
 
-        public boolean anyadir_empresa(int id_empresario, Empresa em){
+        public boolean anyadir_empresa(int id_empresario, Empresa em, Categoria c, File imagenseleccionada){
         boolean resultado = false;
 
             try {
@@ -52,11 +52,16 @@ public class EmpresaModel extends Conexion{
                 ps.setString(3,em.getCIF());
                 ps.setString(4,em.getHorario());
                 ps.setString(5,em.getCiudad());
-                FileInputStream fis = new FileInputStream(String.valueOf(em.getFoto_empresa()));
-                File f = new File(String.valueOf(em.getFoto_empresa()));
+                FileInputStream fis = new FileInputStream(String.valueOf(imagenseleccionada));
+                File f = new File(String.valueOf(imagenseleccionada));
                 ps.setBinaryStream(6, fis, (int) f.length());
                 ps.setString(7,em.getDireccion());
                 ps.execute();
+                String sql2 = "insert into pertenece (id_categoria,id_empresa) values (?,?)";
+                PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
+                ps2.setInt(1,c.getId());
+                ps2.setInt(2,em.getId_empresa());
+                ps2.execute();
                 resultado = true;
             } catch (SQLException | FileNotFoundException e) {
                 throw new RuntimeException(e);

@@ -29,15 +29,21 @@ public class Establecimientos
 
     @javafx.fxml.FXML
     public void initialize() {
+        EmpresaModel empmo = new EmpresaModel();
+        EmpresarioHolder empH = EmpresarioHolder.getInstance();
+        int col = 1;
         try {
-            for (int i = 1; i < 40; i++) {
+            for (Empresa emp : empmo.listar_empresas_empresario(empH.getEmpresario().getId())) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("EstablecimientoMostrar.fxml"));
                 AnchorPane anchor = fxmlLoader.load();
                 EstablecimientoMostrar establecimiento = fxmlLoader.getController();
-                gridPane.add(anchor,1,i);
+                establecimiento.setEmpresa(emp);
+                gridPane.add(anchor,1,col);
+                col++;
                 GridPane.setMargin(anchor,new Insets(2));
             }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -55,4 +61,6 @@ public class Establecimientos
             throw new RuntimeException(e);
         }
     }
+
+
 }

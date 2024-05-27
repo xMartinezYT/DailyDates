@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
@@ -29,10 +28,10 @@
          </children>
       </Pane>
       <Pane fx:id="disenyoPane" layoutX="-3.0" layoutY="18.0" prefHeight="2.0" prefWidth="564.0" style="-fx-border-color: black;" />
-      <ChoiceBox layoutX="171.0" layoutY="93.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
-      <TextField layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="horariofield" layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="67.0" />
       <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="292.0" layoutY="246.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar Cambios" />
+      <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="67.0" text="cats" />
    </children>
 </AnchorPane>
