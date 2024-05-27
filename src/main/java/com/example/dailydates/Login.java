@@ -58,7 +58,7 @@ public class Login {
                 throw new RuntimeException(e);
             }
         } else if (em.validar_empresario(email,password)){
-           // enviarDatos(actionEvent);
+            enviarDatosEmp(actionEvent);
             try {
                 AnchorPane pane = null;
                 pane = FXMLLoader.load(getClass().getResource("PaginaPrincipalEmpresario.fxml"));
@@ -72,6 +72,29 @@ public class Login {
             a.setContentText("Datos incorrectos");
             a.showAndWait();
         }
+    }
+
+    private void enviarDatosEmp(ActionEvent event) {
+        EmpresarioModel em = new EmpresarioModel();
+        Empresario emp = em.buscar_empresario(emailTextField.getText());
+
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+        try {
+            // Paso 1
+            EmpresarioHolder holder = EmpresarioHolder.getInstance();
+            // Paso 2
+            holder.setEmpresario(emp);
+            Parent root = FXMLLoader.load(getClass().getResource("PaginaPrincipalEmpresario.fxml"));
+            Scene scene = new Scene(root);
+            stage.setTitle("Tutorial JavaFX");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
+        }
+
     }
 
     @FXML

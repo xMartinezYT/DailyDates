@@ -75,20 +75,18 @@ public class EmpresarioModel extends Conexion{
         boolean resultado = false;
 
         try {
-            String sql = "update empresario set nombre = ?, apellidos = ?,gmail = ?,contrasenya = ?, telefono = ?, foto_perfil = ?";
+            String sql = "update empresario set nombre = ?, apellidos = ?,gmail = ?,contrasenya = ?, telefono = ? where id_empresario = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, em.getNombre());
             ps.setString(2, em.getApellidos());
             ps.setString(3, em.getGmail());
             ps.setString(4, em.getContrasenya());
             ps.setString(5, em.getTelefono());
-            FileInputStream fis = new FileInputStream(String.valueOf(em.getFoto_perfil()));
-            File f = new File(String.valueOf(em.getFoto_perfil()));
-            ps.setBinaryStream(6, fis, (int) f.length());
+            ps.setInt(6,em.getId());
             ps.execute();
             resultado = true;
 
-        } catch (SQLException | FileNotFoundException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return resultado;
@@ -110,4 +108,25 @@ public class EmpresarioModel extends Conexion{
         }
         return false;
     }
+    public Empresario buscar_empresario(String gmail) {
+        Empresario em = new Empresario();
+
+        try {
+            String sql = "select * from empresario where gmail = ?";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setString(1,gmail);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Image img = null;
+                if (rs.getBlob(7) != null) {
+                    img = new Image(rs.getBlob("foto_perfil").getBinaryStream());
+                }
+                em = new Empresario(rs.getInt("id_empresario"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("gmail"),rs.getString("contrasenya"),rs.getString("telefono"),img);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return em;
+    }
+
 }
