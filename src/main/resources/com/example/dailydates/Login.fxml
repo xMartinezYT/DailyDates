@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -11,37 +12,39 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Login">
    <children>
-      <AnchorPane fx:id="anchorPanePrincipal" layoutX="5.0" layoutY="5.0" prefHeight="600.0" prefWidth="838.0">
+      <AnchorPane fx:id="anchorPanePrincipal" layoutX="4.0" prefHeight="606.0" prefWidth="870.0">
          <children>
-            <TextField fx:id="emailTextField" layoutX="505.0" layoutY="236.0" prefHeight="39.0" prefWidth="173.0" promptText="email">
+            <TextField fx:id="emailTextField" layoutX="505.0" layoutY="236.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-color: #ff00aa; -fx-border-radius: 10px;">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Button fx:id="accederButton" layoutX="443.0" layoutY="390.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="120.0" text="Acceder" />
-            <Button fx:id="crearCuentaButton" layoutX="624.0" layoutY="397.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
-            <Button fx:id="bienvenidoLabel" layoutX="503.0" layoutY="170.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" underline="true" />
-            <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-6.0" layoutY="-11.0" prefHeight="615.0" prefWidth="343.0" stylesheets="@estilos/estilo.css">
+            <Button id="accederEstilo" fx:id="accederButton" layoutX="506.0" layoutY="380.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="295.0" stylesheets="@estilos/estilo.css" text="Acceder" textFill="#ff00aa" />
+            <Button fx:id="crearCuentaButton" layoutX="605.0" layoutY="448.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
+            <Button fx:id="bienvenidoLabel" layoutX="544.0" layoutY="172.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Bienvenido otra vez a Daily Dates" textFill="#ff00aa" />
+            <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-23.0" layoutY="-2.0" prefHeight="610.0" prefWidth="433.0" stylesheets="@estilos/estilo.css">
                <children>
-                  <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="230.0" layoutX="57.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="230.0" layoutX="102.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/DailydatesBlanco.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <ImageView fx:id="pepe" fitHeight="195.0" fitWidth="201.0" layoutX="491.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="pepe" fitHeight="195.0" fitWidth="201.0" layoutX="552.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/User.png" />
                </image>
             </ImageView>
             <TextField fx:id="mostrarContrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="173.0" visible="false" />
-            <ImageView fitHeight="25.0" fitWidth="16.0" layoutX="699.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="16.0" layoutX="773.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/ver.png" />
                </image>
             </ImageView>
-            <CheckBox fx:id="verContraseña" layoutX="699.0" layoutY="321.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" />
-            <PasswordField fx:id="contrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="173.0" promptText="contraseña" />
+            <CheckBox fx:id="verContraseña" layoutX="773.0" layoutY="320.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" />
+            <PasswordField fx:id="contrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: #ff00aa;" />
+            <Label layoutX="506.0" layoutY="216.0" text="E-Mail" textFill="#ff00aa" />
+            <Label layoutX="506.0" layoutY="286.0" text="Contraseña" textFill="#ff00aa" />
          </children>
       </AnchorPane>
    </children>
