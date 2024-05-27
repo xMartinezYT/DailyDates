@@ -22,16 +22,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegistrarseUsuario implements Initializable
+public class RegistrarseUsuario
 {
     @javafx.fxml.FXML
     private Label registroDeSesion;
-    @javafx.fxml.FXML
-    private Label apellidosLabel;
-    @javafx.fxml.FXML
-    private Label contraseñaLabel;
-    @javafx.fxml.FXML
-    private Label telefonoLabel;
     @javafx.fxml.FXML
     private TextField nombreTextField;
     @javafx.fxml.FXML
@@ -47,8 +41,6 @@ public class RegistrarseUsuario implements Initializable
     @javafx.fxml.FXML
     private TextField gmailTextField;
     @javafx.fxml.FXML
-    private Label gmailLabel;
-    @javafx.fxml.FXML
     private Pane fotoPane;
     @javafx.fxml.FXML
     private AnchorPane anchorPaneMain;
@@ -60,42 +52,52 @@ public class RegistrarseUsuario implements Initializable
     private Button atrasButton;
 
     private File imagenSeleccionada;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel21;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel2;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel211;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel1;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel2111;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/hot-pink-minimalist-wallpaper-high-quality-4k-hdr-free-photo.jpg");
+    /*
+        @Override
+        public void initialize(URL url, ResourceBundle resourceBundle) {
+            Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/cfb37e7eebaf13f140d53a98ffd68214.png");
 
-        // Crear un objeto ImageView para aplicar los ajustes de color
-        ImageView imageView = new ImageView(fondo);
+            // Crear un objeto ImageView para aplicar los ajustes de color
+            ImageView imageView = new ImageView(fondo);
 
-        // Crear un objeto ColorAdjust para modificar la opacidad
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setBrightness(0.5); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
 
-        // Aplicar el ajuste de color al ImageView
-        imageView.setEffect(colorAdjust);
+            ColorAdjust colorAdjust = new ColorAdjust();
+            colorAdjust.setBrightness(-0.4); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
 
-        // Crear un Snapshot de ImageView con el efecto de opacidad
-        SnapshotParameters params = new SnapshotParameters();
-        params.setFill(Color.TRANSPARENT); // Fondo transparente para el snapshot
-        WritableImage writableImage = imageView.snapshot(params, null);
-        Image adjustedImage = new ImageView(writableImage).getImage();
+            // Aplicar el ColorAdjust al ImageView
+            imageView.setEffect(colorAdjust);
 
-        // Configurar el fondo con la imagen ajustada
-        BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, false);
-        BackgroundImage backgroundImage = new BackgroundImage(adjustedImage,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.DEFAULT,
-                backgroundSize);
+            // Crear un Snapshot de ImageView con el efecto de opacidad
+            SnapshotParameters params = new SnapshotParameters();
+            params.setFill(Color.TRANSPARENT); // Fondo transparente para el snapshot
+            WritableImage writableImage = imageView.snapshot(params, null);
+            Image adjustedImage = new ImageView(writableImage).getImage();
 
-        Background background = new Background(backgroundImage);
+            // Configurar el fondo con la imagen ajustada
+            BackgroundSize backgroundSize = new BackgroundSize(800, 600, false, false, true, false);
+            BackgroundImage backgroundImage = new BackgroundImage(adjustedImage,
+                    BackgroundRepeat.NO_REPEAT,
+                    BackgroundRepeat.NO_REPEAT,
+                    BackgroundPosition.DEFAULT,
+                    backgroundSize);
 
-        anchorPaneMain.setBackground(background);
-        anchorPaneMain.setPadding(new Insets(20));
+            Background background = new Background(backgroundImage);
 
-    }
-
+            anchorPaneMain.setBackground(background);
+            anchorPaneMain.setPadding(new Insets(20));
+        }
+    */
     @javafx.fxml.FXML
     public void crearCuentaButtonOnAction(ActionEvent actionEvent) {
 
