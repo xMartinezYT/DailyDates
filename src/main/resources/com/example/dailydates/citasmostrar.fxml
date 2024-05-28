@@ -7,7 +7,7 @@
 
 <AnchorPane fx:id="mainAnchorPane" prefHeight="112.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Citasmostrar">
    <children>
-      <Label fx:id="nombreNegocio" layoutX="15.0" layoutY="14.0" prefHeight="47.0" prefWidth="218.0" text="NOMBRE NEGOCIO" textFill="#ff00aa">
+      <Label fx:id="nombreNegocio" layoutX="15.0" layoutY="14.0" prefHeight="47.0" prefWidth="241.0" text="NOMBRE NEGOCIO" textFill="#ff00aa">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
