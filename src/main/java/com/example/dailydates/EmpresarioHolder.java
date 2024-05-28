@@ -1,19 +1,8 @@
 package com.example.dailydates;
 
-import java.io.File;
-
 public class EmpresarioHolder {
 
     private Empresario empresario;
-    private File img;
-
-    public File getImg() {
-        return img;
-    }
-
-    public void setImg(File img) {
-        this.img = img;
-    }
 
     public static final EmpresarioHolder INSTANCE = new EmpresarioHolder();
 

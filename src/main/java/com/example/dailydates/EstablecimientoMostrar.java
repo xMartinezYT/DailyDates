@@ -4,10 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -63,33 +60,52 @@ public class EstablecimientoMostrar
     }
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize(Empresa emp) {
 
-             String imprimir = null;
-             for (Categoria cat : empresa.getCategorias()){
-                 imprimir += ", " + cat.getNombre();
+       setEmpresa(emp);
+
+            String imprimir = "";
+             for (Categoria cat : this.empresa.getCategorias()){
+                 imprimir += " " + cat.getNombre();
              }
              categoriaslabel.setText(imprimir);
+
+             anyadirCifLabel.setText(emp.getCIF());
+
+             horariofield.setText(emp.getHorario());
+
+             ciudadfield.setText(emp.getCiudad());
+
+             direccionfield.setText(emp.getDireccion());
+
+             fotoImage.setImage(emp.getFoto_empresa());
     }
 
     @javafx.fxml.FXML
     public void eliminarButtonOnAction(ActionEvent actionEvent) {
-    }
 
-    @Deprecated
-    public void modificarButtonOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FormularioEmpresa.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        EmpresaModel empmod = new EmpresaModel();
+
+        empmod.eliminar_empresa(empresa.getId_empresa());
+
     }
 
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+
+        EmpresaModel empmod = new EmpresaModel();
+
+        empresa.setHorario(horariofield.getText());
+        empresa.setDireccion(direccionfield.getText());
+        empresa.setCiudad(ciudadfield.getText());
+
+        if (empmod.modificar_empresa(empresa)){
+
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("datos no validos");
+            a.showAndWait();
+        }
+
     }
 }

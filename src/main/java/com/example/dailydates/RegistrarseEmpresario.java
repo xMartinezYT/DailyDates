@@ -23,7 +23,7 @@ import java.io.InterruptedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegistrarseEmpresario implements Initializable {
+public class RegistrarseEmpresario  {
     @javafx.fxml.FXML
     private Label introducirDatosLabel;
     @javafx.fxml.FXML
@@ -37,8 +37,6 @@ public class RegistrarseEmpresario implements Initializable {
     @javafx.fxml.FXML
     private AnchorPane anchorPaneMain;
     @javafx.fxml.FXML
-    private Button pruebaButton;
-    @javafx.fxml.FXML
     private Pane imagenPane;
     @javafx.fxml.FXML
     private TextField telefonoTextField;
@@ -51,6 +49,8 @@ public class RegistrarseEmpresario implements Initializable {
     @javafx.fxml.FXML
     private Button cargarImagenButton;
     private File imagenSeleccionada;
+    @javafx.fxml.FXML
+    private Label nombreUsuarioLabel1;
 
     @javafx.fxml.FXML
     public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
@@ -114,7 +114,7 @@ public class RegistrarseEmpresario implements Initializable {
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void pruebaButtonOnAction(ActionEvent actionEvent) {
 
         try {
@@ -125,19 +125,19 @@ public class RegistrarseEmpresario implements Initializable {
         }
 
     }
-
+/*
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/hot-pink-minimalist-wallpaper-high-quality-4k-hdr-free-photo.jpg");
+        Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/pexels-mdsnmdsnmdsn-1831234.jpg");
 
         // Crear un objeto ImageView para aplicar los ajustes de color
         ImageView imageView = new ImageView(fondo);
 
-        // Crear un objeto ColorAdjust para modificar la opacidad
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setBrightness(0.5); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
 
-        // Aplicar el ajuste de color al ImageView
+        ColorAdjust colorAdjust = new ColorAdjust();
+        colorAdjust.setBrightness(-0.4); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
+
+        // Aplicar el ColorAdjust al ImageView
         imageView.setEffect(colorAdjust);
 
         // Crear un Snapshot de ImageView con el efecto de opacidad
@@ -147,7 +147,7 @@ public class RegistrarseEmpresario implements Initializable {
         Image adjustedImage = new ImageView(writableImage).getImage();
 
         // Configurar el fondo con la imagen ajustada
-        BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, false);
+        BackgroundSize backgroundSize = new BackgroundSize(800, 600, false, false, true, false);
         BackgroundImage backgroundImage = new BackgroundImage(adjustedImage,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
@@ -158,6 +158,8 @@ public class RegistrarseEmpresario implements Initializable {
 
         anchorPaneMain.setBackground(background);
         anchorPaneMain.setPadding(new Insets(20));
+    }
+*/
 
     }
-}
+

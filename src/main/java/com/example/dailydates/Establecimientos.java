@@ -38,7 +38,8 @@ public class Establecimientos
                 fxmlLoader.setLocation(getClass().getResource("EstablecimientoMostrar.fxml"));
                 AnchorPane anchor = fxmlLoader.load();
                 EstablecimientoMostrar establecimiento = fxmlLoader.getController();
-                establecimiento.setEmpresa(emp);
+                //establecimiento.setEmpresa(emp);
+                establecimiento.initialize(emp);
                 gridPane.add(anchor,1,col);
                 col++;
                 GridPane.setMargin(anchor,new Insets(2));

@@ -20,9 +20,10 @@
 #registrarseUsuarioPane {
     -fx-border-color: f8a0de;
     -fx-border-radius: 15;
+    -fx-background-color: transparent;
 
 }
-#registrarseUsuarioPane: hover{
+#registrarseUsuarioPane:hover{
     -fx-border-color: f8a0de;
     -fx-border-radius: 15;
     -fx-border-width: 5;
@@ -32,9 +33,9 @@
 #registrarseEmpresarioPane {
     -fx-border-color: f8a0de;
     -fx-border-radius: 15;
-
+    -fx-background-color: transparent;
 }
-#registrarseEmpresarioPane: hover{
+#registrarseEmpresarioPane:hover{
     -fx-border-color: f8a0de;
     -fx-border-radius: 15;
     -fx-border-width: 5;
@@ -42,31 +43,32 @@
 }
 #registrarseUsuarioButton {
     -fx-color:pink;
-
+    -fx-background-color:transparent;
 
 }
-#registrarseUsuarioButton: hover {
+#registrarseUsuarioButton:hover {
     -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
 
 }
 #registrarseEmpresarioButton {
      -fx-color:pink;
-
+     -fx-background-color:transparent;
 }
-#registrarseEmpresarioButton: hover {
+#registrarseEmpresarioButton:hover {
  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, hotpink);
 
 }
 #atrasButton{
     -fx-background-color: transparent;
+    -fx-text-fill: ff00c3;
 
 }
-#atrasButton: hover {
+#atrasButton:hover {
     -fx-background-color: transparent;
     -fx-border-color: f8a0de;
     -fx-border-radius: 10;
     -fx-border-width: 2;
-    -fx-background-color: fff1ff;
+
 }
 #disenyoPane {
     -fx-border-color: f8a0de;
@@ -106,13 +108,12 @@
 
 }
 #categoriasButton {
-
     -fx-border-color:#ff00aa;
     -fx-border-radius:15;
     -fx-background-color:transparent;
 
 }
-#categoriasButton: hover {
+#categoriasButton:hover {
 
     -fx-border-color:#ff00aa;
     -fx-border-radius:15;
@@ -128,17 +129,30 @@
 }
 
 #buttonEstilo {
-
-    -fx-background-color:#fff1ff;
-    -fx-border-radius:15;
-    -fx-border-color:hotpink;
-    -fx-background-radius:15;
+    -fx-background-color: transparent;
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 10;
 
 }
-#buttonEstilo: hover {
-
-   -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
+#buttonEstilo:hover {
+    -fx-background-color: fff1ff;
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
 
 }
 
 
+
+#text-field-no-background {
+    -fx-background-color: transparent;
+    -fx-border-color: black; /* Cambia a tu color preferido */
+    -fx-border-width: 2px;   /* Cambia el grosor del borde según sea necesario */
+    -fx-border-radius: 5px;  /* Cambia el radio del borde según sea necesario */
+    -fx-padding: 5px;        /* Ajusta el padding si es necesario */
+}
+
+#accederEstilo{
+    -fx-background-color:  #ff00aa;
+    -fx-text-fill: white;
+}
