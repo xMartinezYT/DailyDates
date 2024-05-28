@@ -26,14 +26,18 @@ public class BotonesCategorias
 
     @javafx.fxml.FXML
     public void initialize() {
-
+         CategoriaHolder catHol = CategoriaHolder.getInstance();
+         EmpresaModel empMod = new EmpresaModel();
+         int col = 1;
         try {
-            for (int i = 1; i < 40; i++) {
+            for (Empresa emp : empMod.listar_empresas_categoria(catHol.getCategoria().getId())) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("CategoriasMostrar.fxml"));
                 AnchorPane anchor = fxmlLoader.load();
                 CategoriasMostrar categoriasMostrar = fxmlLoader.getController();
-                gridPane.add(anchor,1,i);
+                categoriasMostrar.initialize(emp);
+                gridPane.add(anchor,1,col);
+                col++;
                 GridPane.setMargin(anchor,new Insets(2));
             }
         } catch (IOException e) {

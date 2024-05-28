@@ -34,8 +34,27 @@ public class CategoriasMostrar
     @javafx.fxml.FXML
     private Button pedirCitaButton;
 
+    private Empresa empresa;
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize(Empresa emp) {
+
+        setEmpresa(emp);
+
+        anyadirNombre.setText(empresa.getNombre());
+        anyadirCiudad.setText(empresa.getCiudad());
+        anyadirDireccion.setText(empresa.getDireccion());
+        anyadirHorario.setText(empresa.getHorario());
+        imagenEmpresa.setImage(empresa.getFoto_empresa());
+
     }
 
     @javafx.fxml.FXML
