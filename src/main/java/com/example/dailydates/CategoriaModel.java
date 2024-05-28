@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CategoriaModel extends Conexion{
+public class   CategoriaModel extends Conexion{
 
     public ArrayList<Categoria> listar_categorias(){
         ArrayList<Categoria> lista = new ArrayList<>();
@@ -62,13 +62,13 @@ public class CategoriaModel extends Conexion{
     public Categoria buscar_categoria(int id){
         Categoria g = null;
         try {
-            String sql = "Select * from categoria";
+            String sql = "Select * from categoria where id_categoria = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 g = new Categoria(rs.getInt(1),rs.getString(3),rs.getString(2));
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

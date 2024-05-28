@@ -15,14 +15,14 @@ public class EmpresaModel extends Conexion{
 
     public ArrayList<Empresa> listar_empresas() {
         ArrayList<Empresa> lista = new ArrayList<>();
-        ArrayList<Categoria> categorias = new ArrayList<>();
+
 
         try {
             String sql = "select * from empresa";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                categorias.clear();
+                ArrayList<Categoria> categorias = new ArrayList<>();
                 String sql2 = "select * from categoria where id_categoria in (select id_categoria from pertenece where id_empresa = ?)";
                 PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                 ps2.setInt(1,rs.getInt(1));
@@ -58,14 +58,17 @@ public class EmpresaModel extends Conexion{
                 ps.setString(7,em.getDireccion());
                 ps.execute();
 
-                //no inserta bien en la tabla pertenece el problema es el id de la empresa ya que al crearla no puedo saber su id
-                // (posible solucion realizando un select para saber el id de la nueva empresa y pasarselo a el segundo insert)
-                String sql2 = "insert into pertenece (id_categoria,id_empresa) values (?,?)";
-                PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
-                ps2.setInt(1,c.getId());
-                ps2.setInt(2,em.getId_empresa());
-                ps2.execute();
 
+                String sql3 = "SELECT max(id_Empresa) FROM dailydates.empresa";
+                PreparedStatement ps3 = this.getConexion().prepareStatement(sql3);
+                ResultSet rs3 = ps3.executeQuery();
+                while(rs3.next()) {
+                    String sql2 = "insert into pertenece (id_categoria,id_empresa) values (?,?)" ;
+                    PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
+                    ps2.setInt(1, c.getId());
+                    ps2.setInt(2, rs3.getInt(1));
+                    ps2.execute();
+                }
                 resultado = true;
             } catch (SQLException | FileNotFoundException e) {
                 throw new RuntimeException(e);
@@ -89,7 +92,6 @@ public class EmpresaModel extends Conexion{
 
         public ArrayList<Empresa> listar_empresas_empresario(int id_empresario){
             ArrayList<Empresa> lista = new ArrayList<>();
-            ArrayList<Categoria> categorias = new ArrayList<>();
 
             try {
                 String sql = "select * from empresa where id_empresario = ?";
@@ -97,12 +99,14 @@ public class EmpresaModel extends Conexion{
                 ps.setInt(1,id_empresario);
                 ResultSet rs = ps.executeQuery();
                 while(rs.next()){
-                    categorias.clear();
+
+                    ArrayList<Categoria> categorias = new ArrayList<>();
                     String sql2 = "select * from categoria where id_categoria in (select id_categoria from pertenece where id_empresa = ?)";
                     PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                     ps2.setInt(1,rs.getInt(1));
                     ResultSet rs2 = ps2.executeQuery();
                     while(rs2.next()){
+
                         Categoria g = new Categoria(rs2.getInt(1),rs2.getString(3),rs2.getString(2));
                         categorias.add(g);
                     }
@@ -118,14 +122,14 @@ public class EmpresaModel extends Conexion{
 
         public ArrayList<Empresa> listar_empresas_categoria(int id_categoria){
             ArrayList<Empresa> lista = new ArrayList<>();
-            ArrayList<Categoria> categorias = new ArrayList<>();
+
             try {
                String sql = "select * from empresa where id_empresa in(select id_empresa from pertenece where id_categoria = ?)";
                PreparedStatement ps = this.getConexion().prepareStatement(sql);
                ps.setInt(1,id_categoria);
                ResultSet rs = ps.executeQuery();
                 while(rs.next()){
-                    categorias.clear();
+                    ArrayList<Categoria> categorias = new ArrayList<>();
                     String sql2 = "select * from categoria where id_categoria in (select id_categoria from pertenece where id_empresa = ?)";
                     PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                     ps2.setInt(1,rs.getInt(1));
@@ -168,7 +172,7 @@ public class EmpresaModel extends Conexion{
            public  ArrayList<Empresa> listar_empresas_ciudad(String ciudad){
 
                ArrayList<Empresa> lista = new ArrayList<>();
-               ArrayList<Categoria> categorias = new ArrayList<>();
+
 
                try {
                    String sql = "select * from empresa where ciudad = ?";
@@ -177,7 +181,7 @@ public class EmpresaModel extends Conexion{
                    ResultSet rs = ps.executeQuery();
 
                    while(rs.next()){
-                       categorias.clear();
+                       ArrayList<Categoria> categorias = new ArrayList<>();
                        String sql2 = "select * from categoria where id_categoria in (select id_categoria from pertenece where id_empresa = ?)";
                        PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                        ps2.setInt(1,rs.getInt(1));
