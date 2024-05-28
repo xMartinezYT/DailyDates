@@ -68,6 +68,8 @@ public class EstablecimientoMostrar
              for (Categoria cat : this.empresa.getCategorias()){
                  imprimir += " " + cat.getNombre();
              }
+             anyadirNombre.setText(emp.getNombre());
+
              categoriaslabel.setText(imprimir);
 
              anyadirCifLabel.setText(emp.getCIF());
