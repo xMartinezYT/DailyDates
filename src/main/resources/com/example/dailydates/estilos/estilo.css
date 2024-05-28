@@ -23,6 +23,7 @@
     -fx-background-color: transparent;
 
 }
+
 #registrarseUsuarioPane:hover{
     -fx-border-color: f8a0de;
     -fx-border-radius: 15;
