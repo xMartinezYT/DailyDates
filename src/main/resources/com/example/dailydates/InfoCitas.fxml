@@ -42,7 +42,7 @@
          </children>
       </Pane>
       <Button id="buttonEstilo" fx:id="modificarButton" layoutX="283.0" layoutY="175.0" mnemonicParsing="false" onAction="#modificarButtonOnAction" stylesheets="@estilos/estilo.css" text="Modificar" />
-      <Pane layoutX="14.0" layoutY="57.0" prefHeight="2.0" prefWidth="232.0" style="-fx-border-color: black;" />
+      <Pane layoutX="14.0" layoutY="57.0" prefHeight="2.0" prefWidth="232.0" style="-fx-border-color: #ff00aa;" />
       <Button id="buttonEstilo" fx:id="eliminarButton" layoutX="384.0" layoutY="175.0" mnemonicParsing="false" onAction="#eliminarButtonOnAction" prefHeight="27.0" prefWidth="69.0" stylesheets="@estilos/estilo.css" text="Eliminar" />
    </children>
 </AnchorPane>

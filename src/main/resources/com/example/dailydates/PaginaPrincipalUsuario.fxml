@@ -20,7 +20,7 @@
                   <Image url="@img/DailyDateFoto.png" />
                </image>
             </ImageView>
-            <Button fx:id="categoriaButton" layoutX="151.0" layoutY="18.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="124.0" stylesheets="@estilos/estilo.css" text="Categorías" textFill="#bf186c">
+            <Button id="categoriaButton" fx:id="categoriaButton" layoutX="151.0" layoutY="18.0" mnemonicParsing="false" onAction="#categoriaButtonOnAction" prefHeight="25.0" prefWidth="124.0" stylesheets="@estilos/estilo.css" text="Categorías" textFill="#bf186c">
                <font>
                   <Font size="19.0" />
                </font></Button>
