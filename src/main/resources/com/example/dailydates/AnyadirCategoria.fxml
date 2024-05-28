@@ -4,11 +4,13 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 
 <AnchorPane fx:id="anchorPane" prefHeight="205.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.AnyadirCategoria">
    <children>
+      <Pane fx:id="pane" layoutX="15.0" layoutY="13.0" prefHeight="179.0" prefWidth="312.0" style="-fx-border-color: f892f1; -fx-border-radius: 20;" />
       <ChoiceBox fx:id="categoriasChoicebox" layoutX="96.0" layoutY="78.0" prefWidth="150.0" />
       <Button fx:id="guardarCambiosButton" layoutX="42.0" layoutY="148.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" text="Guardar Cambios" />
       <Button fx:id="eliminarCategoriaButton" layoutX="191.0" layoutY="148.0" mnemonicParsing="false" onAction="#eliminarCategoriaButtonOnAction" text="Eliminar Categoría" />
