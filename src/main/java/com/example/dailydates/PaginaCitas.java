@@ -28,14 +28,18 @@ public class PaginaCitas
 
     @javafx.fxml.FXML
     public void initialize() {
-
+            CitasModel citmod = new CitasModel();
+            UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
+            int col = 1;
         try {
-            for (int i = 1; i < 40; i++) {
+            for (Citas c : citmod.listar_citas_usuario(usuarioHolder.getUsuario().getId())) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("citasmostrar.fxml"));
                 AnchorPane anchor = fxmlLoader.load();
                 Citasmostrar cita = fxmlLoader.getController();
-                gridPane.add(anchor,1,i);
+                cita.initialize(c);
+                gridPane.add(anchor,1,col);
+                col++;
                 GridPane.setMargin(anchor,new Insets(2));
             }
         } catch (IOException e) {
