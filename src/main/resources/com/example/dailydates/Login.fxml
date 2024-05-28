@@ -19,7 +19,7 @@
                   <Font size="14.0" />
                </font></TextField>
             <Button id="accederEstilo" fx:id="accederButton" layoutX="506.0" layoutY="380.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="295.0" stylesheets="@estilos/estilo.css" text="Acceder" textFill="#ff00aa" />
-            <Button fx:id="crearCuentaButton" layoutX="605.0" layoutY="448.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
+            <Button fx:id="crearCuentaButton" layoutX="599.0" layoutY="450.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
             <Button fx:id="bienvenidoLabel" layoutX="544.0" layoutY="172.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Bienvenido otra vez a Daily Dates" textFill="#ff00aa" />
             <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-23.0" layoutY="-2.0" prefHeight="610.0" prefWidth="433.0" stylesheets="@estilos/estilo.css">
                <children>

@@ -10,17 +10,17 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="223.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.ModificarCitas">
    <children>
-      <Label fx:id="pedidoLabel" layoutX="276.0" layoutY="9.0" prefHeight="66.0" prefWidth="174.0" text="Pedido: (opcional)" wrapText="true">
+      <Label fx:id="pedidoLabel" layoutX="276.0" layoutY="9.0" prefHeight="66.0" prefWidth="174.0" text="Pedido: (opcional)" textFill="#ff00aa" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="anyadirHoraLabel" layoutX="43.0" layoutY="120.0" prefHeight="30.0" prefWidth="56.0" text="Hora:">
+      <Label fx:id="anyadirHoraLabel" layoutX="43.0" layoutY="120.0" prefHeight="30.0" prefWidth="56.0" text="Hora:" textFill="#ff00aa">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="anyadirFechaLabel" layoutX="43.0" layoutY="27.0" text="Fecha:">
+      <Label fx:id="anyadirFechaLabel" layoutX="43.0" layoutY="27.0" text="Fecha:" textFill="#ff00aa">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>

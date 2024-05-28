@@ -7,13 +7,13 @@
 
 <AnchorPane fx:id="mainAnchorPane" prefHeight="112.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Citasmostrar">
    <children>
-      <Label fx:id="nombreNegocio" layoutX="15.0" layoutY="14.0" prefHeight="47.0" prefWidth="218.0" text="NOMBRE NEGOCIO">
+      <Label fx:id="nombreNegocio" layoutX="15.0" layoutY="14.0" prefHeight="47.0" prefWidth="218.0" text="NOMBRE NEGOCIO" textFill="#ff00aa">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelFecha" layoutX="31.0" layoutY="78.0" text="11/10/2024" />
-      <Label fx:id="labelHora" layoutX="183.0" layoutY="78.0" text="11:15" />
-      <Button id=" buttonEstilo" fx:id="buttonInfo" layoutX="445.0" layoutY="44.0" mnemonicParsing="false" onAction="#infoclick" stylesheets="@estilos/estilo.css" text="+ Info" />
+      <Label fx:id="labelFecha" layoutX="31.0" layoutY="78.0" text="11/10/2024" textFill="#ff00aa" />
+      <Label fx:id="labelHora" layoutX="183.0" layoutY="78.0" text="11:15" textFill="#ff00aa" />
+      <Button id="accederEstilo" fx:id="buttonInfo" layoutX="445.0" layoutY="44.0" mnemonicParsing="false" onAction="#infoclick" stylesheets="@estilos/estilo.css" text="+ Info" />
    </children>
 </AnchorPane>

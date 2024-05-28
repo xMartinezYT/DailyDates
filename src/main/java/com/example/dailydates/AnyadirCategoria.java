@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 public class AnyadirCategoria
 {
@@ -18,6 +19,8 @@ public class AnyadirCategoria
     private ChoiceBox categoriasChoicebox;
     @javafx.fxml.FXML
     private Button guardarCambiosButton;
+    @javafx.fxml.FXML
+    private Pane pane;
 
     @javafx.fxml.FXML
     public void initialize() {
