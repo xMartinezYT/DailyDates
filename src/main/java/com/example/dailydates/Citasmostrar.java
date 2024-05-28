@@ -25,8 +25,22 @@ public class Citasmostrar
     @javafx.fxml.FXML
     private Button buttonInfo;
 
+    private Citas citas;
+
+
+    public Citas getCitas() {
+        return citas;
+    }
+
+    public void setCitas(Citas citas) {
+        this.citas = citas;
+    }
+
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize(Citas c) {
+        setCitas(c);
+
+        labelFecha.setText(citas.getFecha().toString());
     }
 
     @javafx.fxml.FXML
