@@ -59,9 +59,13 @@ public class CategoriasMostrar
 
     @javafx.fxml.FXML
     public void pedirCitaButtonOnAction(ActionEvent actionEvent) {
+
         try {
+
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PedirCitas.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
+            PedirCitas pedirCitas = fxmlLoader.getController();
+            pedirCitas.initialize(empresa);
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();

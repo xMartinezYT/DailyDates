@@ -1,9 +1,14 @@
 package com.example.dailydates;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+
+import java.sql.Time;
+import java.util.ArrayList;
 
 public class PedirCitas
 {
@@ -33,12 +38,53 @@ public class PedirCitas
     private Label pideCitaLabel;
     @javafx.fxml.FXML
     private Button guardarCambiosButton;
+    private Usuario usuario;
+
+
+    private Empresa empresa;
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize(Empresa empresa) {
+
+        setEmpresa(empresa);
+        UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
+        nombreTextField.setText(usuarioHolder.getUsuario().getNombre());
+        usuario = usuarioHolder.getUsuario();
+
+
+
+        ObservableList<String> opciones = FXCollections.observableArrayList();
+
+        for (int hour = 0; hour < 24; hour++) {
+            for (int minute = 0; minute < 60; minute += 15) {
+                String time = String.format("%02d:%02d:00", hour, minute);
+                opciones.add(time);
+            }
+        }
+
+        SpinnerValueFactory<String> hora = new SpinnerValueFactory.ListSpinnerValueFactory<String>(opciones);
+        horaSpinner.setValueFactory(hora);
     }
 
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
+
+          CitasModel citmod = new CitasModel();
+
+          Time t = Time.valueOf(horaSpinner.getValue().toString());
+
+
+          Citas c = new Citas( this.usuario.getId(),this.empresa.getId_empresa(),fechaDatePicker.getValue(),t,pedidoTextArea.getText());
+
+          citmod.anyadir_cita(c);
+
     }
 }
