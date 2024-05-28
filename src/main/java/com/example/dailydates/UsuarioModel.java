@@ -102,7 +102,6 @@ public class UsuarioModel extends Conexion{
    }
 
    public boolean validar_usuario(String gmail, String contrasenya){
-
        try {
            String sql = "Select * from usuario where gmail = ? and contrasenya = ?";
            PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -137,17 +136,14 @@ public class UsuarioModel extends Conexion{
                 lista.add(u);
             }
 
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
         return lista;
     }
 
     public Usuario buscar_usuario(String gmail) {
         Usuario u = new Usuario();
-
         try {
             String sql = "select * from usuario where gmail = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -160,6 +156,7 @@ public class UsuarioModel extends Conexion{
                 }
                  u = new Usuario(rs.getInt("id_Usuario"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("gmail"),rs.getString("contrasenya"),rs.getString("telefono"),img);
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

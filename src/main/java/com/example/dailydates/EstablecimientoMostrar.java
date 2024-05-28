@@ -50,6 +50,8 @@ public class EstablecimientoMostrar
     private Label categoriaslabel;
 
     private Empresa empresa;
+    @javafx.fxml.FXML
+    private Button AnyadirCategoriasButton;
 
     public Empresa getEmpresa() {
         return empresa;
@@ -59,7 +61,7 @@ public class EstablecimientoMostrar
         this.empresa = empresa;
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void initialize(Empresa emp) {
 
        setEmpresa(emp);
@@ -68,6 +70,8 @@ public class EstablecimientoMostrar
              for (Categoria cat : this.empresa.getCategorias()){
                  imprimir += " " + cat.getNombre();
              }
+             anyadirNombre.setText(emp.getNombre());
+
              categoriaslabel.setText(imprimir);
 
              anyadirCifLabel.setText(emp.getCIF());
@@ -105,6 +109,20 @@ public class EstablecimientoMostrar
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("datos no validos");
             a.showAndWait();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void AnyadirCategoriasButtonOnAction(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AnyadirCategoria.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }

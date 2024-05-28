@@ -64,6 +64,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void extraescolaresButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(4));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -74,6 +77,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void otrosButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(11));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -84,6 +90,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void pescaderiaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(3));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -94,6 +103,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void restauranteButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(7));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -104,6 +116,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void carniceriaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(6));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -114,6 +129,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void pasteleriaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(1));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -124,6 +142,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void saludButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(5));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -134,6 +155,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void fruteriaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(2));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -144,6 +168,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void verduleriaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(8));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -154,6 +181,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void peluqueriaButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(10));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -164,6 +194,9 @@ public class PaginaCategorias
     @javafx.fxml.FXML
     public void tallerButtonOnAction(ActionEvent actionEvent) {
         try {
+            CategoriaHolder catHol = CategoriaHolder.getInstance();
+            CategoriaModel catMod = new CategoriaModel();
+            catHol.setCategoria(catMod.buscar_categoria(9));
             AnchorPane pane = FXMLLoader.load(getClass().getResource("BotonesCategorias.fxml"));
             this.categoriasAnchorPane.getChildren().setAll(pane);
         } catch (IOException e) {
