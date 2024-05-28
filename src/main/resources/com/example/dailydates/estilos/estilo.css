@@ -60,6 +60,7 @@
 }
 #atrasButton{
     -fx-background-color: transparent;
+    -fx-text-fill: ff00c3;
 
 }
 #atrasButton:hover {
@@ -129,10 +130,12 @@
 
 #buttonEstilo {
     -fx-background-color: transparent;
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 10;
 
 }
 #buttonEstilo:hover {
-    -fx-background-color: transparent;
+    -fx-background-color: fff1ff;
     -fx-border-color: f8a0de;
     -fx-border-radius: 10;
     -fx-border-width: 2;

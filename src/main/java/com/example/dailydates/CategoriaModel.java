@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CategoriaModel extends Conexion{
+public class   CategoriaModel extends Conexion{
 
     public ArrayList<Categoria> listar_categorias(){
         ArrayList<Categoria> lista = new ArrayList<>();

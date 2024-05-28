@@ -9,59 +9,59 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPaneMain" prefHeight="600.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
+<AnchorPane fx:id="anchorPaneMain" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.RegistrarseEmpresario">
    <children>
-      <Label fx:id="introducirDatosLabel" layoutX="186.0" layoutY="33.0" text="Crea una cuenta" textFill="#ff00c3">
+      <Label fx:id="introducirDatosLabel" layoutX="96.0" layoutY="91.0" text="Crea una cuenta" textFill="#ff00c3">
          <font>
             <Font name="System Bold Italic" size="39.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="117.0" text="Nombre" textFill="#ff00c3">
+      <Label layoutX="211.0" layoutY="200.0" text="Nombre" textFill="#ff00c3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTextField" layoutX="199.0" layoutY="135.0" prefHeight="27.0" prefWidth="250.0" promptText="Nombre" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="apellidosTextField" layoutX="199.0" layoutY="193.0" prefHeight="27.0" prefWidth="250.0" promptText="Apellido1, Apellido2" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="contraseñaTextField" layoutX="199.0" layoutY="249.0" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="gmailTextField" layoutX="199.0" layoutY="302.0" prefHeight="27.0" prefWidth="250.0" promptText="ejemplo@gmail.com" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="telefonoTextField" layoutX="199.0" layoutY="355.0" prefHeight="27.0" prefWidth="250.0" promptText="123123123" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <Pane fx:id="imagenPane" layoutX="16.0" layoutY="184.0" prefHeight="158.0" prefWidth="158.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
+      <TextField fx:id="nombreTextField" layoutX="209.0" layoutY="218.0" prefHeight="27.0" prefWidth="250.0" promptText="Nombre" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <TextField fx:id="apellidosTextField" layoutX="209.0" layoutY="272.0" prefHeight="27.0" prefWidth="250.0" promptText="Apellido1, Apellido2" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <TextField fx:id="contraseñaTextField" layoutX="209.0" layoutY="322.0" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <TextField fx:id="gmailTextField" layoutX="209.0" layoutY="372.0" prefHeight="27.0" prefWidth="250.0" promptText="ejemplo@gmail.com" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <TextField fx:id="telefonoTextField" layoutX="209.0" layoutY="422.0" prefHeight="27.0" prefWidth="250.0" promptText="123123123" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <Pane fx:id="imagenPane" layoutX="24.0" layoutY="238.0" prefHeight="158.0" prefWidth="158.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <Button id="buttonEstilo" fx:id="cargarImagenButton" layoutX="28.0" layoutY="119.0" mnemonicParsing="false" onAction="#cargarImagenButtonOnAction" stylesheets="@estilos/estilo.css" text="Cargar imagen" textFill="#ff00c3" />
             <ImageView fx:id="fotoImage" fitHeight="111.0" fitWidth="109.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button id="accederEstilo" fx:id="crearButton" layoutX="204.0" layoutY="412.0" mnemonicParsing="false" onAction="#crearButtonOnAction" prefHeight="38.0" prefWidth="250.0" stylesheets="@estilos/estilo.css" text="Crear cuenta" textFill="#ff00c3">
+      <Button id="accederEstilo" fx:id="crearButton" layoutX="99.0" layoutY="481.0" mnemonicParsing="false" onAction="#crearButtonOnAction" prefHeight="38.0" prefWidth="250.0" stylesheets="@estilos/estilo.css" text="Crear cuenta" textFill="#ff00c3">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Button>
-      <Button id="atrasButton" fx:id="atrasButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" prefHeight="47.0" prefWidth="46.0" stylesheets="@estilos/estilo.css" text="&lt;" textFill="#ff00c3">
+      <Button id="atrasButton" fx:id="atrasButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasButtonOnAction" prefHeight="47.0" prefWidth="46.0" stylesheets="@estilos/estilo.css" text="&lt;">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="199.0" layoutY="175.0" text="Apellidos" textFill="#ff00c3">
+      <Label layoutX="211.0" layoutY="254.0" text="Apellidos" textFill="#ff00c3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="231.0" text="Contraseña" textFill="#ff00c3">
+      <Label layoutX="211.0" layoutY="305.0" text="Contraseña" textFill="#ff00c3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="284.0" text="Correo" textFill="#ff00c3">
+      <Label layoutX="211.0" layoutY="355.0" text="Correo" textFill="#ff00c3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="199.0" layoutY="333.0" text="Telefono" textFill="#ff00c3">
+      <Label layoutX="211.0" layoutY="405.0" text="Telefono" textFill="#ff00c3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="nombreUsuarioLabel1" layoutX="244.0" layoutY="89.0" text="Crea una cuenta y empieza a reservar" textFill="#969696">
+      <Label fx:id="nombreUsuarioLabel1" layoutX="155.0" layoutY="147.0" prefHeight="16.0" prefWidth="199.0" text="Crea una cuenta y empieza a gestionar" textFill="#969696">
          <font>
             <Font size="11.0" />
          </font>
