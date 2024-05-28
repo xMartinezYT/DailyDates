@@ -32,6 +32,7 @@
       <TextField fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="110.0" />
       <TextField fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="110.0" />
       <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="292.0" layoutY="246.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar Cambios" />
-      <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="149.0" text="cats" />
+      <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="92.0" text="cats" />
+      <Button fx:id="AnyadirCategoriasButton" layoutX="267.0" layoutY="93.0" mnemonicParsing="false" onAction="#AnyadirCategoriasButtonOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent; -fx-border-radius: 15;" text="+" />
    </children>
 </AnchorPane>
