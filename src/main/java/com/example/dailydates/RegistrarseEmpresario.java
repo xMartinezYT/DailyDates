@@ -125,41 +125,5 @@ public class RegistrarseEmpresario  {
         }
 
     }
-/*
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/pexels-mdsnmdsnmdsn-1831234.jpg");
-
-        // Crear un objeto ImageView para aplicar los ajustes de color
-        ImageView imageView = new ImageView(fondo);
-
-
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setBrightness(-0.4); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
-
-        // Aplicar el ColorAdjust al ImageView
-        imageView.setEffect(colorAdjust);
-
-        // Crear un Snapshot de ImageView con el efecto de opacidad
-        SnapshotParameters params = new SnapshotParameters();
-        params.setFill(Color.TRANSPARENT); // Fondo transparente para el snapshot
-        WritableImage writableImage = imageView.snapshot(params, null);
-        Image adjustedImage = new ImageView(writableImage).getImage();
-
-        // Configurar el fondo con la imagen ajustada
-        BackgroundSize backgroundSize = new BackgroundSize(800, 600, false, false, true, false);
-        BackgroundImage backgroundImage = new BackgroundImage(adjustedImage,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.DEFAULT,
-                backgroundSize);
-
-        Background background = new Background(backgroundImage);
-
-        anchorPaneMain.setBackground(background);
-        anchorPaneMain.setPadding(new Insets(20));
-    }
-*/
-
     }
 

@@ -118,6 +118,8 @@ public class EstablecimientoMostrar
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AnyadirCategoria.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
+            AnyadirCategoria anyadirCategoria = fxmlLoader.getController();
+            anyadirCategoria.initialize(empresa);
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();

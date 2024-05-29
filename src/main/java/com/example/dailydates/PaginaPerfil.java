@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -60,6 +61,28 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
+        UsuarioModel usmod = new UsuarioModel();
+        UsuarioHolder ushold = UsuarioHolder.getInstance();
+
+        Usuario modus = new Usuario(u.getId(),nombreUsuarioTextField.getText(),apellidosTextField.getText(),correoTextField.getText(),u.getContrasenya(),telefonoTextField.getText(),perfilImage.getImage());
+
+        if (usmod.mod_usuario(modus)){
+            ushold.setUsuario(modus);
+        }else{
+         Alert a = new Alert(Alert.AlertType.ERROR);
+         a.setContentText("Error al modificar perfil");
+         a.showAndWait();
+}
+
+
+        perfilImage.setImage(u.getFoto_perfil());
+        nombreUsuarioTextField.setText(u.getNombre());
+        nombreTextField.setText(u.getNombre());
+        correoTextField.setText(u.getGmail());
+        apellidosTextField.setText(u.getApellidos());
+        telefonoTextField.setText(u.getTelefono());
+
+
     }
 
     @javafx.fxml.FXML
@@ -90,7 +113,4 @@ public class PaginaPerfil
 
     }
 
-    @Deprecated
-    public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
-    }
 }

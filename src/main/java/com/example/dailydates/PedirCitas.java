@@ -84,7 +84,13 @@ public class PedirCitas
 
           Citas c = new Citas( this.usuario.getId(),this.empresa.getId_empresa(),fechaDatePicker.getValue(),t,pedidoTextArea.getText());
 
-          citmod.anyadir_cita(c);
+        if (citmod.anyadir_cita(c)){
+
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Error al modificar cita");
+            a.showAndWait();
+        }
 
     }
 }

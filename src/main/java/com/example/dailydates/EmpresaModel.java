@@ -228,7 +228,35 @@ public class EmpresaModel extends Conexion{
                return e;
            }
 
-
+           public boolean anyadir_categoria(int id_categoria, int id_empresa){
+                  boolean resultado = false;
+               try {
+                   String sql = "insert into pertenece values(?,?)";
+                   PreparedStatement ps = this.getConexion().prepareStatement(sql);
+                   ps.setInt(1,id_categoria);
+                   ps.setInt(2,id_empresa);
+                   ps.execute();
+                   resultado = true;
+               } catch (SQLException e) {
+                   throw new RuntimeException(e);
+               }
+                  return resultado;
+           }
+           public boolean eliminar_categoria(int id_categoria, int id_empresa){
+                boolean resultado = false;
+                    try {
+                        String sql = "delete from pertenece where id_categoria = ? and id_empresa = ?";
+                        PreparedStatement ps = this.getConexion().prepareStatement(sql);
+                        ps.setInt(1,id_categoria);
+                        ps.setInt(2,id_empresa);
+                        ps.execute();
+                        resultado = true;
+                    } catch (SQLException e) {
+                         throw new RuntimeException(e);
+                    }
+                    return resultado;
+                }
         }
+
 
 
