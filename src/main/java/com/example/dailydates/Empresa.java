@@ -4,19 +4,36 @@ import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 
+/**
+ * La clase Empresa representa una empresa en la aplicación.
+ */
 public class Empresa {
 
-    private int id_empresa;
-    private int id_empresario;
-    private ArrayList<Categoria> categorias;
-    private String nombre;
-    private String CIF;
-    private String horario;
-    private String ciudad;
-    private String direccion;
-    private Image foto_empresa;
+    // Atributos de la empresa
+    private int id_empresa;     // Identificador único de la empresa
+    private int id_empresario;      // Identificador único del empresario dueño de la empresa
+    private ArrayList<Categoria> categorias;    // Lista de categorías a las que pertenece la empresa
+    private String nombre;      // Nombre de la empresa
+    private String CIF;     // Código de Identificación Fiscal de la empresa
+    private String horario;     // Horario de la empresa
+    private String ciudad;      // Ciudad donde se encuentra la empresa
+    private String direccion;       // Dirección de la empresa
+    private Image foto_empresa;     // Foto de la empresa
 
 
+    /**
+     * Constructor de la clase Empresa.
+     *
+     * @param id_empresa     El ID de la empresa.
+     * @param id_empresario  El ID del empresario dueño de la empresa.
+     * @param categorias     La lista de categorías a las que pertenece la empresa.
+     * @param nombre         El nombre de la empresa.
+     * @param CIF            El CIF de la empresa.
+     * @param horario        El horario de la empresa.
+     * @param ciudad         La ciudad donde se encuentra la empresa.
+     * @param direccion      La dirección de la empresa.
+     * @param foto_empresa   La foto de la empresa.
+     */
     public Empresa(int id_empresa, int id_empresario, ArrayList<Categoria> categorias, String nombre, String CIF, String horario, String ciudad, String direccion, Image foto_empresa) {
         this.id_empresa = id_empresa;
         this.id_empresario = id_empresario;
@@ -102,8 +119,11 @@ public class Empresa {
         this.foto_empresa = foto_empresa;
     }
 
+    // Métodos getters y setters para acceder y modificar los atributos de la empresa
     @Override
     public String toString() {
+
+        // Método para obtener una representación en cadena de la empresa
         return "Empresa{" +
                 "id_empresa=" + id_empresa +
                 ", id_empresario=" + id_empresario +

@@ -18,6 +18,10 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Controlador para la página de perfil de un empresario.
+ * Esta página permite a los empresarios ver y editar su perfil.
+ */
 public class PaginaPerfilEmpresario
 {
     @javafx.fxml.FXML
@@ -57,12 +61,20 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private TextField nombreTextField;
 
+    /**
+     * Inicializa la página de perfil del empresario.
+     * Llama al método anyadirdatos() para mostrar los datos del empresario actual.
+     */
     @javafx.fxml.FXML
     public void initialize() {
 
      anyadirdatos();
 
     }
+    /**
+     * Maneja el evento del botón para cerrar la sesión del empresario.
+     * @param actionEvent Evento de acción del botón.
+     */
     @javafx.fxml.FXML
     public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -77,6 +89,12 @@ public class PaginaPerfilEmpresario
         }
     }
 
+    /**
+     * Maneja el evento del botón para guardar los cambios en el perfil del empresario.
+     * Obtiene los datos ingresados por el usuario y actualiza el perfil del empresario en la base de datos.
+     * Además, actualiza el objeto Empresario en el holder.
+     * @param actionEvent Evento de acción del botón.
+     */
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
@@ -100,6 +118,9 @@ public class PaginaPerfilEmpresario
 
     }
 
+    /**
+     * Carga los datos del empresario actual en los campos de la página de perfil.
+     */
     public void anyadirdatos(){
 
         EmpresarioHolder holder = EmpresarioHolder.getInstance();

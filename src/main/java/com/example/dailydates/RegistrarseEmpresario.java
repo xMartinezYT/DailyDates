@@ -23,6 +23,9 @@ import java.io.InterruptedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador para la ventana de registro de empresarios.
+ */
 public class RegistrarseEmpresario  {
     @javafx.fxml.FXML
     private Label introducirDatosLabel;
@@ -52,6 +55,11 @@ public class RegistrarseEmpresario  {
     @javafx.fxml.FXML
     private Label nombreUsuarioLabel1;
 
+    /**
+     * Maneja el evento del botón "Cargar Imagen".
+     * Permite al usuario seleccionar una imagen de perfil.
+     * @param actionEvent Evento de acción del botón "Cargar Imagen".
+     */
     @javafx.fxml.FXML
     public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
 
@@ -70,6 +78,11 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Maneja el evento del botón "Crear".
+     * Crea un nuevo perfil de empresario con los datos proporcionados por el usuario.
+     * @param actionEvent Evento de acción del botón "Crear".
+     */
     @javafx.fxml.FXML
     public void crearButtonOnAction(ActionEvent actionEvent) {
         EmpresarioModel em = new EmpresarioModel();
@@ -100,6 +113,11 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Maneja el evento del botón "Atrás".
+     * Regresa a la ventana de selección de tipo de registro.
+     * @param actionEvent Evento de acción del botón "Atrás".
+     */
     @javafx.fxml.FXML
     public void atrasButtonOnAction(ActionEvent actionEvent) {
 
@@ -114,6 +132,10 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Método deprecado.
+     * @param actionEvent Evento de acción.
+     */
     @Deprecated
     public void pruebaButtonOnAction(ActionEvent actionEvent) {
 

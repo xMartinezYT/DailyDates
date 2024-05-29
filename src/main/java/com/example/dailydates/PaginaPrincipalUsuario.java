@@ -22,6 +22,10 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
+/**
+ * Controlador para la página principal de un usuario.
+ * Esta página proporciona acceso a diferentes funcionalidades para el usuario, como categorías, citas y perfil.
+ */
 public class PaginaPrincipalUsuario {
 
     @javafx.fxml.FXML
@@ -37,6 +41,10 @@ public class PaginaPrincipalUsuario {
     @javafx.fxml.FXML
     private AnchorPane contenedorAnchorPane;
 
+    /**
+     * Inicializa la página principal del usuario.
+     * Configura las animaciones para los botones del menú y carga la página de categorías por defecto.
+     */
     @javafx.fxml.FXML
     public void initialize() {
 
@@ -94,28 +102,6 @@ public class PaginaPrincipalUsuario {
         perfilButton.setOnMouseExited(event -> {
             perfilTimeline.stop(); // Detener la animación
         });
-
-
-
-
-
-               try {
-            categoriaButton.setUnderline(true);
-            citasButton.setUnderline(false);
-            perfilButton.setUnderline(false);
-
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("PaginaCategorias.fxml"));
-            this.contenedorAnchorPane.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    @javafx.fxml.FXML
-    public void categoriaButtonOnAction(ActionEvent actionEvent) {
-
-
         try {
             categoriaButton.setUnderline(true);
             citasButton.setUnderline(false);
@@ -127,9 +113,31 @@ public class PaginaPrincipalUsuario {
             throw new RuntimeException(e);
         }
     }
+    /**
+     * Cambia la vista a la página de categorías cuando se hace clic en el botón "Categoría".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Categoría".
+     */
+    @javafx.fxml.FXML
+    public void categoriaButtonOnAction(ActionEvent actionEvent) {
+        try {
+            categoriaButton.setUnderline(true);
+            citasButton.setUnderline(false);
+            perfilButton.setUnderline(false);
+
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("PaginaCategorias.fxml"));
+            this.contenedorAnchorPane.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    /**
+     * Cambia la vista a la página de citas cuando se hace clic en el botón "Citas".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Citas".
+     */
     @javafx.fxml.FXML
     public void citasButtonOnAction(ActionEvent actionEvent) {
-
         try {
             citasButton.setUnderline(true);
             categoriaButton.setUnderline(false);
@@ -141,6 +149,12 @@ public class PaginaPrincipalUsuario {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * Cambia la vista a la página de perfil cuando se hace clic en el botón "Perfil".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Perfil".
+     */
     @javafx.fxml.FXML
     public void perfilButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -154,7 +168,5 @@ public class PaginaPrincipalUsuario {
             throw new RuntimeException(e);
         }
     }
-
-
-
 }
+
