@@ -22,13 +22,26 @@ public class AnyadirCategoria
 
     private Empresa empresa;
 
+    /**
+     * Obtiene la empresa asociada a esta instancia.
+     * @return La empresa asociada.
+     */
     public Empresa getEmpresa() {
         return empresa;
     }
 
+    /**
+     * Establece la empresa asociada a esta instancia.
+     * @param empresa La empresa a establecer.
+     */
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+
+    /**
+     * Inicializa la elección de categorías.
+     * @param empr La empresa asociada.
+     */
     @javafx.fxml.FXML
     public void initialize(Empresa empr) {
         setEmpresa(empr);
@@ -38,6 +51,10 @@ public class AnyadirCategoria
         }
     }
 
+    /**
+     * Maneja el evento de clic en el botón para eliminar una categoría.
+     * @param actionEvent El evento de clic.
+     */
     @javafx.fxml.FXML
     public void eliminarCategoriaButtonOnAction(ActionEvent actionEvent) {
         EmpresaModel empresaModel = new EmpresaModel();
@@ -54,6 +71,10 @@ public class AnyadirCategoria
 
     }
 
+    /**
+     * Maneja el evento de clic en el botón para guardar los cambios en las categorías.
+     * @param actionEvent El evento de clic.
+     */
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
