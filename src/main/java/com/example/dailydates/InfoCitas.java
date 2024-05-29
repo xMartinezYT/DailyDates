@@ -42,9 +42,40 @@ public class InfoCitas
     @javafx.fxml.FXML
     private Button eliminarButton;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    private Citas citas;
 
+    public Citas getCitas() {
+        return citas;
+    }
+
+    public void setCitas(Citas citas) {
+        this.citas = citas;
+    }
+
+    private Empresa empresa;
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    @javafx.fxml.FXML
+    public void initialize(Citas c) {
+        EmpresaModel empmod = new EmpresaModel();
+
+        setCitas(c);
+        setEmpresa(empmod.buscar_empresa(c.getId_empresa()));
+
+
+        anyadirFechaLabel.setText(citas.getFecha().toString());
+        anyadirHoraLabel.setText(citas.getHora().toString());
+        anyadirCiudadLabel.setText(empresa.getCiudad());
+        anyadirDireccionLabel.setText(empresa.getDireccion());
+        anyadirNombreLabel.setText(empresa.getNombre());
+        anyadirPedidoLabel.setText(citas.getPedido());
     }
 
     @javafx.fxml.FXML

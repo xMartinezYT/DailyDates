@@ -32,8 +32,6 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private TextField nombreTextField;
     @javafx.fxml.FXML
-    private Label datosPersonalesLabel;
-    @javafx.fxml.FXML
     private TextField nombreUsuarioTextField;
     @javafx.fxml.FXML
     private TextField correoTextField;
@@ -46,35 +44,13 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private TextField apellidosTextField;
     @javafx.fxml.FXML
-    private Label negocio3Label;
-    @javafx.fxml.FXML
-    private Label negocio1Label;
-    @javafx.fxml.FXML
-    private Label negociosRecientesLabel;
-    @javafx.fxml.FXML
-    private Label negocio2Label;
-    @javafx.fxml.FXML
-    private ImageView negocio1Image;
-    @javafx.fxml.FXML
-    private ImageView negocio3Image;
-    @javafx.fxml.FXML
-    private Pane fotoPane1;
-    @javafx.fxml.FXML
-    private ImageView editarImage;
-    @javafx.fxml.FXML
-    private Pane fotoPane12;
-    @javafx.fxml.FXML
-    private Pane fotoPane11;
-    @javafx.fxml.FXML
-    private ImageView negocio2Image;
-    @javafx.fxml.FXML
     private Button guardarCambiosButton;
     @javafx.fxml.FXML
     private Button cerrarSesionButton;
-    @javafx.fxml.FXML
-    private Button cargarImagenButton;
 
     private Usuario u = new Usuario();
+    @javafx.fxml.FXML
+    private Label registroDeSesion;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -114,7 +90,7 @@ public class PaginaPerfil
 
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
     }
 }

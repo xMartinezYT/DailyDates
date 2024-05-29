@@ -36,18 +36,25 @@ public class Citasmostrar
         this.citas = citas;
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void initialize(Citas c) {
-        setCitas(c);
 
+        EmpresaModel empmod = new EmpresaModel();
+
+        setCitas(c);
         labelFecha.setText(citas.getFecha().toString());
+        labelHora.setText(citas.getHora().toString());
+        nombreNegocio.setText(empmod.buscar_empresa(citas.getId_empresa()).getNombre());
     }
 
     @javafx.fxml.FXML
     public void infoclick(ActionEvent actionEvent) {
         try {
+
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InfoCitas.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
+            InfoCitas infoCitas = fxmlLoader.getController();
+            infoCitas.initialize(citas);
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();

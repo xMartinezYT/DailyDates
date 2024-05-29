@@ -199,6 +199,36 @@ public class EmpresaModel extends Conexion{
                }
                return lista;
            }
+
+           public Empresa buscar_empresa(int id){
+                   Empresa e = null;
+               try {
+                   String sql = "select * from empresa where id_empresa = ?";
+                   PreparedStatement ps = this.getConexion().prepareStatement(sql);
+                   ps.setInt(1,id);
+                   ResultSet rs = ps.executeQuery();
+                   while(rs.next()){
+
+                       ArrayList<Categoria> categorias = new ArrayList<>();
+                       String sql2 = "select * from categoria where id_categoria in (select id_categoria from pertenece where id_empresa = ?)";
+                       PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
+                       ps2.setInt(1,rs.getInt(1));
+                       ResultSet rs2 = ps2.executeQuery();
+                       while(rs2.next()){
+
+                           Categoria g = new Categoria(rs2.getInt(1),rs2.getString(3),rs2.getString(2));
+                           categorias.add(g);
+                       }
+                       Image img = new Image(rs.getBlob(7).getBinaryStream());
+                        e = new Empresa(rs.getInt(1),rs.getInt(2),categorias,rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(8),img);
+                   }
+               } catch (SQLException em) {
+                   throw new RuntimeException(em);
+               }
+               return e;
+           }
+
+
         }
 
 
