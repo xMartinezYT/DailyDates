@@ -36,7 +36,7 @@ public class Citasmostrar
         this.citas = citas;
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void initialize(Citas c) {
 
         EmpresaModel empmod = new EmpresaModel();

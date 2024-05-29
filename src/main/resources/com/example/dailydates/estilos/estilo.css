@@ -157,3 +157,38 @@
     -fx-background-color:  #ff00aa;
     -fx-text-fill: white;
 }
+#accederEstilo:hover{
+    -fx-background-color:  #fff1ff;
+    -fx-text-fill: ff00aa;
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 3px;
+}
+#estiloTextField{
+
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+
+}
+#textosEmpresaEstilo{
+
+     -fx-font-weight: bold;
+     -fx-text-fill:ff00aa;
+
+}
+#paneEstilo{
+
+    -fx-border-color: f8a0de;
+    -fx-border-radius: 15;
+    -fx-background-color: transparent;
+
+}
+#choiceBoxStyle{
+
+    -fx-border-color:rgba(88, 88, 88, 0.44);
+    -fx-background-color:#d0d0d0;
+    -fx-border-radius:10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 0, 236, 0.93), 10, 0, 0, 0);
+    -fx-background-radius:10px;
+
+}

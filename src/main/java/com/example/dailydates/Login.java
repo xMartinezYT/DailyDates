@@ -136,7 +136,7 @@ public class Login implements Initializable {
         }
 
     }
-    @FXML
+    @Deprecated
     private void enviarDatos(ActionEvent event) {
         anchorPanePrincipal.setBackground(null);
         UsuarioModel um = new UsuarioModel();

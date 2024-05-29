@@ -44,7 +44,7 @@ public class CategoriasMostrar
         this.empresa = empresa;
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void initialize(Empresa emp) {
 
         setEmpresa(emp);

@@ -30,11 +30,11 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTextField" layoutX="209.0" layoutY="220.0" prefHeight="27.0" prefWidth="242.0" promptText="Nombre" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="apellidosTextField" layoutX="209.0" layoutY="272.0" prefHeight="27.0" prefWidth="242.0" promptText="Apellido1, Apellido2" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="contraseñaTextField" layoutX="209.0" layoutY="322.0" prefHeight="27.0" prefWidth="242.0" style="-fx-background-color: trasnparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="gmailTextField" layoutX="209.0" layoutY="372.0" prefHeight="27.0" prefWidth="242.0" promptText="ejemplo@gmail.com" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
-      <TextField fx:id="telefonoTextField" layoutX="209.0" layoutY="422.0" prefHeight="27.0" prefWidth="242.0" promptText="123123123" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" />
+      <TextField id="estiloTextField" fx:id="nombreTextField" layoutX="209.0" layoutY="220.0" prefHeight="27.0" prefWidth="242.0" promptText="Nombre" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="apellidosTextField" layoutX="209.0" layoutY="272.0" prefHeight="27.0" prefWidth="242.0" promptText="Apellido1, Apellido2" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="contraseñaTextField" layoutX="209.0" layoutY="322.0" prefHeight="27.0" prefWidth="242.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="gmailTextField" layoutX="209.0" layoutY="372.0" prefHeight="27.0" prefWidth="242.0" promptText="ejemplo@gmail.com" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="telefonoTextField" layoutX="209.0" layoutY="422.0" prefHeight="27.0" prefWidth="242.0" promptText="123123123" stylesheets="@estilos/estilo.css" />
       <Button id="accederEstilo" fx:id="crearCuentaButton" layoutX="99.0" layoutY="481.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="18.0" prefWidth="231.0" stylesheets="@estilos/estilo.css" text="Crear cuenta" textFill="#ff00c3">
          <font>
             <Font name="System Bold Italic" size="16.0" />

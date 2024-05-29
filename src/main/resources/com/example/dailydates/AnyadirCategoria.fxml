@@ -7,17 +7,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="205.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.AnyadirCategoria">
    <children>
-      <Pane fx:id="pane" layoutX="15.0" layoutY="13.0" prefHeight="179.0" prefWidth="312.0" style="-fx-border-color: f892f1; -fx-border-radius: 20;" />
-      <ChoiceBox fx:id="categoriasChoicebox" layoutX="96.0" layoutY="78.0" prefWidth="150.0" />
-      <Button fx:id="guardarCambiosButton" layoutX="42.0" layoutY="148.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" text="Guardar Cambios" />
-      <Button fx:id="eliminarCategoriaButton" layoutX="191.0" layoutY="148.0" mnemonicParsing="false" onAction="#eliminarCategoriaButtonOnAction" text="Eliminar Categoría" />
-      <Label fx:id="elejirCategoriaLabel" layoutX="101.0" layoutY="21.0" text="ELIJA LA CATEGORÍA:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
+      <Pane id="paneEstilo" fx:id="pane" layoutX="15.0" layoutY="13.0" prefHeight="179.0" prefWidth="312.0" stylesheets="@estilos/estilo.css">
+         <children>
+            <Label fx:id="elejirCategoriaLabel" layoutX="80.0" layoutY="14.0" text="ELIJA LA CATEGORÍA:" textFill="#ff00aa">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <ChoiceBox id="choiceBoxStyle" fx:id="categoriasChoicebox" layoutX="96.0" layoutY="78.0" prefWidth="150.0" stylesheets="@estilos/estilo.css" />
+      <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="42.0" layoutY="148.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar Cambios" />
+      <Button id="buttonEstilo" fx:id="eliminarCategoriaButton" layoutX="191.0" layoutY="148.0" mnemonicParsing="false" onAction="#eliminarCategoriaButtonOnAction" stylesheets="@estilos/estilo.css" text="Eliminar Categoría" />
    </children>
 </AnchorPane>

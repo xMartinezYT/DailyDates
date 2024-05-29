@@ -20,7 +20,7 @@
                </font></TextField>
             <Button id="accederEstilo" fx:id="accederButton" layoutX="506.0" layoutY="380.0" mnemonicParsing="false" onAction="#accederButtonOnAction" prefHeight="39.0" prefWidth="295.0" stylesheets="@estilos/estilo.css" text="Acceder" textFill="#ff00aa" />
             <Button fx:id="crearCuentaButton" layoutX="599.0" layoutY="450.0" mnemonicParsing="false" onAction="#crearCuentaButtonOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="¿Nuevo en D&amp;D?" textFill="#ff00aa" underline="true" />
-            <Button fx:id="bienvenidoLabel" layoutX="544.0" layoutY="172.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Bienvenido otra vez a Daily Dates" textFill="#ff00aa" />
+            <Button fx:id="bienvenidoLabel" layoutX="544.0" layoutY="172.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Bienvenido a Daily Dates" textFill="#ff00aa" />
             <AnchorPane id="AnchorPaneDegradado" fx:id="AnchorPaneDegradado" layoutX="-23.0" layoutY="-2.0" prefHeight="610.0" prefWidth="433.0" stylesheets="@estilos/estilo.css">
                <children>
                   <ImageView fx:id="logoImage" fitHeight="187.0" fitWidth="230.0" layoutX="102.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
@@ -36,13 +36,13 @@
                </image>
             </ImageView>
             <TextField fx:id="mostrarContrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="173.0" visible="false" />
-            <ImageView fitHeight="25.0" fitWidth="16.0" layoutX="773.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="16.0" layoutX="819.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/ver.png" />
                </image>
             </ImageView>
-            <CheckBox fx:id="verContraseña" layoutX="773.0" layoutY="320.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" />
-            <PasswordField fx:id="contrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: #ff00aa;" />
+            <CheckBox fx:id="verContraseña" layoutX="819.0" layoutY="320.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" />
+            <PasswordField fx:id="contrasenyaField" layoutX="508.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: #ff00aa;" />
             <Label layoutX="506.0" layoutY="216.0" text="E-Mail" textFill="#ff00aa" />
             <Label layoutX="506.0" layoutY="286.0" text="Contraseña" textFill="#ff00aa" />
          </children>

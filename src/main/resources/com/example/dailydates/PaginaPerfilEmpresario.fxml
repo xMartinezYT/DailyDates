@@ -17,22 +17,17 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="nombreTextField" layoutX="237.0" layoutY="145.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-radius: 10px;" text="nombre">
+            <TextField id="estiloTextField" fx:id="apellidosTextField" layoutX="237.0" layoutY="206.0" prefHeight="30.0" prefWidth="140.0" stylesheets="@estilos/estilo.css" text="apellido">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="apellidosTextField" layoutX="237.0" layoutY="206.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" text="apellido">
+            <TextField id="estiloTextField" fx:id="correoTextField" layoutX="237.0" layoutY="268.0" prefHeight="30.0" prefWidth="140.0" stylesheets="@estilos/estilo.css" text="correo">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="correoTextField" layoutX="237.0" layoutY="268.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: black;" text="correo">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="telefonoTextField" layoutX="237.0" layoutY="332.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" text="telefono">
+            <TextField id="estiloTextField" fx:id="telefonoTextField" layoutX="237.0" layoutY="332.0" prefHeight="30.0" prefWidth="140.0" stylesheets="@estilos/estilo.css" text="telefono">
                <font>
                   <Font size="14.0" />
                </font>
@@ -70,54 +65,12 @@
                   <Font name="System Bold Italic" size="31.0" />
                </font>
             </Label>
+            <TextField id="estiloTextField" fx:id="nombreTextField" layoutX="237.0" layoutY="145.0" prefHeight="30.0" prefWidth="140.0" stylesheets="@estilos/estilo.css" text="nombre">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
          </children>
       </AnchorPane>
-      <Label fx:id="perfilLabel" alignment="CENTER" layoutX="85.0" layoutY="32.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: #fff1ff;" text="Perfil" textFill="#ff00c3">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Label>
-      <TextField fx:id="nombreTextField" layoutX="247.0" layoutY="155.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-radius: 10px;" text="nombre">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="apellidosTextField" layoutX="247.0" layoutY="216.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" text="apellido">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="correoTextField" layoutX="247.0" layoutY="278.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: black;" text="correo">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="telefonoTextField" layoutX="247.0" layoutY="342.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 10px;" text="telefono">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="161.0" layoutY="421.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" prefHeight="27.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Guardar cambios" textFill="#ff00c3" />
-      <Button id="buttonEstilo" fx:id="cerrarSesionButton" layoutX="614.0" layoutY="421.0" mnemonicParsing="false" onAction="#cerrarSesionButtonOnAction" prefHeight="27.0" prefWidth="112.0" stylesheets="@estilos/estilo.css" text="Cerrar Sesión" textFill="#ff00c3" />
-      <Label fx:id="nombreLabel" layoutX="95.0" layoutY="156.0" text="Nombre:" textFill="#ff00c3">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="apellidosLabel" layoutX="95.0" layoutY="219.0" text="Apellidos:" textFill="#ff00c3">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="correoLabel" layoutX="97.0" layoutY="281.0" text="Correo:" textFill="#ff00c3">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="telefonoLabel" layoutX="95.0" layoutY="345.0" text="Nº Teléfono:" textFill="#ff00c3">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

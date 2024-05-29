@@ -9,19 +9,19 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.CategoriasMostrar">
    <children>
-      <Label fx:id="anyadirNombre" alignment="TOP_LEFT" layoutX="68.0" layoutY="58.0" prefHeight="30.0" prefWidth="169.0" text="Nombre Empresa">
+      <Label id="textosEmpresaEstilo" fx:id="anyadirNombre" alignment="TOP_LEFT" layoutX="68.0" layoutY="58.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@estilos/estilo.css" text="Nombre Empresa">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="anyadirHorario" alignment="TOP_LEFT" layoutX="68.0" layoutY="119.0" prefHeight="30.0" prefWidth="169.0" text="Horario Empresa">
+      <Label id="textosEmpresaEstilo" fx:id="anyadirHorario" alignment="TOP_LEFT" layoutX="68.0" layoutY="117.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@estilos/estilo.css" text="Horario Empresa">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="anyadirCiudad" alignment="TOP_LEFT" layoutX="68.0" layoutY="174.0" prefHeight="30.0" prefWidth="169.0" text="Ciudad Empresa">
+      <Label id="textosEmpresaEstilo" fx:id="anyadirCiudad" alignment="TOP_LEFT" layoutX="68.0" layoutY="174.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@estilos/estilo.css" text="Ciudad Empresa">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="anyadirDireccion" alignment="TOP_LEFT" layoutX="68.0" layoutY="232.0" prefHeight="30.0" prefWidth="169.0" text="Direccion Empresa">
+      <Label id="textosEmpresaEstilo" fx:id="anyadirDireccion" alignment="TOP_LEFT" layoutX="68.0" layoutY="232.0" prefHeight="30.0" prefWidth="178.0" stylesheets="@estilos/estilo.css" text="Dirección Empresa">
          <font>
             <Font size="20.0" />
          </font></Label>
