@@ -22,7 +22,7 @@
             <Font size="16.0" />
          </font></Label>
       <Button id="accederEstilo" fx:id="buttonInfo" layoutX="521.0" layoutY="38.0" mnemonicParsing="false" onAction="#infoclick" prefHeight="38.0" prefWidth="63.0" stylesheets="@estilos/estilo.css" text="+ Info" />
-      <Line endX="700.0" layoutY="105.0" stroke="#ff00aa" />
+      <Line endX="687.2929077148438" endY="-1.52587890625E-5" layoutY="105.0" startX="-33.20710754394531" startY="-1.52587890625E-5" stroke="#ff00aa" />
       <Line endX="418.5" endY="-1.0" layoutX="-25.0" layoutY="1.0" startX="419.5" startY="104.5" stroke="#ff00aa" />
    </children>
 </AnchorPane>
