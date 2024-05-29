@@ -77,19 +77,12 @@ public class InfoCitas
         anyadirDireccionLabel.setText(empresa.getDireccion());
         anyadirNombreLabel.setText(empresa.getNombre());
         anyadirPedidoLabel.setText(citas.getPedido());
+        imagenPerfil.setImage(empresa.getFoto_empresa());
     }
 
     @javafx.fxml.FXML
     public void modificarButtonOnAction(ActionEvent actionEvent) {
-       /* try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("ModificarCitas.fxml"));
-            ModificarCitas modificarCitas = fxmlLoader.getController();
-            modificarCitas.initialize(citas);
-            this.anchorPane.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
+
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("ModificarCitas.fxml"));
