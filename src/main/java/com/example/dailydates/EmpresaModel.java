@@ -11,8 +11,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * La clase EmpresaModel proporciona métodos para interactuar con la base de datos relacionados con las empresas.
+ */
 public class EmpresaModel extends Conexion{
 
+    /**
+     * Obtiene una lista de todas las empresas en la base de datos.
+     *
+     * @return Una lista de empresas.
+     */
     public ArrayList<Empresa> listar_empresas() {
         ArrayList<Empresa> lista = new ArrayList<>();
 
@@ -28,10 +36,13 @@ public class EmpresaModel extends Conexion{
                 ps2.setInt(1,rs.getInt(1));
                 ResultSet rs2 = ps2.executeQuery();
                 while(rs2.next()){
+                    // Obtiene las categorías asociadas a la empresa
                     Categoria g = new Categoria(rs2.getInt(1),rs2.getString(3),rs2.getString(2));
                     categorias.add(g);
                 }
+                // Obtiene la imagen de la empresa y la convierte en un objeto Image
                 Image img = new Image(rs.getBlob(7).getBinaryStream());
+                // Crea un objeto Empresa y lo añade a la lista
                 Empresa e = new Empresa(rs.getInt(1),rs.getInt(2),categorias,rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(8),img);
                 lista.add(e);
             }
@@ -41,6 +52,15 @@ public class EmpresaModel extends Conexion{
         return lista;
     }
 
+    /**
+     * Añade una nueva empresa a la base de datos.
+     *
+     * @param id_empresario      El ID del empresario dueño de la empresa.
+     * @param em                 La empresa a añadir.
+     * @param c                  La categoría asociada a la empresa.
+     * @param imagenseleccionada La imagen de la empresa.
+     * @return true si la operación se realizó con éxito, false en caso contrario.
+     */
         public boolean anyadir_empresa(int id_empresario, Empresa em, Categoria c, File imagenseleccionada){
         boolean resultado = false;
 
@@ -58,11 +78,12 @@ public class EmpresaModel extends Conexion{
                 ps.setString(7,em.getDireccion());
                 ps.execute();
 
-
+                // Obtiene el ID de la última empresa añadida
                 String sql3 = "SELECT max(id_Empresa) FROM dailydates.empresa";
                 PreparedStatement ps3 = this.getConexion().prepareStatement(sql3);
                 ResultSet rs3 = ps3.executeQuery();
                 while(rs3.next()) {
+                    // Asocia la empresa con la categoría correspondiente
                     String sql2 = "insert into pertenece (id_categoria,id_empresa) values (?,?)" ;
                     PreparedStatement ps2 = this.getConexion().prepareStatement(sql2);
                     ps2.setInt(1, c.getId());
@@ -228,7 +249,35 @@ public class EmpresaModel extends Conexion{
                return e;
            }
 
-
+           public boolean anyadir_categoria(int id_categoria, int id_empresa){
+                  boolean resultado = false;
+               try {
+                   String sql = "insert into pertenece values(?,?)";
+                   PreparedStatement ps = this.getConexion().prepareStatement(sql);
+                   ps.setInt(1,id_categoria);
+                   ps.setInt(2,id_empresa);
+                   ps.execute();
+                   resultado = true;
+               } catch (SQLException e) {
+                   throw new RuntimeException(e);
+               }
+                  return resultado;
+           }
+           public boolean eliminar_categoria(int id_categoria, int id_empresa){
+                boolean resultado = false;
+                    try {
+                        String sql = "delete from pertenece where id_categoria = ? and id_empresa = ?";
+                        PreparedStatement ps = this.getConexion().prepareStatement(sql);
+                        ps.setInt(1,id_categoria);
+                        ps.setInt(2,id_empresa);
+                        ps.execute();
+                        resultado = true;
+                    } catch (SQLException e) {
+                         throw new RuntimeException(e);
+                    }
+                    return resultado;
+                }
         }
+
 
 

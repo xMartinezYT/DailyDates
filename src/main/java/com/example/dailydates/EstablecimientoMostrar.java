@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * La clase EstablecimientoMostrar se utiliza para manejar la vista y las acciones relacionadas con la información de un establecimiento en la aplicación.
+ */
 public class EstablecimientoMostrar
 {
     @javafx.fxml.FXML
@@ -53,14 +56,29 @@ public class EstablecimientoMostrar
     @javafx.fxml.FXML
     private Button AnyadirCategoriasButton;
 
+    /**
+     * Obtiene la empresa actual.
+     *
+     * @return el objeto Empresa actual
+     */
     public Empresa getEmpresa() {
         return empresa;
     }
 
+    /**
+     * Establece la empresa actual.
+     *
+     * @param empresa el objeto Empresa a establecer
+     */
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
 
+    /**
+     * Inicializa la vista con la información de la empresa proporcionada.
+     *
+     * @param emp el objeto Empresa para inicializar la vista
+     */
     @Deprecated
     public void initialize(Empresa emp) {
 
@@ -85,6 +103,11 @@ public class EstablecimientoMostrar
              fotoImage.setImage(emp.getFoto_empresa());
     }
 
+    /**
+     * Maneja el evento de clic del botón eliminar.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void eliminarButtonOnAction(ActionEvent actionEvent) {
 
@@ -94,6 +117,11 @@ public class EstablecimientoMostrar
 
     }
 
+    /**
+     * Maneja el evento de clic del botón guardar cambios.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
@@ -104,13 +132,18 @@ public class EstablecimientoMostrar
         empresa.setCiudad(ciudadfield.getText());
 
         if (empmod.modificar_empresa(empresa)){
-
+            // Código para manejar la actualización exitosa
         }else{
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("datos no validos");
             a.showAndWait();
         }
     }
+    /**
+     * Maneja el evento de clic del botón añadir categorías.
+     *
+     * @param actionEvent el evento de acción
+     */
 
     @javafx.fxml.FXML
     public void AnyadirCategoriasButtonOnAction(ActionEvent actionEvent) {
@@ -118,6 +151,8 @@ public class EstablecimientoMostrar
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AnyadirCategoria.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
+            AnyadirCategoria anyadirCategoria = fxmlLoader.getController();
+            anyadirCategoria.initialize(empresa);
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.show();

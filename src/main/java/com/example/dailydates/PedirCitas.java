@@ -10,6 +10,10 @@ import javafx.scene.layout.Pane;
 import java.sql.Time;
 import java.util.ArrayList;
 
+/**
+ * Controlador para la ventana de solicitud de citas.
+ * Permite a los usuarios enviar solicitudes de citas a las empresas.
+ */
 public class PedirCitas
 {
     @javafx.fxml.FXML
@@ -47,10 +51,19 @@ public class PedirCitas
         return empresa;
     }
 
+    /**
+     * Establece la empresa para la cual se solicitará la cita.
+     * @param empresa La empresa para la cual se solicitará la cita.
+     */
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
 
+    /**
+     * Inicializa la ventana de solicitud de citas.
+     * Establece los valores iniciales y las opciones para el spinner de horas.
+     * @param empresa La empresa para la cual se solicitará la cita.
+     */
     @Deprecated
     public void initialize(Empresa empresa) {
 
@@ -58,8 +71,6 @@ public class PedirCitas
         UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
         nombreTextField.setText(usuarioHolder.getUsuario().getNombre());
         usuario = usuarioHolder.getUsuario();
-
-
 
         ObservableList<String> opciones = FXCollections.observableArrayList();
 
@@ -74,6 +85,11 @@ public class PedirCitas
         horaSpinner.setValueFactory(hora);
     }
 
+    /**
+     * Maneja el evento del botón "Guardar cambios".
+     * Guarda la cita en la base de datos con la información proporcionada por el usuario.
+     * @param actionEvent Evento de acción del botón "Guardar cambios".
+     */
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
@@ -84,7 +100,13 @@ public class PedirCitas
 
           Citas c = new Citas( this.usuario.getId(),this.empresa.getId_empresa(),fechaDatePicker.getValue(),t,pedidoTextArea.getText());
 
-          citmod.anyadir_cita(c);
+        if (citmod.anyadir_cita(c)){
+
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Error al modificar cita");
+            a.showAndWait();
+        }
 
     }
 }

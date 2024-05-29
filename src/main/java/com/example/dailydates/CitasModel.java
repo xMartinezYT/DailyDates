@@ -43,13 +43,14 @@ public class CitasModel extends Conexion{
 
         return resultado;
     }
-    public boolean eliminar_cita(int id){
+    public boolean eliminar_cita(Citas citas){
         boolean resultado = false;
 
         try {
-            String sql = "delete from citas where id = ?";
+            String sql = "delete from citas where fecha = ? and hora = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ps.setInt(1,id);
+            ps.setDate(1, Date.valueOf(citas.getFecha()));
+            ps.setTime(2,citas.getHora());
             ps.execute();
             resultado = true;
         } catch (SQLException e) {
@@ -107,4 +108,45 @@ public class CitasModel extends Conexion{
         }
         return lista;
     }
+    public ArrayList<Citas> listar_citas_empresario(int id_empresario){
+        ArrayList<Citas> lista = new ArrayList<>();
+        try {
+            String sql = "Select * from citas where id_empresa in (select id_empresa from empresa where id_empresario = ?)";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setInt(1,id_empresario);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Citas c =  new Citas(rs.getInt(2),rs.getInt(1),rs.getDate(3).toLocalDate(),rs.getTime(5),rs.getString(4));
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
+    }
+
+
+    public boolean mod_cita(Citas c, LocalDate fecha, Time hora, String pedido){
+      boolean resultado = false;
+        try {
+            String sql = "update citas set fecha = ?, hora = ?, pedido = ? where fecha = ? and hora = ?";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setDate(1, Date.valueOf(fecha));
+            ps.setTime(2,hora);
+            ps.setString(3,pedido);
+            ps.setDate(4, Date.valueOf(c.getFecha()));
+            ps.setTime(5,c.getHora());
+            ps.execute();
+            resultado = true;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return resultado;
+    }
+
+
+
+
+
+
 }

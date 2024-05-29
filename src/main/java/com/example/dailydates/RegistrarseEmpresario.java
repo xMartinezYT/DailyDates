@@ -23,6 +23,9 @@ import java.io.InterruptedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador para la ventana de registro de empresarios.
+ */
 public class RegistrarseEmpresario  {
     @javafx.fxml.FXML
     private Label introducirDatosLabel;
@@ -52,6 +55,11 @@ public class RegistrarseEmpresario  {
     @javafx.fxml.FXML
     private Label nombreUsuarioLabel1;
 
+    /**
+     * Maneja el evento del botón "Cargar Imagen".
+     * Permite al usuario seleccionar una imagen de perfil.
+     * @param actionEvent Evento de acción del botón "Cargar Imagen".
+     */
     @javafx.fxml.FXML
     public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
 
@@ -70,6 +78,11 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Maneja el evento del botón "Crear".
+     * Crea un nuevo perfil de empresario con los datos proporcionados por el usuario.
+     * @param actionEvent Evento de acción del botón "Crear".
+     */
     @javafx.fxml.FXML
     public void crearButtonOnAction(ActionEvent actionEvent) {
         EmpresarioModel em = new EmpresarioModel();
@@ -100,6 +113,11 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Maneja el evento del botón "Atrás".
+     * Regresa a la ventana de selección de tipo de registro.
+     * @param actionEvent Evento de acción del botón "Atrás".
+     */
     @javafx.fxml.FXML
     public void atrasButtonOnAction(ActionEvent actionEvent) {
 
@@ -114,6 +132,10 @@ public class RegistrarseEmpresario  {
 
     }
 
+    /**
+     * Método deprecado.
+     * @param actionEvent Evento de acción.
+     */
     @Deprecated
     public void pruebaButtonOnAction(ActionEvent actionEvent) {
 
@@ -125,41 +147,5 @@ public class RegistrarseEmpresario  {
         }
 
     }
-/*
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image fondo = new Image("file:src/main/resources/com/example/dailydates/img/pexels-mdsnmdsnmdsn-1831234.jpg");
-
-        // Crear un objeto ImageView para aplicar los ajustes de color
-        ImageView imageView = new ImageView(fondo);
-
-
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setBrightness(-0.4); // Ajusta este valor según la opacidad deseada (0.0 - 1.0)
-
-        // Aplicar el ColorAdjust al ImageView
-        imageView.setEffect(colorAdjust);
-
-        // Crear un Snapshot de ImageView con el efecto de opacidad
-        SnapshotParameters params = new SnapshotParameters();
-        params.setFill(Color.TRANSPARENT); // Fondo transparente para el snapshot
-        WritableImage writableImage = imageView.snapshot(params, null);
-        Image adjustedImage = new ImageView(writableImage).getImage();
-
-        // Configurar el fondo con la imagen ajustada
-        BackgroundSize backgroundSize = new BackgroundSize(800, 600, false, false, true, false);
-        BackgroundImage backgroundImage = new BackgroundImage(adjustedImage,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.DEFAULT,
-                backgroundSize);
-
-        Background background = new Background(backgroundImage);
-
-        anchorPaneMain.setBackground(background);
-        anchorPaneMain.setPadding(new Insets(20));
-    }
-*/
-
     }
 

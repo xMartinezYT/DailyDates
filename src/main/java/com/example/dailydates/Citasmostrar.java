@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Citasmostrar class is a controller for displaying appointment details in a JavaFX application.
+ */
 public class Citasmostrar
 {
     @javafx.fxml.FXML
@@ -27,15 +30,30 @@ public class Citasmostrar
 
     private Citas citas;
 
-
+    /**
+     * Gets the Citas object representing the appointment.
+     *
+     * @return Citas object.
+     */
     public Citas getCitas() {
         return citas;
     }
 
+    /**
+     * Sets the Citas object representing the appointment.
+     *
+     * @param citas Citas object to set.
+     */
     public void setCitas(Citas citas) {
         this.citas = citas;
     }
 
+    /**
+     * Initializes the controller with the given appointment details.
+     * This method is deprecated and should be replaced with more robust initialization.
+     *
+     * @param c Citas object representing the appointment to initialize the controller with.
+     */
     @Deprecated
     public void initialize(Citas c) {
 
@@ -47,6 +65,12 @@ public class Citasmostrar
         nombreNegocio.setText(empmod.buscar_empresa(citas.getId_empresa()).getNombre());
     }
 
+    /**
+     * Event handler for the info button click event.
+     * Loads the InfoCitas.fxml file and initializes the InfoCitas controller with the appointment details.
+     *
+     * @param actionEvent The ActionEvent triggered by clicking the info button.
+     */
     @javafx.fxml.FXML
     public void infoclick(ActionEvent actionEvent) {
         try {
@@ -64,3 +88,4 @@ public class Citasmostrar
         }
     }
 }
+

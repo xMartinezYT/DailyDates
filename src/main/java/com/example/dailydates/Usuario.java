@@ -13,6 +13,17 @@ public class Usuario {
     private Image foto_perfil;
 
 
+    /**
+     * Constructor de la clase Usuario.
+     * @param id Identificador del usuario.
+     * @param nombre Nombre del usuario.
+     * @param apellidos Apellidos del usuario.
+     * @param gmail Correo electrónico del usuario.
+     * @param contrasenya Contraseña del usuario.
+     * @param telefono Número de teléfono del usuario.
+     * @param fotoPerfil Foto de perfil del usuario.
+     */
+
     public Usuario(int id, String nombre, String apellidos, String gmail, String contrasenya, String telefono, Image fotoPerfil) {
         this.id = id;
         this.nombre = nombre;
@@ -23,10 +34,13 @@ public class Usuario {
         foto_perfil = fotoPerfil;
     }
 
+    /**
+     * Constructor vacío de la clase Usuario.
+     */
     public Usuario() {
     }
 
-
+    // Métodos getters y setters
     public int getId() {
         return id;
     }

@@ -2,6 +2,7 @@ package com.example.dailydates;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -76,19 +77,38 @@ public class InfoCitas
         anyadirDireccionLabel.setText(empresa.getDireccion());
         anyadirNombreLabel.setText(empresa.getNombre());
         anyadirPedidoLabel.setText(citas.getPedido());
+        imagenPerfil.setImage(empresa.getFoto_empresa());
     }
 
     @javafx.fxml.FXML
     public void modificarButtonOnAction(ActionEvent actionEvent) {
+
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("ModificarCitas.fxml"));
-            this.anchorPane.getChildren().setAll(pane);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("ModificarCitas.fxml"));
+        AnchorPane anchor = fxmlLoader.load();
+        ModificarCitas cita = fxmlLoader.getController();
+        cita.initialize(citas);
+        anchorPane.getChildren().clear();
+        anchorPane.getChildren().add(anchor);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     @javafx.fxml.FXML
     public void eliminarButtonOnAction(ActionEvent actionEvent) {
+             CitasModel citmod = new CitasModel();
+        if(citmod.eliminar_cita(citas)){
+            Alert al = new Alert(Alert.AlertType.INFORMATION);
+            al.setContentText("Eliminada con Exito");
+            al.showAndWait();
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Error al eliminar Cita");
+            a.showAndWait();
+        }
+
     }
 }

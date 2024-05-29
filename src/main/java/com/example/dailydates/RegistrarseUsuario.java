@@ -98,6 +98,12 @@ public class RegistrarseUsuario
             anchorPaneMain.setPadding(new Insets(20));
         }
     */
+
+    /**
+     * Maneja el evento del botón "Crear Cuenta".
+     * Crea una nueva cuenta de usuario con los datos proporcionados por el usuario.
+     * @param actionEvent Evento de acción del botón "Crear Cuenta".
+     */
     @javafx.fxml.FXML
     public void crearCuentaButtonOnAction(ActionEvent actionEvent) {
 
@@ -129,6 +135,11 @@ public class RegistrarseUsuario
         }
     }
 
+    /**
+     * Maneja el evento del botón "Cargar Imagen".
+     * Permite al usuario seleccionar una imagen de perfil.
+     * @param actionEvent Evento de acción del botón "Cargar Imagen".
+     */
     @javafx.fxml.FXML
     public void cargarButtonOnAction(ActionEvent actionEvent) {
 
@@ -147,6 +158,11 @@ public class RegistrarseUsuario
 
     }
 
+    /**
+     * Maneja el evento del botón "Atrás".
+     * Regresa a la ventana de selección de tipo de registro.
+     * @param actionEvent Evento de acción del botón "Atrás".
+     */
     @javafx.fxml.FXML
     public void atrasButtonOnAction(ActionEvent actionEvent) {
         try {

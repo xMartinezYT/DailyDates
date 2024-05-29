@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * La clase Establecimientos se utiliza para manejar la vista y las acciones relacionadas con la lista de establecimientos en la aplicación.
+ */
 public class Establecimientos
 {
     @javafx.fxml.FXML
@@ -27,6 +30,9 @@ public class Establecimientos
     @javafx.fxml.FXML
     private Button anyadirEmpresaButton;
 
+    /**
+     * Inicializa la vista con la información de las empresas del empresario actual.
+     */
     @javafx.fxml.FXML
     public void initialize() {
         EmpresaModel empmo = new EmpresaModel();
@@ -49,6 +55,11 @@ public class Establecimientos
         }
     }
 
+    /**
+     * Maneja el evento de clic del botón añadir empresa.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void anyadirEmpresaButtonOnAction(ActionEvent actionEvent) {
         try {

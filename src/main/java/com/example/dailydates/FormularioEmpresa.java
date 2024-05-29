@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * La clase FormularioEmpresa se utiliza para manejar la interfaz de creación de una nueva empresa en la aplicación.
+ */
 public class FormularioEmpresa
 {
     @javafx.fxml.FXML
@@ -53,6 +56,9 @@ public class FormularioEmpresa
     private Button cargar_imagen;
     private File imagenSeleccionada;
 
+    /**
+     * Inicializa la interfaz de creación de empresa, cargando las categorías disponibles.
+     */
     @javafx.fxml.FXML
     public void initialize() {
         CategoriaModel catmod = new CategoriaModel();
@@ -61,7 +67,11 @@ public class FormularioEmpresa
         }
     }
 
-
+    /**
+     * Maneja el evento de clic del botón guardar. Guarda los datos de la nueva empresa.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void guardarButtonOnAction(ActionEvent actionEvent) {
 
@@ -81,6 +91,7 @@ public class FormularioEmpresa
         Empresa e = new Empresa(1,emphol.getEmpresario().getId(),cats,nombre,CIF,horario,ciudad,direccion,foto_empresa);
 
         if (empmod.anyadir_empresa(emphol.getEmpresario().getId(),e,(Categoria) categoriaChoiceBox.getValue(), imagenSeleccionada)){
+            // Empresa añadida con éxito
 
         }else {
             Alert a = new Alert(Alert.AlertType.ERROR);
@@ -90,6 +101,11 @@ public class FormularioEmpresa
 
     }
 
+    /**
+     * Maneja el evento de clic del botón cargar imagen. Permite al usuario seleccionar una imagen de perfil para la empresa.
+     *
+     * @param actionEvent el evento de acción
+     */
     @javafx.fxml.FXML
     public void cargar_imagenOnClick(ActionEvent actionEvent) {
 
@@ -107,3 +123,4 @@ public class FormularioEmpresa
         imagenPerfil.setImage(fotoperfil);
     }
 }
+
