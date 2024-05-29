@@ -26,6 +26,14 @@ public class PaginaCalendario
     @Deprecated
     public void initialize() {
 
+        CitasModel ca = new CitasModel();
+        EmpresarioHolder em = new EmpresarioHolder();
+
+
+
+
+
+
 // Crear instancia de CalendarView
         CalendarView calendarView = new CalendarView();
 
@@ -47,16 +55,54 @@ public class PaginaCalendario
         anchorPane.setBottomAnchor(calendarView, 50.0);
         anchorPane.setLeftAnchor(calendarView, 0.0);
 
+
+
+        em.getEmpresario();
+
+
+
+        for (Citas i : ca.listar_citas()){
+
+         String fecha = String.valueOf(i.getFecha());
+         String hora = String.valueOf(i.getHora());
+         String pedido =  i.getPedido();
+         
+         LocalDateTime startDateTime = LocalDateTime.of(Integer.parseInt(fecha), Month.MAY, 17, Integer.parseInt(hora), 0);
+            Entry<String> entry = new Entry<>(pedido);
+            entry.setInterval(startDateTime);
+            entry.setLocation("Ubicación del evento");
+            calendar.addEntry(entry);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
 
     private void agregarEvento(Calendar calendar) {
         // Crear evento en una fecha y hora específica
+
+
         LocalDateTime startDateTime = LocalDateTime.of(2024, Month.MAY, 17, 10, 0);
-        LocalDateTime endDateTime = startDateTime.plusHours(1);
+
 
         // Crear y configurar la entrada
         Entry<String> entry = new Entry<>("Vicent homo");
-        entry.setInterval(startDateTime, endDateTime);
+        entry.setInterval(startDateTime);
         entry.setLocation("Ubicación del evento");
 
 
