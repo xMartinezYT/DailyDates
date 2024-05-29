@@ -74,4 +74,23 @@ public class CitasModel extends Conexion{
         }
         return c;
     }
+    public ArrayList<Citas> listar_citas_usuario(int id_usuario){
+        ArrayList<Citas> lista = new ArrayList<>();
+        try {
+            String sql = "Select * from citas where id_usuario = ?";
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setInt(1,id_usuario);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                Citas c =  new Citas(rs.getInt(2),rs.getInt(1),rs.getDate(3).toLocalDate(),rs.getTime(5),rs.getString(4));
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
+    }
+
+
+
 }

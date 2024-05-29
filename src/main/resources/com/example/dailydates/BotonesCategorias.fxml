@@ -23,7 +23,7 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Label fx:id="anyadirCategoriaLabel" layoutX="379.0" layoutY="40.0" text="Categoría">
+      <Label fx:id="anyadirCategoriaLabel" layoutX="379.0" layoutY="40.0" text="Categoría" textFill="#ff00aa">
          <font>
             <Font size="22.0" />
          </font>

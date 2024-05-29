@@ -44,15 +44,15 @@
       <Pane fx:id="fotoPane" layoutX="261.0" layoutY="26.0" prefHeight="142.0" prefWidth="170.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="137.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="cargar_imagen" layoutX="38.0" layoutY="107.0" mnemonicParsing="false" onAction="#cargar_imagenOnClick" text="Cargar Imagen" />
+            <Button id="buttonEstilo" fx:id="cargar_imagen" layoutX="38.0" layoutY="107.0" mnemonicParsing="false" onAction="#cargar_imagenOnClick" stylesheets="@estilos/estilo.css" text="Cargar Imagen" />
          </children>
       </Pane>
       <Button id="buttonEstilo" fx:id="guardarButton" layoutX="317.0" layoutY="191.0" mnemonicParsing="false" onAction="#guardarButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar" />
       <ChoiceBox fx:id="categoriaChoiceBox" layoutX="118.0" layoutY="59.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="anyadirNombre" layoutX="118.0" layoutY="26.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="anyadirHorario" layoutX="118.0" layoutY="93.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="anyadirDireccion" layoutX="118.0" layoutY="125.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="anyadirCiudad" layoutX="118.0" layoutY="158.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="anyadirCif" layoutX="118.0" layoutY="191.0" prefHeight="25.0" prefWidth="82.0" />
+      <TextField id="estiloTextField" fx:id="anyadirNombre" layoutX="118.0" layoutY="26.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="anyadirHorario" layoutX="118.0" layoutY="93.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="anyadirDireccion" layoutX="118.0" layoutY="125.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="anyadirCiudad" layoutX="118.0" layoutY="158.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="anyadirCif" layoutX="118.0" layoutY="191.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@estilos/estilo.css" />
    </children>
 </AnchorPane>
