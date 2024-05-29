@@ -27,17 +27,11 @@ public class PaginaPerfilEmpresario
     @javafx.fxml.FXML
     private Label apellidosLabel;
     @javafx.fxml.FXML
-    private ImageView editarImage;
-    @javafx.fxml.FXML
     private Label nombreLabel;
     @javafx.fxml.FXML
     private Label telefonoLabel;
     @javafx.fxml.FXML
     private ImageView perfilImage;
-    @javafx.fxml.FXML
-    private TextField nombreTextField;
-    @javafx.fxml.FXML
-    private Label datosPersonalesLabel;
     @javafx.fxml.FXML
     private Pane fotoPane;
     @javafx.fxml.FXML
@@ -56,6 +50,13 @@ public class PaginaPerfilEmpresario
     private Button guardarCambiosButton;
     private Empresario emp = new Empresario();
     private File imagenSeleccionada;
+    @javafx.fxml.FXML
+    private Label registroDeSesion;
+    @javafx.fxml.FXML
+    private AnchorPane perfilAnchorPane;
+    @javafx.fxml.FXML
+    private TextField nombreTextField;
+
     @javafx.fxml.FXML
     public void initialize() {
 

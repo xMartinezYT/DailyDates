@@ -51,7 +51,7 @@ public class PedirCitas
         this.empresa = empresa;
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void initialize(Empresa empresa) {
 
         setEmpresa(empresa);
