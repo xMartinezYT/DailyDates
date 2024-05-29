@@ -64,7 +64,7 @@ public class ModificarCitas
 
         CitasModel citmod = new CitasModel();
 
-        if (citmod.mod_cita(citas,fechaDatePicker.getValue(), (Time) horaSpinner.getValue(),pedidoTextArea.getText())){
+        if (citmod.mod_cita(citas,fechaDatePicker.getValue(), Time.valueOf(horaSpinner.getValue().toString()),pedidoTextArea.getText())){
 
         }else{
             Alert a = new Alert(Alert.AlertType.ERROR);
