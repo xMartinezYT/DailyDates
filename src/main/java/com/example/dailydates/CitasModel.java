@@ -4,8 +4,17 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * CitasModel class provides methods to interact with the citas table in the database.
+ * It extends the Conexion class to utilize the database connection.
+ */
 public class CitasModel extends Conexion{
 
+    /**
+     * Retrieves a list of all appointments from the database.
+     *
+     * @return ArrayList of Citas objects representing all appointments.
+     */
     public ArrayList<Citas> listar_citas(){
         ArrayList<Citas> lista = new ArrayList<>();
         try {
@@ -21,6 +30,13 @@ public class CitasModel extends Conexion{
         }
         return lista;
     }
+
+    /**
+     * Adds a new appointment to the database.
+     *
+     * @param c Citas object representing the appointment to be added.
+     * @return boolean indicating the success of the operation.
+     */
     public boolean anyadir_cita(Citas c){
         boolean resultado = false;
 
@@ -43,6 +59,13 @@ public class CitasModel extends Conexion{
 
         return resultado;
     }
+
+    /**
+     * Deletes an appointment from the database based on its ID.
+     *
+     * @param id The ID of the appointment to be deleted.
+     * @return boolean indicating the success of the operation.
+     */
     public boolean eliminar_cita(int id){
         boolean resultado = false;
 
@@ -58,6 +81,13 @@ public class CitasModel extends Conexion{
         return resultado;
     }
 
+    /**
+     * Searches for an appointment in the database based on its date and time.
+     *
+     * @param fecha The date of the appointment.
+     * @param hora The time of the appointment.
+     * @return Citas object representing the found appointment, or null if not found.
+     */
     public Citas buscar_cita(LocalDate fecha, Time hora){
         Citas c = null;
         try {
@@ -74,6 +104,13 @@ public class CitasModel extends Conexion{
         }
         return c;
     }
+
+    /**
+     * Retrieves a list of appointments for a specific user from the database.
+     *
+     * @param id_usuario The ID of the user.
+     * @return ArrayList of Citas objects representing the user's appointments.
+     */
     public ArrayList<Citas> listar_citas_usuario(int id_usuario){
         ArrayList<Citas> lista = new ArrayList<>();
         try {
@@ -91,6 +128,12 @@ public class CitasModel extends Conexion{
         return lista;
     }
 
+    /**
+     * Retrieves a list of appointments for a specific company from the database.
+     *
+     * @param id_empresa The ID of the company.
+     * @return ArrayList of Citas objects representing the company's appointments.
+     */
     public ArrayList<Citas> listar_citas_empresa(int id_empresa){
         ArrayList<Citas> lista = new ArrayList<>();
         try {

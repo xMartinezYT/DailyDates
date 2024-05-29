@@ -10,8 +10,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * La clase EmpresarioModel maneja las operaciones CRUD (crear, leer, actualizar, eliminar) para los empresarios en la base de datos.
+ */
 public class EmpresarioModel extends Conexion{
 
+    /**
+     * Lista todos los empresarios en la base de datos.
+     *
+     * @return una lista de objetos Empresario
+     */
     public ArrayList<Empresario> Listar_Empresarios() {
         ArrayList<Empresario> lista = new ArrayList<>();
 
@@ -31,6 +39,13 @@ public class EmpresarioModel extends Conexion{
         return lista;
     }
 
+    /**
+     * Añade un nuevo empresario a la base de datos.
+     *
+     * @param em el objeto Empresario a añadir
+     * @param img el archivo de imagen del perfil del empresario
+     * @return true si el empresario se añadió con éxito, false en caso contrario
+     */
     public boolean anyadir_empresario(Empresario em, File img){
         boolean resultado = false;
         try {
@@ -55,6 +70,13 @@ public class EmpresarioModel extends Conexion{
         }
         return resultado;
     }
+
+    /**
+     * Elimina un empresario de la base de datos por su ID.
+     *
+     * @param id el ID del empresario a eliminar
+     * @return true si el empresario se eliminó con éxito, false en caso contrario
+     */
     public boolean eliminar_empresario(int id){
 
         boolean resultado = false;
@@ -71,6 +93,12 @@ public class EmpresarioModel extends Conexion{
         return resultado;
     }
 
+    /**
+     * Modifica los detalles de un empresario existente en la base de datos.
+     *
+     * @param em el objeto Empresario con los nuevos detalles
+     * @return true si el empresario se modificó con éxito, false en caso contrario
+     */
     public boolean modificar_empresario(Empresario em){
         boolean resultado = false;
 
@@ -91,6 +119,14 @@ public class EmpresarioModel extends Conexion{
         }
         return resultado;
     }
+
+    /**
+     * Valida las credenciales de un empresario.
+     *
+     * @param gmail el correo electrónico del empresario
+     * @param contrasenya la contraseña del empresario
+     * @return true si las credenciales son válidas, false en caso contrario
+     */
     public boolean validar_empresario(String gmail, String contrasenya) {
 
         try {
@@ -108,6 +144,13 @@ public class EmpresarioModel extends Conexion{
         }
         return false;
     }
+
+    /**
+     * Busca un empresario en la base de datos por su correo electrónico.
+     *
+     * @param gmail el correo electrónico del empresario a buscar
+     * @return el objeto Empresario encontrado, o un nuevo objeto Empresario si no se encuentra
+     */
     public Empresario buscar_empresario(String gmail) {
         Empresario em = new Empresario();
 

@@ -73,25 +73,7 @@ public class PaginaCalendario
             entry.setLocation("Ubicación del evento");
             calendar.addEntry(entry);
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
 
     private void agregarEvento(Calendar calendar) {
         // Crear evento en una fecha y hora específica
@@ -109,9 +91,4 @@ public class PaginaCalendario
         // Añadir la entrada al calendario
         calendar.addEntry(entry);
     }
-
-
-
-
-
 }
