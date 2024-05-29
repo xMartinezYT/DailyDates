@@ -30,10 +30,6 @@ public class PaginaCalendario
         EmpresarioHolder em = EmpresarioHolder.getInstance();
         EmpresaModel empmod = new EmpresaModel();
 
-
-
-
-
 // Crear instancia de CalendarView
         CalendarView calendarView = new CalendarView();
 
@@ -43,23 +39,13 @@ public class PaginaCalendario
         calendarSource.getCalendars().add(calendar);
         calendarView.getCalendarSources().add(calendarSource);
 
-        // Botón para añadir evento
-        Button addButton = new Button("Añadir Evento");
-        addButton.setOnAction(e -> agregarEvento(calendar));
-
-
-
         anchorPane.getChildren().add(calendarView);
         anchorPane.setTopAnchor(calendarView, 0.0);
         anchorPane.setRightAnchor(calendarView, 0.0);
         anchorPane.setBottomAnchor(calendarView, 50.0);
         anchorPane.setLeftAnchor(calendarView, 0.0);
 
-
-
         Empresario emp = em.getEmpresario();
-
-
 
         for (Citas i : ca.listar_citas_empresario(emp.getId())){
 
@@ -75,20 +61,4 @@ public class PaginaCalendario
         }
     }
 
-    private void agregarEvento(Calendar calendar) {
-        // Crear evento en una fecha y hora específica
-
-
-        LocalDateTime startDateTime = LocalDateTime.of(2024, Month.MAY, 17, 10, 0);
-
-
-        // Crear y configurar la entrada
-        Entry<String> entry = new Entry<>("Vicent homo");
-        entry.setInterval(startDateTime);
-        entry.setLocation("Ubicación del evento");
-
-
-        // Añadir la entrada al calendario
-        calendar.addEntry(entry);
-    }
 }
