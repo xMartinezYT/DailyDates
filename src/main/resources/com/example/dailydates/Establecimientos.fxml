@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Establecimientos">
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.Establecimientos">
    <children>
       <Label fx:id="calendarioLabel" alignment="CENTER" layoutX="75.0" layoutY="43.0" prefHeight="50.0" prefWidth="700.0" style="-fx-border-color: ff00aa; -fx-border-radius: 15; -fx-background-color: #fff1ff;" text="Establecimientos">
          <font>
@@ -28,6 +28,6 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Button id="buttonEstilo" fx:id="anyadirEmpresaButton" layoutX="375.0" layoutY="495.0" mnemonicParsing="false" onAction="#anyadirEmpresaButtonOnAction" stylesheets="@estilos/estilo.css" text="Añadir Empresa" />
+      <Button id="buttonEstilo" fx:id="anyadirEmpresaButton" layoutX="374.0" layoutY="478.0" mnemonicParsing="false" onAction="#anyadirEmpresaButtonOnAction" stylesheets="@estilos/estilo.css" text="Añadir Empresa" />
    </children>
 </AnchorPane>

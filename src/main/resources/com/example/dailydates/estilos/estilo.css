@@ -1,194 +1,154 @@
 #AnchorPaneDegradado {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff00aa, white);
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff00aa, white); /* Fondo degradado de rosa a blanco*/
 }
 #menuPane{
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, white);
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, white); /* Fondo degradado de rosa claro a blanco*/
 }
 
 #categoriaButton {
-     -fx-background-color: transparent;
-     -fx-color: #bf186c;
-
-
+     -fx-background-color: transparent; /* Fondo transparente*/
+     -fx-color: #bf186c; /* Color del texto*/
  }
+
  #citasButton {
-     -fx-background-color: transparent; /* Fondo transparente */
-     -fx-color: #bf186c;
-
-
+     -fx-background-color: transparent; /* Fondo transparente*/
+     -fx-color: #bf186c; /* Color del texto*/
  }
-#registrarseUsuarioPane {
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 15;
-    -fx-background-color: transparent;
 
+#registrarseUsuarioPane {
+    -fx-border-color: f8a0de; /* Color del borde*/
+    -fx-border-radius: 15; /* Radio del borde*/
+    -fx-background-color: transparent; /* Fondo transparente*/
 }
 
 #registrarseUsuarioPane:hover{
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 15;
-    -fx-border-width: 5;
-    -fx-background-color: fff1ff;
-
+    -fx-border-color: f8a0de; /* Color del borde en hover*/
+    -fx-border-radius: 15; /* Radio del borde en hover*/
+    -fx-border-width: 5; /* Ancho del borde en hover*/
+    -fx-background-color: fff1ff; /* Fondo en hover*/
 }
+
 #registrarseEmpresarioPane {
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 15;
-    -fx-background-color: transparent;
+    -fx-border-color: f8a0de; /* Color del borde*/
+    -fx-border-radius: 15; /* Radio del borde*/
+    -fx-background-color: transparent; /* Fondo transparente*/
 }
 #registrarseEmpresarioPane:hover{
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 15;
-    -fx-border-width: 5;
-    -fx-background-color: fff1ff;
+    -fx-border-color: f8a0de; /* Color del borde en hover*/
+    -fx-border-radius: 15; /* Radio del borde en hover*/
+    -fx-border-width: 5; /* Ancho del borde en hover*/
+    -fx-background-color: fff1ff; /* Fondo en hover*/
 }
 #registrarseUsuarioButton {
-    -fx-color:pink;
-    -fx-background-color:transparent;
-
+    -fx-color:pink; /* Color del texto*/
+    -fx-background-color:transparent; /* Fondo transparente*/
 }
 #registrarseUsuarioButton:hover {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink);
-
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, hotpink, pink); /* Fondo degradado en hover*/
 }
 #registrarseEmpresarioButton {
-     -fx-color:pink;
-     -fx-background-color:transparent;
+     -fx-color:pink; /* Color del texto*/
+     -fx-background-color:transparent; /* Fondo transparente*/
 }
 #registrarseEmpresarioButton:hover {
- -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, hotpink);
-
+ -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, pink, hotpink); /* Fondo degradado en hover*/
 }
 #atrasButton{
-    -fx-background-color: transparent;
-    -fx-text-fill: ff00c3;
-
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-text-fill: ff00c3; /* Color del texto*/
 }
 #atrasButton:hover {
-    -fx-background-color: transparent;
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 10;
-    -fx-border-width: 2;
-
+    -fx-background-color: transparent; /* Fondo transparente en hover*/
+    -fx-border-color: f8a0de; /* Color del borde en hover*/
+    -fx-border-radius: 10; /* Radio del borde en hover*/
+    -fx-border-width: 2; /* Ancho del borde en hover*/
 }
 #disenyoPane {
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 10;
-    -fx-border-width: 2;
-
+    -fx-border-color: f8a0de; /* Color del borde*/
+    -fx-border-radius: 10; /* Radio del borde*/
+    -fx-border-width: 2; /* Ancho del borde*/
 }
-
 #calendarioButton {
-
-    -fx-background-color: transparent;
-    -fx-text-fill:#bf186c ;
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-text-fill:#bf186c; /* Color del texto*/
 }
 #perfilButton {
-
-    -fx-background-color: transparent;
-    -fx-text-fill:#bf186c ;
-
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-text-fill:#bf186c; /* Color del texto*/
 }
 #establecimientosButton {
-
-    -fx-background-color: transparent;
-    -fx-text-fill:#bf186c ;
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-text-fill:#bf186c; /* Color del texto*/
 }
-
 #categoriaButton {
-
-    -fx-background-color:transparent;
-    -fx-text-fill:#bf186c;
-
+    -fx-background-color:transparent; /* Fondo transparente*/
+    -fx-text-fill:#bf186c; /* Color del texto*/
 }
-
 #citasButton {
-
-    -fx-background-color:transparent;
-    -fx-text-fill:#bf186c;
-
+    -fx-background-color:transparent; /* Fondo transparente*/
+    -fx-text-fill:#bf186c; /* Color del texto*/
 }
 #categoriasButton {
-    -fx-border-color:#ff00aa;
-    -fx-border-radius:15;
-    -fx-background-color:transparent;
-
+    -fx-border-color:#ff00aa; /* Color del borde*/
+    -fx-border-radius:15; /* Radio del borde*/
+    -fx-background-color:transparent; /* Fondo transparente*/
 }
 #categoriasButton:hover {
-
-    -fx-border-color:#ff00aa;
-    -fx-border-radius:15;
-    -fx-border-width:1.5;
-    -fx-background-color:#fff1ff;
-
+    -fx-border-color:#ff00aa; /* Color del borde en hover*/
+    -fx-border-radius:15; /* Radio del borde en hover*/
+    -fx-border-width:1.5; /* Ancho del borde en hover*/
+    -fx-background-color:#fff1ff; /* Fondo en hover*/
 }
-
 #pideTuCitaLabel {
-
-    -fx-text-fill:ff00aa;
-
+    -fx-text-fill:ff00aa; /* Color del texto*/
 }
-
 #buttonEstilo {
-    -fx-background-color: transparent;
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 10;
-
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-border-color: f8a0de; /* Color del borde*/
+    -fx-border-radius: 10; /* Radio del borde*/
 }
 #buttonEstilo:hover {
-    -fx-background-color: fff1ff;
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 10;
-    -fx-border-width: 2;
-
+    -fx-background-color: fff1ff; /* Fondo en hover*/
+    -fx-border-color: f8a0de; /* Color del borde en hover*/
+    -fx-border-radius: 10; /* Radio del borde en hover*/
+    -fx-border-width: 2; /* Ancho del borde en hover*/
 }
-
-
-
 #text-field-no-background {
-    -fx-background-color: transparent;
-    -fx-border-color: black; /* Cambia a tu color preferido */
-    -fx-border-width: 2px;   /* Cambia el grosor del borde según sea necesario */
-    -fx-border-radius: 5px;  /* Cambia el radio del borde según sea necesario */
-    -fx-padding: 5px;        /* Ajusta el padding si es necesario */
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-border-color: black; /* Color del borde*/
+    -fx-border-width: 2px; /* Ancho del borde*/
+    -fx-border-radius: 5px; /* Radio del borde*/
+    -fx-padding: 5px; /* Padding*/
 }
-
 #accederEstilo{
-    -fx-background-color:  #ff00aa;
-    -fx-text-fill: white;
+    -fx-background-color:  #ff00aa; /* Fondo*/
+    -fx-text-fill: white; /* Color del texto*/
 }
 #accederEstilo:hover{
-    -fx-background-color:  #fff1ff;
-    -fx-text-fill: ff00aa;
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 3px;
+    -fx-background-color:  #fff1ff; /* Fondo en hover*/
+    -fx-text-fill: ff00aa; /* Color del texto en hover*/
+    -fx-border-color: f8a0de; /* Color del borde en hover*/
+    -fx-border-radius: 3px; /* Radio del borde en hover*/
 }
 #estiloTextField{
-
-    -fx-border-color: black;
-    -fx-background-color: transparent;
-    -fx-border-radius: 10px;
-
+    -fx-border-color: black; /* Color del borde*/
+    -fx-background-color: transparent; /* Fondo transparente*/
+    -fx-border-radius: 10px; /* Radio del borde*/
 }
 #textosEmpresaEstilo{
-
-     -fx-font-weight: bold;
-     -fx-text-fill:ff00aa;
-
+     -fx-font-weight: bold; /* Texto en negrita*/
+     -fx-text-fill:ff00aa; /* Color del texto*/
 }
 #paneEstilo{
-
-    -fx-border-color: f8a0de;
-    -fx-border-radius: 15;
-    -fx-background-color: transparent;
-
+    -fx-border-color: f8a0de; /* Color del borde*/
+    -fx-border-radius: 15; /* Radio del borde*/
+    -fx-background-color: transparent; /* Fondo transparente*/
 }
 #choiceBoxStyle{
-
-    -fx-border-color:rgba(88, 88, 88, 0.44);
-    -fx-background-color:#d0d0d0;
-    -fx-border-radius:10px;
-    -fx-effect: dropshadow(three-pass-box, rgba(255, 0, 236, 0.93), 10, 0, 0, 0);
-    -fx-background-radius:10px;
-
+    -fx-border-color:rgba(88, 88, 88, 0.44); // Color del borde con transparencia*/
+    -fx-background-color:#d0d0d0; // Fondo*/
+    -fx-border-radius:10px; /* Radio del borde*/
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 0, 236, 0.93), 10, 0, 0, 0); /* Sombra*/
+    -fx-background-radius:10px; /* Radio del fondo*/
 }
+```

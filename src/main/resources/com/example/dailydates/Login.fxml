@@ -14,7 +14,7 @@
    <children>
       <AnchorPane fx:id="anchorPanePrincipal" layoutX="4.0" prefHeight="606.0" prefWidth="870.0">
          <children>
-            <TextField fx:id="emailTextField" layoutX="505.0" layoutY="236.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-color: #ff00aa; -fx-border-radius: 10px;">
+            <TextField fx:id="emailTextField" layoutX="506.0" layoutY="236.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-color: #ff00aa; -fx-border-radius: 10px;">
                <font>
                   <Font size="14.0" />
                </font></TextField>
@@ -35,16 +35,16 @@
                   <Image url="@img/User.png" />
                </image>
             </ImageView>
-            <TextField fx:id="mostrarContrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="173.0" visible="false" />
+            <TextField fx:id="mostrarContrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-color: #ff00aa; -fx-border-radius: 10px;" visible="false" />
             <ImageView fitHeight="25.0" fitWidth="16.0" layoutX="819.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/ver.png" />
                </image>
             </ImageView>
-            <CheckBox fx:id="verContraseña" layoutX="819.0" layoutY="320.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" />
-            <PasswordField fx:id="contrasenyaField" layoutX="508.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: #ff00aa;" />
+            <CheckBox fx:id="verContraseña" layoutX="819.0" layoutY="320.0" mnemonicParsing="false" onAction="#verContraseñaOnAction" opacity="0.0" textFill="#ff00aa" />
+            <PasswordField fx:id="contrasenyaField" layoutX="506.0" layoutY="309.0" prefHeight="39.0" prefWidth="295.0" style="-fx-background-color: transparent; -fx-border-radius: 10px; -fx-border-color: #ff00aa;" />
             <Label layoutX="506.0" layoutY="216.0" text="E-Mail" textFill="#ff00aa" />
-            <Label layoutX="506.0" layoutY="286.0" text="Contraseña" textFill="#ff00aa" />
+            <Label layoutX="506.0" layoutY="290.0" text="Contraseña" textFill="#ff00aa" />
          </children>
       </AnchorPane>
    </children>
