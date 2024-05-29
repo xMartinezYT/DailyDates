@@ -15,6 +15,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Controlador para la página de perfil de usuario.
+ * Esta página permite a los usuarios ver y editar su perfil.
+ */
 public class PaginaPerfil
 {
     @javafx.fxml.FXML
@@ -52,16 +56,29 @@ public class PaginaPerfil
     @javafx.fxml.FXML
     private Label registroDeSesion;
 
+    /**
+     * Inicializa la página de perfil.
+     * Llama al método anyadirdatos() para mostrar los datos del usuario actual.
+     */
     @javafx.fxml.FXML
     public void initialize() {
       anyadirdatos();
     }
+
+    /**
+     * Maneja el evento del botón para guardar los cambios en el perfil.
+     * @param actionEvent Evento de acción del botón.
+     */
 
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
     }
 
+    /**
+     * Maneja el evento del botón para cerrar la sesión del usuario.
+     * @param actionEvent Evento de acción del botón.
+     */
     @javafx.fxml.FXML
     public void cerrarSesionButtonOnAction(ActionEvent actionEvent) {
 
@@ -76,6 +93,10 @@ public class PaginaPerfil
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * Carga los datos del usuario actual en los campos de la página de perfil.
+     */
     public void anyadirdatos(){
 
         UsuarioHolder holder = UsuarioHolder.getInstance();
@@ -90,7 +111,13 @@ public class PaginaPerfil
 
     }
 
+    /**
+     * [DEPRECATED] Maneja el evento del botón para cargar una imagen de perfil.
+     * @param actionEvent Evento de acción del botón.
+     * @deprecated Este método está marcado como obsoleto y no se debe utilizar.
+     */
     @Deprecated
     public void cargarImagenButtonOnAction(ActionEvent actionEvent) {
     }
 }
+

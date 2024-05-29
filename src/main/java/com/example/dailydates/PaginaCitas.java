@@ -15,6 +15,9 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Controlador para la página de citas.
+ */
 public class PaginaCitas
 {
     @javafx.fxml.FXML
@@ -26,6 +29,10 @@ public class PaginaCitas
     @javafx.fxml.FXML
     private GridPane gridPane;
 
+    /**
+     * Inicializa la página de citas.
+     * Carga las citas del usuario actual y las muestra en el gridPane.
+     */
     @javafx.fxml.FXML
     public void initialize() {
             CitasModel citmod = new CitasModel();
@@ -49,3 +56,4 @@ public class PaginaCitas
     }
 
 }
+

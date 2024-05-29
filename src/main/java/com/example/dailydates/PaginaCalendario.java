@@ -30,7 +30,7 @@ public class PaginaCalendario
         EmpresarioHolder em = EmpresarioHolder.getInstance();
         EmpresaModel empmod = new EmpresaModel();
 
-// Crear instancia de CalendarView
+        // Crear instancia de CalendarView
         CalendarView calendarView = new CalendarView();
 
         // Crear un calendario y añadirlo a CalendarView

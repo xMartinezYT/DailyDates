@@ -15,6 +15,10 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
+/**
+ * Controlador para la página principal de un empresario.
+ * Esta página proporciona acceso a diferentes funcionalidades para el empresario, como el calendario, el perfil y los establecimientos.
+ */
 public class PaginaPrincipalEmpresario
 {
 
@@ -31,10 +35,14 @@ public class PaginaPrincipalEmpresario
     @javafx.fxml.FXML
     private AnchorPane anchorpaneMainEmpresario;
 
+    /**
+     * Inicializa la página principal del empresario.
+     * Configura las animaciones para los botones del menú y carga la página de calendario por defecto.
+     */
     @javafx.fxml.FXML
     public void initialize() {
 
-        // Animación de degradado del color del texto
+        // Animación de degradado del color del texto para el botón "Calendario"
         Timeline calendarioTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(calendarioButton.textFillProperty(), Color.WHITE)),
                 new KeyFrame(Duration.seconds(1), new KeyValue(calendarioButton.textFillProperty(), Color.DEEPPINK))
@@ -101,6 +109,11 @@ public class PaginaPrincipalEmpresario
 
     }
 
+    /**
+     * Cambia la vista a la página de calendario cuando se hace clic en el botón "Calendario".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Calendario".
+     */
     @javafx.fxml.FXML
     public void calendarioButtonOnAction(ActionEvent actionEvent) {
 
@@ -117,6 +130,11 @@ public class PaginaPrincipalEmpresario
 
     }
 
+    /**
+     * Cambia la vista a la página de perfil del empresario cuando se hace clic en el botón "Perfil".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Perfil".
+     */
     @javafx.fxml.FXML
     public void perfilButtonOnAction(ActionEvent actionEvent) {
 
@@ -132,6 +150,11 @@ public class PaginaPrincipalEmpresario
         }
     }
 
+    /**
+     * Cambia la vista a la página de establecimientos cuando se hace clic en el botón "Establecimientos".
+     * Actualiza la apariencia de los botones del menú.
+     * @param actionEvent Evento de acción del botón "Establecimientos".
+     */
     @javafx.fxml.FXML
     public void establecimientosButtonOnAction(ActionEvent actionEvent) {
         try {

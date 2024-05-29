@@ -10,6 +10,9 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
+/**
+ * Controlador para la ventana de registro, que permite a los usuarios elegir entre registrarse como usuario o como empresario.
+ */
 public class Registrarse
 {
     @javafx.fxml.FXML
@@ -39,10 +42,18 @@ public class Registrarse
     @javafx.fxml.FXML
     private Pane registrarseUsuarioPane;
 
+    /**
+     * Inicializa la ventana de registro.
+     */
     @javafx.fxml.FXML
     public void initialize() {
     }
 
+    /**
+     * Maneja el evento del botón "Registrarse como empresario".
+     * Abre la ventana de registro para empresarios.
+     * @param actionEvent Evento de acción del botón "Registrarse como empresario".
+     */
     @javafx.fxml.FXML
     public void registrarseEmpresarioButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -53,6 +64,11 @@ public class Registrarse
         }
     }
 
+    /**
+     * Maneja el evento del botón "Registrarse como usuario".
+     * Abre la ventana de registro para usuarios.
+     * @param actionEvent Evento de acción del botón "Registrarse como usuario".
+     */
     @javafx.fxml.FXML
     public void registrarseUsuarioButtonOnAction(ActionEvent actionEvent) {
 
@@ -64,6 +80,11 @@ public class Registrarse
         }
     }
 
+    /**
+     * Maneja el evento del botón "Atrás".
+     * Regresa a la ventana de inicio de sesión.
+     * @param actionEvent Evento de acción del botón "Atrás".
+     */
     @javafx.fxml.FXML
     public void atrasButtonOnAction(ActionEvent actionEvent) {
         try {
