@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="303.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.EstablecimientoMostrar">
    <children>
-      <Label fx:id="anyadirNombre" layoutX="45.0" layoutY="26.0" prefHeight="44.0" prefWidth="186.0" text="Nombre Negocio">
+      <Label fx:id="anyadirNombre" layoutX="45.0" layoutY="26.0" prefHeight="44.0" prefWidth="186.0" text="Nombre Negocio" textFill="#ff00aa">
          <font>
             <Font size="24.0" />
          </font>
@@ -27,10 +27,10 @@
             <ImageView fx:id="fotoImage" fitHeight="158.0" fitWidth="120.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane fx:id="disenyoPane" layoutX="-3.0" layoutY="18.0" prefHeight="2.0" prefWidth="564.0" style="-fx-border-color: black;" />
-      <TextField fx:id="horariofield" layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="110.0" />
-      <TextField fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="110.0" />
-      <TextField fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="110.0" />
+      <Pane fx:id="disenyoPane" layoutX="-3.0" layoutY="18.0" prefHeight="2.0" prefWidth="564.0" style="-fx-border-color: #ff00aa;" />
+      <TextField id="estiloTextField" fx:id="horariofield" layoutX="171.0" layoutY="164.0" prefHeight="25.0" prefWidth="110.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="ciudadfield" layoutX="171.0" layoutY="198.0" prefHeight="25.0" prefWidth="110.0" stylesheets="@estilos/estilo.css" />
+      <TextField id="estiloTextField" fx:id="direccionfield" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="110.0" stylesheets="@estilos/estilo.css" />
       <Button id="buttonEstilo" fx:id="guardarCambiosButton" layoutX="292.0" layoutY="246.0" mnemonicParsing="false" onAction="#guardarCambiosButtonOnAction" stylesheets="@estilos/estilo.css" text="Guardar Cambios" />
       <Label fx:id="categoriaslabel" layoutX="171.0" layoutY="97.0" prefHeight="17.0" prefWidth="92.0" text="cats" />
       <Button fx:id="AnyadirCategoriasButton" layoutX="261.0" layoutY="84.0" mnemonicParsing="false" onAction="#AnyadirCategoriasButtonOnAction" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-border-radius: 15;" text="+" textFill="#e500ff">

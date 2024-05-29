@@ -9,17 +9,17 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="223.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dailydates.InfoCitas">
    <children>
-      <Label fx:id="direccionLabel" layoutX="34.0" layoutY="111.0" text="Dirección:">
+      <Label fx:id="direccionLabel" layoutX="36.0" layoutY="104.0" text="Dirección:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="ciudadLabel" layoutX="33.0" layoutY="143.0" text="Ciudad:">
+      <Label fx:id="ciudadLabel" layoutX="35.0" layoutY="136.0" text="Ciudad:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="pedidoLabel" layoutX="34.0" layoutY="174.0" prefHeight="35.0" prefWidth="62.0" text="Pedido: (opcional)" wrapText="true">
+      <Label fx:id="pedidoLabel" layoutX="36.0" layoutY="167.0" prefHeight="35.0" prefWidth="62.0" text="Pedido: (opcional)" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -33,9 +33,9 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="anyadirDireccionLabel" layoutX="157.0" layoutY="111.0" text="direccion" />
-      <Label fx:id="anyadirCiudadLabel" layoutX="163.0" layoutY="143.0" text="ciudad" />
-      <Label fx:id="anyadirPedidoLabel" layoutX="162.0" layoutY="180.0" text="pedido" />
+      <Label fx:id="anyadirDireccionLabel" layoutX="159.0" layoutY="104.0" text="direccion" />
+      <Label fx:id="anyadirCiudadLabel" layoutX="165.0" layoutY="136.0" text="ciudad" />
+      <Label fx:id="anyadirPedidoLabel" layoutX="164.0" layoutY="173.0" text="pedido" />
       <Pane fx:id="fotoPane" layoutX="283.0" layoutY="14.0" prefHeight="142.0" prefWidth="170.0" style="-fx-border-color: ff00aa; -fx-border-radius: 10;">
          <children>
             <ImageView fx:id="imagenPerfil" fitHeight="122.0" fitWidth="137.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
