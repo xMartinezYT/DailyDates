@@ -27,8 +27,8 @@ public class PaginaCalendario
     public void initialize() {
 
         CitasModel ca = new CitasModel();
-        EmpresarioHolder em = new EmpresarioHolder();
-
+        EmpresarioHolder em = EmpresarioHolder.getInstance();
+        EmpresaModel empmod = new EmpresaModel();
 
 
 
@@ -57,21 +57,21 @@ public class PaginaCalendario
 
 
 
-        em.getEmpresario();
+        Empresario emp = em.getEmpresario();
 
 
 
-        for (Citas i : ca.listar_citas()){
+        for (Citas i : ca.listar_citas_empresario(emp.getId())){
 
-         String fecha = String.valueOf(i.getFecha());
          String hora = String.valueOf(i.getHora());
          String pedido =  i.getPedido();
          
-         LocalDateTime startDateTime = LocalDateTime.of(Integer.parseInt(fecha), Month.MAY, 17, Integer.parseInt(hora), 0);
+         LocalDateTime startDateTime = LocalDateTime.of(i.getFecha().getYear(), i.getFecha().getMonth(), i.getFecha().getDayOfMonth(), i.getHora().getHours(), i.getHora().getMinutes());
             Entry<String> entry = new Entry<>(pedido);
             entry.setInterval(startDateTime);
-            entry.setLocation("Ubicación del evento");
+            entry.setLocation(empmod.buscar_empresa(i.getId_empresa()).getDireccion());
             calendar.addEntry(entry);
+
         }
     }
 
