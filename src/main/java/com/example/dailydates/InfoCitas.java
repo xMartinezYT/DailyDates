@@ -11,6 +11,9 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
+/**
+ * Controlador para la visualización de la información de una cita.
+ */
 public class InfoCitas
 {
 
@@ -45,24 +48,51 @@ public class InfoCitas
 
     private Citas citas;
 
+    /**
+     * Obtiene la cita asociada a esta vista.
+     *
+     * @return La cita asociada.
+     */
     public Citas getCitas() {
         return citas;
     }
 
+    /**
+     * Establece la cita asociada a esta vista.
+     *
+     * @param citas La cita a establecer.
+     */
     public void setCitas(Citas citas) {
         this.citas = citas;
     }
 
     private Empresa empresa;
 
+    /**
+     * Obtiene la empresa asociada a esta vista.
+     *
+     * @return La empresa asociada.
+     */
     public Empresa getEmpresa() {
         return empresa;
     }
 
+    /**
+     * Establece la empresa asociada a esta vista.
+     *
+     * @param empresa La empresa a establecer.
+     */
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
 
+
+    /**
+     * Método de inicialización que se llama cuando se carga la vista.
+     * Establece la información de la cita y la empresa asociada.
+     *
+     * @param c La cita para la que se muestra la información.
+     */
     @Deprecated
     public void initialize(Citas c) {
         EmpresaModel empmod = new EmpresaModel();
@@ -80,6 +110,12 @@ public class InfoCitas
         imagenPerfil.setImage(empresa.getFoto_empresa());
     }
 
+    /**
+     * Maneja el evento de clic en el botón de modificación.
+     * Abre la vista de modificación de la cita.
+     *
+     * @param actionEvent El evento de clic.
+     */
     @javafx.fxml.FXML
     public void modificarButtonOnAction(ActionEvent actionEvent) {
 
@@ -97,6 +133,12 @@ public class InfoCitas
 
     }
 
+    /**
+     * Maneja el evento de clic en el botón de eliminación.
+     * Elimina la cita actual y muestra un mensaje de éxito o error.
+     *
+     * @param actionEvent El evento de clic.
+     */
     @javafx.fxml.FXML
     public void eliminarButtonOnAction(ActionEvent actionEvent) {
              CitasModel citmod = new CitasModel();
