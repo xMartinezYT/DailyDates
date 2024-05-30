@@ -100,9 +100,15 @@ public class InfoCitas
         setCitas(c);
         setEmpresa(empmod.buscar_empresa(c.getId_empresa()));
 
+        String cita = String.valueOf(citas.getHora().getHours());
+         if(String.valueOf(citas.getHora().getMinutes()).length() < 2){
+             cita += ":0" + citas.getHora().getMinutes();
+         }else{
+             cita += ":" + citas.getHora().getMinutes();
+         }
 
         anyadirFechaLabel.setText(citas.getFecha().toString());
-        anyadirHoraLabel.setText(citas.getHora().toString());
+        anyadirHoraLabel.setText(cita);
         anyadirCiudadLabel.setText(empresa.getCiudad());
         anyadirDireccionLabel.setText(empresa.getDireccion());
         anyadirNombreLabel.setText(empresa.getNombre());

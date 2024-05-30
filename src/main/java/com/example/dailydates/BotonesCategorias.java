@@ -43,7 +43,7 @@ public class BotonesCategorias
          EmpresaModel empMod = new EmpresaModel();
          int col = 1;
         try {
-
+                  anyadirCategoriaLabel.setText(catHol.getCategoria().getNombre());
             // Iterar sobre las empresas en la categoría seleccionada y agregarlas al gridPane.
 
             for (Empresa emp : empMod.listar_empresas_categoria(catHol.getCategoria().getId())) {
@@ -63,7 +63,6 @@ public class BotonesCategorias
 
                 gridPane.add(anchor,1,col);
                 col++;
-
                 // Establecer el margen para el diseño de la empresa.
 
                 GridPane.setMargin(anchor,new Insets(2));

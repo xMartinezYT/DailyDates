@@ -132,8 +132,9 @@ public class ModificarCitas
         CitasModel citmod = new CitasModel();
         EmpresaModel em = new EmpresaModel();
 
-
-        boolean cambioCorrecto = em.comprobarHorario(citas.getHora(), em.buscar_empresa(citas.getId_empresa()).getHorario());
+        String horario = em.buscar_empresa(citas.getId_empresa()).getHorario();
+        Time hora = Time.valueOf(horaSpinner.getValue().toString());
+        boolean cambioCorrecto = em.comprobarHorario(hora, horario);
 
         if (cambioCorrecto) {
         if (citmod.mod_cita(citas,fechaDatePicker.getValue(), Time.valueOf(horaSpinner.getValue().toString()),pedidoTextArea.getText())){
@@ -145,7 +146,7 @@ public class ModificarCitas
             a.showAndWait();
         } } else {
             Alert a = new Alert(Alert.AlertType.ERROR);
-            a.setContentText("Error al modificar cita");
+            a.setContentText("Hora no disponible");
             a.showAndWait();
         }
 

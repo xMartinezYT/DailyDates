@@ -415,7 +415,7 @@ public class EmpresaModel extends Conexion {
 
 
         if (horaCita.before(t2) && horaCita.after(t)) {
-            resultado = true;
+           resultado = true;
         }
 
         return resultado;
