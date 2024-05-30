@@ -69,7 +69,7 @@ public class PedirCitas
 
         setEmpresa(empresa);
         UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
-        nombreTextField.setText(usuarioHolder.getUsuario().getNombre());
+        nombreTextField.setText(usuarioHolder.getUsuario().getGmail());
         usuario = usuarioHolder.getUsuario();
 
         ObservableList<String> opciones = FXCollections.observableArrayList();
