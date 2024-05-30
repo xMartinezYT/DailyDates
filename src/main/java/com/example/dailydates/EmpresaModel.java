@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.ArrayList;
 
 /**
@@ -394,4 +395,32 @@ public class EmpresaModel extends Conexion {
         }
         return resultado;
     }
+
+
+
+
+
+    public boolean comprobarHorario(Time horaCita, String Horahorario) {
+
+        // Dividir el string en las dos partes separadas por '-'
+        String[] partes = Horahorario.split("-");
+// Obtener la parte de la hora antes de los dos puntos y convertirla a entero
+        int horaInicio = Integer.parseInt(partes[0].split(":")[0]);
+        int horaFin = Integer.parseInt(partes[1].split(":")[0]);
+
+        Time t = new Time(horaInicio,00,00);
+        Time t2 = new Time(horaFin,00,00);
+
+        boolean resultado = false;
+
+
+        if (horaCita.before(t2) && horaCita.after(t)) {
+            resultado = true;
+        }
+
+        return resultado;
+    }
+
+
+
 }

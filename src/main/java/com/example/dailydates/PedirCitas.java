@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 import java.sql.Time;
 import java.util.ArrayList;
 
+import static java.lang.Integer.parseInt;
+
 /**
  * Controlador para la ventana de solicitud de citas.
  * Permite a los usuarios enviar solicitudes de citas a las empresas.
@@ -93,20 +95,35 @@ public class PedirCitas
     @javafx.fxml.FXML
     public void guardarCambiosButtonOnAction(ActionEvent actionEvent) {
 
-          CitasModel citmod = new CitasModel();
+        EmpresaModel empresaModel = new EmpresaModel();
 
-          Time t = Time.valueOf(horaSpinner.getValue().toString());
+        CitasModel citmod = new CitasModel();
+
+        Time t = Time.valueOf(horaSpinner.getValue().toString());
 
 
-          Citas c = new Citas( this.usuario.getId(),this.empresa.getId_empresa(),fechaDatePicker.getValue(),t,pedidoTextArea.getText());
+        Citas c = new Citas(this.usuario.getId(), this.empresa.getId_empresa(), fechaDatePicker.getValue(), t, pedidoTextArea.getText());
 
-        if (citmod.anyadir_cita(c)){
+
+
+
+
+        boolean cambioCorrecto = empresaModel.comprobarHorario(c.getHora(), empresa.getHorario());
+
+        if (cambioCorrecto) {
+            if (citmod.anyadir_cita(c)) {
+
+            } else {
+                Alert a = new Alert(Alert.AlertType.ERROR);
+                a.setContentText("Error al modificar cita");
+                a.showAndWait();
+            }
 
         }else{
             Alert a = new Alert(Alert.AlertType.ERROR);
-            a.setContentText("Error al modificar cita");
+            a.setContentText("Esta hora no esta disponible revisa el horario");
             a.showAndWait();
         }
-
+        }
     }
-}
+

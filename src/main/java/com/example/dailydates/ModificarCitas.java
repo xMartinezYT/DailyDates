@@ -130,7 +130,12 @@ public class ModificarCitas
     public void guardarButtonOnAction(ActionEvent actionEvent) {
         // Se intenta guardar la cita modificada
         CitasModel citmod = new CitasModel();
+        EmpresaModel em = new EmpresaModel();
 
+
+        boolean cambioCorrecto = em.comprobarHorario(citas.getHora(), em.buscar_empresa(citas.getId_empresa()).getHorario());
+
+        if (cambioCorrecto) {
         if (citmod.mod_cita(citas,fechaDatePicker.getValue(), Time.valueOf(horaSpinner.getValue().toString()),pedidoTextArea.getText())){
             // La modificación fue exitosa
         }else{
@@ -138,7 +143,13 @@ public class ModificarCitas
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("Error al modificar cita");
             a.showAndWait();
+        } } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Error al modificar cita");
+            a.showAndWait();
         }
+
+
 
 
     }
