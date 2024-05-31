@@ -112,10 +112,12 @@ public class PedirCitas
 
         if (cambioCorrecto) {
             if (citmod.anyadir_cita(c)) {
-
+                Alert a = new Alert(Alert.AlertType.INFORMATION);
+                a.setContentText("Añadido correctamente");
+                a.showAndWait();
             } else {
                 Alert a = new Alert(Alert.AlertType.ERROR);
-                a.setContentText("Error al modificar cita");
+                a.setContentText("Error al añadir cita");
                 a.showAndWait();
             }
 

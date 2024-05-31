@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -111,10 +112,19 @@ public class PaginaPerfilEmpresario
 
         Empresario e = new Empresario(emp.getId(),nombre,apellidos,gmail,contrasenya,telefono,foto_perfil);
 
-        empmod.modificar_empresario(e);
 
-        EmpresarioHolder holder = EmpresarioHolder.getInstance();
-        holder.setEmpresario(e);
+
+        if (empmod.modificar_empresario(e)){
+            EmpresarioHolder holder = EmpresarioHolder.getInstance();
+            holder.setEmpresario(e);
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Modificado correctamente");
+            a.showAndWait();
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Error al modificar perfil");
+            a.showAndWait();
+        }
 
     }
 

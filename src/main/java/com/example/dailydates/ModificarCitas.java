@@ -139,6 +139,9 @@ public class ModificarCitas
         if (cambioCorrecto) {
         if (citmod.mod_cita(citas,fechaDatePicker.getValue(), Time.valueOf(horaSpinner.getValue().toString()),pedidoTextArea.getText())){
             // La modificación fue exitosa
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Guardado correctamente");
+            a.showAndWait();
         }else{
             // Se muestra una alerta en caso de error
             Alert a = new Alert(Alert.AlertType.ERROR);

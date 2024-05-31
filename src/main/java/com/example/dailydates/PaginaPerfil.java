@@ -141,7 +141,9 @@ public class PaginaPerfil
         Usuario modus = new Usuario(u.getId(),nombreUsuarioTextField.getText(),apellidosTextField.getText(),correoTextField.getText(),u.getContrasenya(),telefonoTextField.getText(),perfilImage.getImage());
 
         if (usmod.mod_usuario(modus)){
-            ushold.setUsuario(modus);
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Modificado correctamente");
+            a.showAndWait();
         }else{
          Alert a = new Alert(Alert.AlertType.ERROR);
          a.setContentText("Error al modificar perfil");

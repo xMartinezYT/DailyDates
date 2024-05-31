@@ -113,7 +113,15 @@ public class EstablecimientoMostrar
 
         EmpresaModel empmod = new EmpresaModel();
 
-        empmod.eliminar_empresa(empresa.getId_empresa());
+        if (empmod.eliminar_empresa(empresa.getId_empresa())){
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Guardado correctamente");
+            a.showAndWait();
+        }else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("datos no validos");
+            a.showAndWait();
+        }
 
     }
 
@@ -132,7 +140,9 @@ public class EstablecimientoMostrar
         empresa.setCiudad(ciudadfield.getText());
 
         if (empmod.modificar_empresa(empresa)){
-            // Código para manejar la actualización exitosa
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Guardado correctamente");
+            a.showAndWait();
         }else{
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("datos no validos");

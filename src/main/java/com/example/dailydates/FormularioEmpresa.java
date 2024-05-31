@@ -91,8 +91,9 @@ public class FormularioEmpresa
         Empresa e = new Empresa(1,emphol.getEmpresario().getId(),cats,nombre,CIF,horario,ciudad,direccion,foto_empresa);
 
         if (empmod.anyadir_empresa(emphol.getEmpresario().getId(),e,(Categoria) categoriaChoiceBox.getValue(), imagenSeleccionada)){
-            // Empresa añadida con éxito
-
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Guardado correctamente");
+            a.showAndWait();
         }else {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("datos incorrectos");

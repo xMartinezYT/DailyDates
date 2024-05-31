@@ -62,7 +62,9 @@ public class AnyadirCategoria
         Categoria cat = (Categoria) categoriasChoicebox.getValue();
 
         if (empresaModel.eliminar_categoria(cat.getId(),empresa.getId_empresa())){
-
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Eliminado correctamente");
+            a.showAndWait();
         }else {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("Error al eliminar categoria");
@@ -83,7 +85,9 @@ public class AnyadirCategoria
         Categoria cat = (Categoria) categoriasChoicebox.getValue();
 
         if (empresaModel.anyadir_categoria(cat.getId(),empresa.getId_empresa())){
-
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Guardado correctamente");
+            a.showAndWait();
         }else {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("Error al añadir categoria");
