@@ -1,0 +1,42 @@
+11:51:59  [main] 	Initializing Control Panel
+11:51:59  [main] 	Windows Version:  Enterprise  64-bit
+11:51:59  [main] 	XAMPP Version: 8.2.12
+11:51:59  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:51:59  [main] 	You are not running with administrator rights! This will work for
+11:51:59  [main] 	most application stuff but whenever you do something with services
+11:51:59  [main] 	there will be a security dialogue or things will break! So think 
+11:51:59  [main] 	about running this application with administrator rights!
+11:51:59  [main] 	XAMPP Installation Directory: "c:\xampp\"
+11:51:59  [main] 	Checking for prerequisites
+11:52:01  [main] 	All prerequisites found
+11:52:01  [main] 	Initializing Modules
+11:52:01  [mysql] 	Problem detected!
+11:52:01  [mysql] 	Port 3306 in use by "Unable to open process"!
+11:52:01  [mysql] 	MySQL WILL NOT start without the configured ports free!
+11:52:01  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+11:52:01  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+11:52:01  [main] 	Starting Check-Timer
+11:52:01  [main] 	Control Panel Ready
+11:53:02  [Apache] 	Attempting to start Apache app...
+11:53:03  [Apache] 	Status change detected: running
+11:53:05  [mysql] 	Problem detected!
+11:53:05  [mysql] 	Port 3306 in use by "Unable to open process"!
+11:53:05  [mysql] 	MySQL WILL NOT start without the configured ports free!
+11:53:05  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+11:53:05  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+11:53:05  [mysql] 	Attempting to start MySQL app...
+11:53:05  [mysql] 	Status change detected: running
+11:53:07  [mysql] 	Status change detected: stopped
+11:53:07  [mysql] 	Error: MySQL shutdown unexpectedly.
+11:53:07  [mysql] 	This may be due to a blocked port, missing dependencies, 
+11:53:07  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+11:53:07  [mysql] 	Press the Logs button to view error logs and check
+11:53:07  [mysql] 	the Windows Event Viewer for more clues
+11:53:07  [mysql] 	If you need more help, copy and post this
+11:53:07  [mysql] 	entire log window on the forums
+14:03:52  [Apache] 	Attempting to stop Apache (PID: 7828)
+14:03:52  [Apache] 	Attempting to stop Apache (PID: 10684)
+14:03:52  [Apache] 	Status change detected: stopped
+14:05:45  [main] 	Deinitializing Modules
+14:05:45  [main] 	Deinitializing Control Panel
+
