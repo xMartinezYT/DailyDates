@@ -106,7 +106,7 @@ public class UsuarioModel extends Conexion{
        try {
            // Preparar la consulta SQL para actualizar los datos del usuario
 
-           String sql = "update usuario set nombre = ?, apellidos = ?, gmail = ?, contrasenya = ?, telefono = ?, foto_perfil = ? where id=?";
+           String sql = "update usuario set nombre = ?, apellidos = ?, gmail = ?, contrasenya = ?, telefono = ? where id_usuario = ?";
            PreparedStatement ps = this.getConexion().prepareStatement(sql);
            // Establecer los valores de los parámetros en la consulta SQL
 
@@ -116,22 +116,14 @@ public class UsuarioModel extends Conexion{
            ps.setString(4,u.getContrasenya());
            ps.setString(5,u.getTelefono());
            FileInputStream fis = null;
-
-           // Convertir la imagen de perfil del usuario en un flujo de entrada de bytes
-           fis = new FileInputStream(String.valueOf(u.getFoto_perfil()));
-           File f = new File(String.valueOf(u.getFoto_perfil()));
-
-           // Establecer el flujo de entrada de bytes como parámetro en la consulta SQL
-           ps.setBinaryStream(6, fis, (int) f.length());
-
            // Establecer el ID del usuario como parámetro en la consulta SQL
-           ps.setInt(7,u.getId());
+           ps.setInt(6,u.getId());
 
            // Ejecutar la consulta SQL para actualizar los datos del usuario
            ps.execute();
            resultado = true;
 
-       } catch (SQLException | FileNotFoundException e) {
+       } catch (SQLException  e) {
            // Lanzar una excepción en caso de error durante la actualización del usuario
            throw new RuntimeException(e);
        }
